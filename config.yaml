@@ -1,3 +1,11 @@
 # Configuration file for webgen for ctioga2's website
 Tag/News:
   file: src/news.yaml
+Tag/SVNAuthor:
+  authorNames:
+    fourmond: |
+      <a href="http://vince-debian.blogspot.com">Vincent Fourmond</a>
+    jfleck: "Jean-Julien Fleck"
+    bpaxton: "Bill Paxton"
+  defaultName: "Jean-Julien Fleck"
+  # Jean-Julien is reponsible for pages not in SVN

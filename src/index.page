@@ -1,5 +1,5 @@
 ---
-title: Welcome to the home page of ctioga2
+title: Welcome to ctioga2
 inMenu: true
 directoryName: ctioga2
 orderInfo: -1
@@ -44,7 +44,9 @@ you might want to check it.
 An example of example
 </pre>
 
-{news: }
+h2. "News":news.html
+
+{news: {number: 3}}
 
 h2. Support, bugs and feature requests
 

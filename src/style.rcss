@@ -178,6 +178,7 @@ h3 {
      border-bottom:2px solid <%= Colors.title_underline %>;
      }
 
+
 #sidebar { 
            color: <%= Colors.sidebar %>;
            }
@@ -204,3 +205,13 @@ h3 {
 .examples { 
             margin: 2% 10% 2% 5%;
             }
+
+/* News items: */
+h3.news { 
+          border-bottom: none;
+          font-size: 110%;
+          }
+
+p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;}
+span.news-author { font-weight: bold; }
+span.news-date { font-style: italic; }

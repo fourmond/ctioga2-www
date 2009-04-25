@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-# get-new: a script to retrieve news items from rubyforge.org
+# get-news: a script to retrieve news items from rubyforge.org
 # This program is copyright 2009 by Vincent Fourmond.
 
 # This program is free software; you can redistribute it and/or modify
@@ -38,7 +38,6 @@ end
 
 STDERR.puts "Found #{post_ids.size} posts"
 
-Post = Struct.new(:id, :author, :date, :title, :contents)
 posts = []
 
 # Fine, now we have the forums corresponding to the posts. Next thing,
@@ -49,23 +48,23 @@ for id in post_ids
   resp, data = http.get("/forum/forum.php?forum_id=#{id}")
   if data =~ /<strong>(.*?)<p>(.*?)<\/p>/m
     header, contents = $1, $2
-    post = Post.new
+    post = {}
     for k,v in {
         :author => /Posted\s*By/i, 
         :title => /Summary/i,
         :date => /Date/i,
       }
       if header =~ /#{v}\s*:\s*<\/strong>\s*(?:<a[^>]+>)?\s*(.*?)\s*(?:<\/a>)?\s*<br\s*\/>/
-          post.send("#{k}=", $1)
+          post[k] = $1
       end
     end
-    post.id = id
-    post.contents = contents.gsub(/[\r\t]/,'').gsub(/<br\s*\/>/,"\n").
-      gsub(/\A\n+|\n+\z/,'')
-    if post.date =~ /(\d+)-(\d+)-(\d+)\s+(\d+):(\d+)/
-      post.date = Time.local($1.to_i, $2.to_i, $3.to_i,
+    post[:id] = id
+    post[:contents] = contents.gsub(/[\r\t]/,'').gsub(/<br\s*\/>/,"\n").
+      gsub(/\A\n+|\n+\z/,'').gsub(/(--[\w-]+)/, '@\1@') # The last one for command-line arguments, if 
+    if post[:date] =~ /(\d+)-(\d+)-(\d+)\s+(\d+):(\d+)/
+      post[:date] = Time.local($1.to_i, $2.to_i, $3.to_i,
                              $4.to_i, $5.to_i)
-      post.date += 5*3600       # 5 hours time difference with the
+      post[:date] += 5*3600       # 5 hours time difference with the
                                 # site of rubyforge...
     end
     posts << post

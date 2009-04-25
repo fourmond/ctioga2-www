@@ -1,0 +1,3 @@
+# Configuration file for webgen for ctioga2's website
+Tag/News:
+  file: src/news.yaml

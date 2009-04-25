@@ -121,7 +121,7 @@ class NewsFeed < FileHandlers::DefaultHandler
         out.puts "<guid isPermaLink=\"true\">http://rubyforge.org/forum/forum.php?forum_id=#{post[:id]}</guid>"
 
         out.puts "<pubDate>#{post[:date].rfc2822}</pubDate>"
-
+        out.puts "<author>#{CGI::escapeHTML(post[:author])}</author>"
         out.puts "</item>"
       end
 

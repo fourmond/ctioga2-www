@@ -1,0 +1,41 @@
+---
+title: Polymorphic ?
+inMenu: true
+---
+
+h2. Why polymorphic ?
+
+One of the great advantages of @ctioga2@ over @ctioga@, and actually
+over all plotting programs I know, is that it can be used in two
+different ways:
+
+* directly from the command-line, specifying the look of the graph
+  through command-line arguments;
+* using a command file, a bit like files you could use with
+  "gnuplot":http://http://gnuplot.info/.
+
+For instance, running
+
+<pre class='examples'>
+ctioga2 --title 'A nice title, for sure' --math 'sin(x)' \
+    -x 'The X label' -y 'The Y label'
+</pre>
+
+produces the same graph as running @ctioga2 -f@ on a file containing
+this:
+
+<pre class='examples'>
+title('A nice title, for sure')
+math()
+plot('sin(x)')
+xlabel(The X label)
+ylabel(The Y label)
+</pre>
+
+If the latter version is more verbose, it is also more easy to edit in
+the case of complex plots.
+
+
+Both ways can be mixed freely, which means you can override various
+parameters of a command file with the command-line (or the other way
+around), add datasets and so on...

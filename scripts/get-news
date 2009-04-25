@@ -21,8 +21,7 @@
 require 'net/http'
 require 'yaml'
 
-id = ARGV[0] || "1477"          # group id, work on SciYAG by default
-                                # for now
+id = ARGV[0] || "8218"          # group id
 
 http = Net::HTTP.new("rubyforge.org")
 

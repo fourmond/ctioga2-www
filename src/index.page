@@ -6,43 +6,15 @@ orderInfo: -1
 ---
 h2. What is ctioga2 ?
 
-ctioga2 is a powerful non-interactive polymorphic plotting program. 
+ctioga2 is a powerful non-interactive "polymorphic":polymorphic.html
+plotting program, based on the 
+"Tioga plotting library":http://tioga.rubyforge.org.
 
+It is a complete rewrite of the
+"@ctioga@":http://sciyag.rubyforge.org/ctioga plotting
+program. Compatibility was kept when it was not a problem. Most simple
+graphs from @ctioga@ can be used directly with @ctioga2@.
 
-
-SciYAG is a long term project to provide the scientific community a good
-set of tools to plot and analyze data. It is structured in different 
-subprojects:
-
-* "ctioga":ctioga/index.html is a command-line interface for the wonderful 
-  Ruby plotting library, Tioga.
-
-* Backends is a set of ruby libraries used to fetch data from files. 
-  It is used internally by ctioga and SciYAG. You can however profit
-  directly from it's ease of use. Have a look at it's current
-  "documentation":rdoc/Backends.
-
-* MetaBuilder is a complete system for type-safe user interaction written
-  in pure Ruby. It features for now an interface to command-line parsing
-  and to Qt widgets.
-
-* "SciYAG":sciyag/ itself is a graphical program to organize, display
-  and search scientific data.
-
-* SCalc is a C++/Ruby library to efficiently compute the result of a
-  mathematical expression. It should provide derivation of the formulas 
-  (useful for fits, for instance). Only the C++ code is written for now;
-  it is accessible in the 
-  "SVN repository":http://rubyforge.org/scm/?group_id=1477, 
-  module @SciYAG/SCalc@.
-
-New are regularly posted on the main developer's 
-"blog":http://vince-debian.blogspot.com/search/label/sciyag, 
-you might want to check it.
-
-<pre class='examples'>
-An example of example
-</pre>
 
 h2. "News":news.html
 
@@ -50,11 +22,12 @@ h2. "News":news.html
 
 h2. Support, bugs and feature requests
 
-We cannot offer you any support at the moment, as the SciYAG project
-is essentially based on good will. However, if you find a bug,  we'll
-be glad to tackle it. And if you're interested in a feature that also
-sounds interesting to us, just let us know... or even better,
-implement it and send us a patch !
+We cannot offer you any support at the moment, as ctioga2 is developed
+during our free time. However, if you find a bug, we'll be glad to
+tackle it. And if you're interested in a feature that also sounds
+interesting to us, just let us know... or even better, implement it
+and send us a patch !
 
 All this can be done on the Rubyforge "project
-page":http://rubyforge.org/projects/sciyag/.
+page":http://rubyforge.org/projects/ctioga2/. Alternatively, you can
+send an email to the mailing list @ctioga2-users@ at @rubyforge.org@.

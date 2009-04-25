@@ -1,0 +1,9 @@
+--- 
+- :author: Vincent Fourmond
+  :title: New home for the ctioga2 project
+  :contents: |-
+    So far, the efforts in developing the successor of ctioga were located in the SciYAG project (<a href="http://sciyag.rubyforge.org" target="_new">http://sciyag.rubyforge.org</a>). Now, thanks to the rubyforge team, ctioga2 has a new home, <a href="http://rubyforge.org/projects/ctioga2" target="_new">http://rubyforge.org/projects/ctioga2</a>. Development is under way in the SVN repository, and a web page is being written. 
+    
+    The first release of ctioga2 should be expected reasonably soon !
+  :id: 31886
+  :date: 2009-04-26 00:35:00 +02:00

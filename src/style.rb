@@ -125,7 +125,7 @@ $bg_away_color = HTMLColor.white # The color in a faraway distance
 $bg_color = HTMLColor.white      # The real background color
 $bg_sides_color = HTMLColor.new("#B0B0B0") # The color just on the sides of the text
 $bg_sides_color = HTMLColor.new("#8ed9d9")
-$bg_sides_color = HTMLColor.new("#182b9c")
+$bg_sides_color = HTMLColor.new("#1284cd")
 # $bg_sides_color = HTMLColor.new("#B0B0FF") # The color just on the sides of the text
 $bg_stop_color = $bg_sides_color.mix_with(HTMLColor.white, 0.6)
 

@@ -1,0 +1,96 @@
+--- content, html
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{lang:}">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Your description goes here..." />
+    <meta name="keywords" content="your,keywords,goes,here" />
+    <meta name="author" content="Vincent Fourmond" />
+    <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
+    <link rel="stylesheet" type="text/css" 
+	  href="{relocatable:style.css}" media="screen,projection" />
+    <title>{title: }</title>
+  </head>
+
+  <body>
+    <div id="full">
+      <div id="header" class="fullwidth">
+	<div id="header-top" class="round"></div>
+	<div id="header-inner">
+	  <div id="slogan">
+	    <h1><a href="{relocatable: /index.page}">SciYAG</a>
+<!-- 	      &amp;  -->
+<!-- 	      <a href="{relocatable: /ctioga/index.page}">ctioga</a> -->
+	    </h1>
+	    Ruby tools for scientists
+	  </div>
+	  <p id="toplinks">
+	    Location: {breadcrumbTrail: }
+	  </p>
+	  <h1 class="maintitle">{title:}</h1>
+	  <div style="clear: both;"></div> 
+	</div>
+	<div id="header-bottom" class="round"></div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div id="center" class="fullwidth">
+ 	<div id="center-top" class="round"></div>
+	<div id="center-inner">
+	  <div id="sidebar">
+	    <h2>Welcome!</h2>
+	    <p><a href="{relocatable: /index.page}">SciYAG</a> aims at
+	      providing Ruby tools to scientists to deal with their
+	      data.
+	    </p>
+
+	    <h2>Pages:</h2>
+	    {menu: {menuStyle: vertical, options: {maxLevels: 3}}}
+
+	    <div id="randimg">
+	      {randomImage: }
+	    </div>
+
+	    <h2>Links:</h2>
+	    <ul class="links">
+	      <li><a href="http://rubyforge.org/projects/sciyag/">Rubyforge
+		  project page</a></li>
+	      <li><a href="http://rubyforge.org/frs/?group_id=1477">Downloads</a>
+	      </li>
+	      <li><a href="http://rubyforge.org/forum/?group_id=1477">Forums</a>
+	      </li>
+	    </ul>
+	    
+	  </div>
+	  <div id="content">
+	    {block: }
+	  </div>
+	  <!-- Make sure both floats have finished -->
+	  <div style="clear: both;"></div> 
+	</div>
+	<div id="center-bottom" class="round"></div>
+      </div> <!-- End of center division -->
+
+      <div id="footer" class="fullwidth">
+	<p><a href="#header">Back to top</a>
+	  &copy; 2007, 2008, 2009 by 
+	  Vincent Fourmond and Jean-Julien Fleck| Generated
+	  by <a href="http://webgen.rubyforge.org">webgen</a><br/>      
+	  This page was last modified on <b>{mDate:}</b> by <b>{svnAuthor:}</b>
+	</p>
+      </div>
+
+    </div> <!-- of the main wrap... -->
+    <!-- Google analytics code -->
+<!--     <script type="text/javascript"> -->
+<!--       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); -->
+<!--       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); -->
+<!--     </script> -->
+<!--     <script type="text/javascript"> -->
+<!--       var pageTracker = _gat._getTracker("UA-940352-3"); -->
+<!--       pageTracker._initData(); -->
+<!--       pageTracker._trackPageview(); -->
+<!--     </script> -->
+    <!-- Enf of Google analytics code -->
+  </body>
+</html>

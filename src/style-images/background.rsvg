@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<% $: << "./src" %>
+<% load "style.rb" %>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="<%= $total_width%>"
+   height="<%= $bg_pix_height %>"
+   id="svg2">
+  <defs>
+    <linearGradient
+       id="lgMain">
+      <stop
+         style="stop-color:<%= $bg_away_color %>;stop-opacity:1;"
+         offset="0" />
+      <stop
+         style="stop-color:<%= $bg_stop_color %>;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#lgMain"
+       id="lg1"
+       x1="<%= $bg_left - $bg_away_distance %>" y1="0"
+       x2="<%= $bg_left %>" y2="0"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#lgMain"
+       id="lg2"
+       x1="<%= $bg_right + $bg_away_distance %>" y1="0"
+       x2="<%= $bg_right %>" y2="0"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g id="layer1">
+    <!-- Left-hand side -->
+    <rect
+       style="opacity:1;fill:url(#lg1);
+	      fill-opacity:1;fill-rule:evenodd;stroke:none"
+       width="<%= $bg_left %>"
+       height="<%= $bg_pix_height %>"
+       x="0"
+       y="0" />
+    <!-- Right-hand side -->
+    <rect
+       style="opacity:1;fill:url(#lg2);
+	      fill-opacity:1;fill-rule:evenodd;stroke:none"
+       width="<%= $bg_left %>"
+       height="<%= $bg_pix_height %>"
+       x="<%= $bg_right %>"
+       y="0" />
+    <!-- Middle... -->
+    <rect
+       style="opacity:1;fill:<%= $bg_stop_color %>;
+	      fill-opacity:1;fill-rule:evenodd;stroke:none"
+       width="<%= $bg_right - $bg_left %>"
+       height="<%= $bg_pix_height %>"
+       x="<%= $bg_left %>"
+       y="0" />
+  </g>
+</svg>

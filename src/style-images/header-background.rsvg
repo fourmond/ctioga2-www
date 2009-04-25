@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<% $: << "./src" %>
+<% load "style.rb" %>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="<%= Full.width %>"
+   height="<%= $bg_pix_height %>" id="svg2">
+  <g id="mainLayer">
+    <!-- Background  -->
+    <rect
+       style="opacity:1;fill:<%= $bg_stop_color%>;
+	      fill-opacity:1;fill-rule:evenodd;stroke:none"
+       width="<%= Full.width %>"
+       height="<%= 2 * Round.ray %>"
+       x="0" y="0" />
+    <!-- Main box: -->
+    <rect
+       style="opacity:1;fill:<%= $bg_color %>;
+	      fill-opacity:1;fill-rule:evenodd;
+	      stroke:<%= $bg_sides_color %>;
+	      stroke-width=<%= Border.width%>;"
+       width="<%= Full.width - 2*Border.dx%>"
+       height="<%= 2 * Round.ray + $bg_pix_height%>"
+       x="<%= Border.dx %>" y="<%= -Round.ray_eff %>" 
+       rx="<%= Round.ray_eff %>" ry="<%= Round.ray_eff %>" />
+  </g>
+</svg>

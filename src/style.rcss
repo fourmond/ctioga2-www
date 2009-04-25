@@ -1,0 +1,151 @@
+/* -*- mode: css; -*- */
+/* style.rcss: an erb-processed style for the SciYAG website */
+/* Copyright 2009 by Vincent Fourmond */
+
+/* This program is free software; you can redistribute it and/or modify */
+/* it under the terms of the GNU General Public License as published by */
+/* the Free Software Foundation; either version 2 of the License, or */
+/* (at your option) any later version. */
+
+/* This program is distributed in the hope that it will be useful, */
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the */
+/* GNU General Public License for more details (in the COPYING file). */
+
+/* This file is inspired by the design 1024px - An open source
+xhtml/css website template by Andreas Viklund -
+http://andreasviklund.com */
+
+<% $: << "./src" %>
+<% load "style.rb" %>
+
+body {
+      background:<%= $bg_color %> url("style-images/background.png") top center repeat-y;
+      margin:0;
+      padding:0;
+}
+
+/************************************************************/
+/* The main layout elements */
+
+/* The main wrap, ie where everything ends up */
+#full{
+       width:<%= Full.width %>px;
+       padding:0;
+       margin: 5px auto 10px;
+}
+
+/* Class for things that take the whole width */
+.fullwidth { 
+             width: <%= Full.width %>;
+             padding: 0;
+             margin: 0;
+}
+
+/* Class for dummy blocks here only for rounding the corners */
+.round { 
+         width: <%= Full.width %>px;
+         height: <%= Round.ray %>px;
+         padding: 0;
+         margin: 0;
+}
+
+/* Header-related things: */
+#header-top { 
+              background: <%= $bg_color %> url("style-images/header-top-background.png") center center; 
+}
+
+#header-bottom { 
+                 background: <%= $bg_color %> url("style-images/header-bottom-background.png") center center; 
+                 }
+
+#header-inner {
+                width:<%= Full.usable_width %>px;
+                margin: <%= Round.neg_margin %>px auto;
+          }
+/* Last but not least: the background for the header: */
+#header {
+          background: <%= $bg_color %> url("style-images/header-background.png") center repeat-y; 
+          }
+
+
+/* Now, things about the center */
+#center-top {
+              background: <%= $bg_color %> url("style-images/header-top-background.png") center center; 
+              }
+
+
+#center-bottom { 
+                 background: <%= $bg_color %> url("style-images/header-bottom-background.png") center center; 
+                 }
+
+#center-inner {
+                width:<%= Full.usable_width %>px;
+                margin: <%= Round.neg_margin %>px auto;
+          }
+
+#center { 
+          background: <%= $bg_color %> url("style-images/header-background.png") center repeat-y; 
+}
+
+#content{
+          width:<%= Contents.width %>px;
+          text-align:left;
+          margin:0;
+          padding:<%= Contents.padding %>px;
+          float: right;
+          }
+
+#sidebar{
+          width:<%= SideBar.width %>px;
+          float: left;
+          padding:<%= SideBar.padding %>px;
+}
+
+#footer {
+          width:<%= Full.width %>px;
+          text-align: right;
+          font-size: 75%;
+          }
+
+/* Here come the fine details */
+
+
+/* The text at the top of the page */
+#toplinks { 
+            text-align: right;
+            font-size: 75%;
+            }
+
+h1{
+    font-size:160%;
+    color: <%= Colors.main_title %>;		/* TODO: change here !! */
+}
+
+h1.maintitle {
+               font-size: 180%;
+               text-align: center;
+}
+/* We don't want links to show in the main titles/slogans */
+h1 a{text-transform:none; color:<%= Colors.main_title %>;}
+
+div#slogan { 
+             width: <%= SideBar.width %>;
+             float: left;
+             text-align: center;
+             padding-bottom: 0.4em;
+             }
+
+
+/* Various styles */
+.examples, .examples-ctioga, .examples-gnuplot { 
+            overflow: auto;
+            text-align: left;
+            padding: 0.5em;
+            background-color: <%= Colors.pre_bg %>;
+            border: 1pt solid <%= Colors.borders %>;
+            }
+
+.examples { 
+            margin: 2% 10% 2% 5%;
+            }

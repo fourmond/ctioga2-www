@@ -1,10 +1,14 @@
 ---
-title: Welcome to SciYAG
+title: Welcome to the home page of ctioga2
 inMenu: true
-directoryName: SciYAG
+directoryName: ctioga2
 orderInfo: -1
 ---
-h2. What is SciYAG ?
+h2. What is ctioga2 ?
+
+ctioga2 is a powerful non-interactive polymorphic plotting program. 
+
+
 
 SciYAG is a long term project to provide the scientific community a good
 set of tools to plot and analyze data. It is structured in different 
@@ -40,6 +44,8 @@ you might want to check it.
 An example of example
 </pre>
 
+{news: }
+
 h2. Support, bugs and feature requests
 
 We cannot offer you any support at the moment, as the SciYAG project
@@ -49,4 +55,4 @@ sounds interesting to us, just let us know... or even better,
 implement it and send us a patch !
 
 All this can be done on the Rubyforge "project
-page":http://rubyforge.org/projects/sciyag/. 
+page":http://rubyforge.org/projects/sciyag/.

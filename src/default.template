@@ -4,8 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{lang:}">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Your description goes here..." />
-    <meta name="keywords" content="your,keywords,goes,here" />
+    <meta name="description" 
+	  content="ctioga2: the polymorphic plotting program" />
+    <meta name="keywords" 
+	  content="ctioga2, ctioga, plotting program, polymorphic" />
     <meta name="author" content="Vincent Fourmond" />
     <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
     <link rel="stylesheet" type="text/css" 
@@ -19,11 +21,8 @@
 	<div id="header-top" class="round"></div>
 	<div id="header-inner">
 	  <div id="slogan">
-	    <h1><a href="{relocatable: /index.page}">SciYAG</a>
-<!-- 	      &amp;  -->
-<!-- 	      <a href="{relocatable: /ctioga/index.page}">ctioga</a> -->
-	    </h1>
-	    Ruby tools for scientists
+	    <h1><a href="{relocatable: /index.page}">ctioga2</a></h1>
+	    <p>the polymorphic plotting program</p>
 	  </div>
 	  <p id="toplinks">
 	    Location: {breadcrumbTrail: }
@@ -39,9 +38,8 @@
 	<div id="center-inner">
 	  <div id="sidebar">
 	    <h2>Welcome!</h2>
-	    <p><a href="{relocatable: /index.page}">SciYAG</a> aims at
-	      providing Ruby tools to scientists to deal with their
-	      data.
+	    <p><a href="{relocatable: /index.page}">ctioga2</a> is a
+	      powerful polymorphic non-interactive plotting program.
 	    </p>
 
 	    <h2>Pages:</h2>
@@ -53,11 +51,13 @@
 
 	    <h2>Links:</h2>
 	    <ul class="links">
-	      <li><a href="http://rubyforge.org/projects/sciyag/">Rubyforge
+	      <li><a href="http://rubyforge.org/projects/ctioga2/">Rubyforge
 		  project page</a></li>
-	      <li><a href="http://rubyforge.org/frs/?group_id=1477">Downloads</a>
+	      <li><a href="http://rubyforge.org/frs/?group_id=8218">Downloads</a>
 	      </li>
-	      <li><a href="http://rubyforge.org/forum/?group_id=1477">Forums</a>
+	      <li><a href="http://rubyforge.org/tracker/?group_id=8218">Trackers</a>
+	      </li>
+	      <li><a href="http://rubyforge.org/forum/?group_id=8218">Forums</a>
 	      </li>
 	    </ul>
 	    
@@ -82,15 +82,15 @@
 
     </div> <!-- of the main wrap... -->
     <!-- Google analytics code -->
-<!--     <script type="text/javascript"> -->
-<!--       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); -->
-<!--       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); -->
-<!--     </script> -->
-<!--     <script type="text/javascript"> -->
-<!--       var pageTracker = _gat._getTracker("UA-940352-3"); -->
-<!--       pageTracker._initData(); -->
-<!--       pageTracker._trackPageview(); -->
-<!--     </script> -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-940352-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
     <!-- Enf of Google analytics code -->
   </body>
 </html>

@@ -113,6 +113,10 @@ class HTMLColor
   def self.white
     return HTMLColor.new(255, 255, 255)
   end
+
+  def self.black
+    return HTMLColor.new(0,0,0)
+  end
 end
 
 Colors = OpenStruct.new
@@ -123,7 +127,18 @@ $bg_sides_color = HTMLColor.new("#B0B0B0") # The color just on the sides of the 
 # $bg_sides_color = HTMLColor.new("#B0B0FF") # The color just on the sides of the text
 $bg_stop_color = $bg_sides_color.mix_with(HTMLColor.white, 0.6)
 
+
 Colors.main_title = HTMLColor.new("#4088b8")
-Colors.slogan = HTMLColor.new("#000000")
+Colors.slogan = HTMLColor.black.mix_with(HTMLColor.white, 0.5)
 Colors.borders = $bg_sides_color
+
+
 Colors.pre_bg = Colors.borders.mix_with(HTMLColor.white, 0.5)
+Colors.titles = HTMLColor.new("#4088b8")
+Colors.title_underline = Colors.titles.mix_with(HTMLColor.white, 0.5)
+Colors.title_underline = Colors.titles
+
+Colors.sidebar = HTMLColor.black.mix_with(HTMLColor.white, 0.6)
+Colors.sidebar = HTMLColor.black
+
+

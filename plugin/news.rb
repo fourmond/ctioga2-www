@@ -16,7 +16,12 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301
 # USA
 
-# TODO
+# For the RFC spec.
+require 'time'
+
+# For the CGI::escape
+require 'cgi'
+
 class NewsTag < Tags::DefaultTag
 
   infos( :name => 'Tag/News',
@@ -58,3 +63,78 @@ class NewsTag < Tags::DefaultTag
   end
 
 end
+
+class NewsFeed < FileHandlers::DefaultHandler
+  
+  infos( :name => 'File/NewsFeed',
+         :author => 'Vincent Fourmond <vincent.fourmond@9online.fr>',
+         :summary => "Transform news into a real XML feed"
+         )
+
+  param 'paths', ['**/news.yaml'], 
+  'The path of the news files (in YAML format).'
+  param 'title', 'News about ctioga2', "The title of the feed"
+  param 'link', "http://ctioga2.rubyforge.org", "The link from the description"
+  param 'description', "All news about ctioga2", "Description"
+
+  def initialize( plugin_manager )
+    super
+    param( 'paths' ).each {|path| register_path_pattern( path ) }
+  end
+  
+  def create_node( path, parent, meta_info )
+    name = File.basename(path, ".yaml")
+
+    # Thumbnail
+    n = Node.new( parent, "#{name}.xml" )
+    n['title'] = "#{name}.xml"
+    n.node_info[:src] = path
+    n.node_info[:processor] = self
+    return n
+  end
+  
+  def write_node(node)
+    if @plugin_manager['Core/FileHandler'].file_modified?( node.node_info[:src], node.full_path )
+      n = node.node_info
+      begin
+        posts = YAML.load(File::open(n[:src]))
+      rescue Exception => e
+        return
+      end
+      date_string = 
+      out = File::open(node.full_path, "w")
+      out.puts "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\">"
+      out.puts "<channel><title>#{param('title')}</title>"
+      out.puts "<link>#{param('link')}</link>"
+      out.puts "<description>#{param('description')}</description>"
+      out.puts "<lastBuildDate>#{Time.now.rfc2822}</lastBuildDate>"
+      out.puts "<pubDate>#{Time.now.rfc2822}</pubDate>"
+
+      # Now the posts
+      for post in posts
+        out.puts "<item>"
+        out.puts "<title>#{CGI::escapeHTML(post[:title])}</title>"
+        converter = RedCloth.new(post[:contents])
+        converter.hard_breaks = false 
+        out.puts "<description>#{CGI::escapeHTML(converter.to_html)}</description>"
+        out.puts "<link>http://rubyforge.org/forum/forum.php?forum_id=#{post[:id]}</link>"
+        out.puts "<guid isPermaLink=\"true\">http://rubyforge.org/forum/forum.php?forum_id=#{post[:id]}</guid>"
+
+        out.puts "<pubDate>#{post[:date].rfc2822}</pubDate>"
+
+        out.puts "</item>"
+      end
+
+
+      
+      
+      out.puts "</channel>\n</rss>"
+      out.close
+    else
+      if param('verbose') 
+        puts "Skipping regeneration of #{node.path}"
+      end
+    end
+  end
+
+end  

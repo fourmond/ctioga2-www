@@ -6,6 +6,8 @@ inMenu: true
 h2. News
 
 The news items displayed below are a copy of the news posted at the
-"rubyforge project page":http://rubyforge.org/news/?group_id=8218
+"rubyforge project page":http://rubyforge.org/news/?group_id=8218.
+
+A "RSS feed":news.xml is available.
 
 {news:}

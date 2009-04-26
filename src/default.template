@@ -39,7 +39,9 @@
 	  <div id="sidebar">
 	    <h2>Welcome!</h2>
 	    <p><a href="{relocatable: /index.page}">ctioga2</a> is a
-	      powerful polymorphic non-interactive plotting program.
+	      powerful 
+	      <a href="{relocatable: /polymorphic.page}">polymorphic</a>
+	      non-interactive plotting program.
 	    </p>
 
 	    <h2>Pages:</h2>

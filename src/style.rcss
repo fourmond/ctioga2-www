@@ -185,12 +185,14 @@ h3 {
 
 #sidebar ul{
              list-style:none;
-             font-size: 90%;
+             font-size: 80%;
              margin:0;
              padding:0 0 15px 10px;
 }
 
-#sidebar p { font-size: 90%; }
+/* Avoid shrinking to infinity */
+#sidebar ul ul {font-size: 100%;  }
+#sidebar p { font-size: 80%; }
 
 
 /* Various styles */

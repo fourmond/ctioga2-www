@@ -1,0 +1,20 @@
+---
+title: ctioga2 documentation
+inMenu: true
+directoryName: Documentation
+orderInfo: -1
+---
+h2. ctioga2 documentation
+
+Here be ctioga2 documentation:
+
+* backends
+* commands (and options)
+* command-line/command files
+* a list of all commands ?
+* manual page
+* examples
+* types: points, distances, and so on (see overlap with the manual
+  page ?)
+* some things would probably have to be generated on-the-fly from the
+  source code ?

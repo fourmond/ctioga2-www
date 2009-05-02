@@ -144,4 +144,5 @@ Colors.title_underline = Colors.titles
 Colors.sidebar = HTMLColor.black.mix_with(HTMLColor.white, 0.6)
 Colors.sidebar = HTMLColor.black
 
-
+# The colors for generated documentation
+Colors.doc_title = HTMLColor.new("#1f7172")

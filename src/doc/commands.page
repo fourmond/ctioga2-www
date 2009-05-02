@@ -5,7 +5,9 @@ inMenu: true
 h2. ctioga2's commands
 
 In this page are described all the commands known to @ctioga2@. This
-page is generated from the inline documentation of @ctioga2@.
+page is generated from the inline documentation of
+@ctioga2@. Arguments to the commands, are links to the
+corresponding "type":types.html. So are options.
 
 <notextile>
 {execute: {command: ctioga2 --write-html-commands, processOutput:

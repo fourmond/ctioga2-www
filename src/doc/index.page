@@ -6,6 +6,8 @@ orderInfo: -1
 ---
 h2. ctioga2 documentation
 
+First, read "that":getting-started.html to get started.
+
 @ctioga2@ is organized into two distinct elements:
 * so-called "backends", whose job is to acquire data from whichever
   source you need (text files, mathematical formulas, databases, plain

@@ -1,0 +1,16 @@
+---
+title: Getting started !
+inMenu: true
+---
+h2. Getting started with @ctioga2@
+
+Here, a very small tutorial, demonstrating:
+* a simple usage from command-line
+* the use of options (for labels, say) from command-line
+* the same example using a file (and how to play with a file)
+* the existence of options to the plot command
+* the use of options for plots on command-line
+* the existence of style-sets...
+
+There should also be a kind of picture explaining how the style is
+chosen for every style item.

@@ -12,6 +12,8 @@
     <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
     <link rel="stylesheet" type="text/css" 
 	  href="{relocatable:style.css}" media="screen,projection" />
+    <link rel="alternate" type="application/rss+xml" 
+	  title="ctioga2 news" href="{relocatable:news.xml}" />
     <title>{title: }</title>
   </head>
 

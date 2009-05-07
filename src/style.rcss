@@ -196,17 +196,23 @@ h3 {
 
 
 /* Various styles */
-.examples, .examples-ctioga, .examples-gnuplot { 
-            overflow: auto;
-            text-align: left;
-            padding: 0.5em;
-            background-color: <%= Colors.pre_bg %>;
-            border: 1pt solid <%= Colors.borders %>;
-            }
+/* .examples-ctioga, .examples-gnuplot {  */
+/*             overflow: auto; */
+/*             text-align: left; */
+/*             padding: 0.5em; */
+/*             background-color: <%= Colors.pre_bg %>; */
+/*             border: 1pt solid <%= Colors.borders %>; */
+/*             } */
 
-.examples { 
-            margin: 2% 10% 2% 5%;
-            }
+.examples-cmdline, 
+.examples-cmdfile {overflow: auto;
+                    text-align: left;
+                    padding: 0.5em;
+                    background-color: <%= Colors.pre_bg %>;
+                    border: 1pt solid <%= Colors.borders %>;
+                    margin: 2% 10% 2% 5%;
+                    }
+
 
 /* News items: */
 h3.news { 
@@ -225,3 +231,6 @@ h4 { color: <%= Colors.doc_title %>;
      border-bottom: 1px solid <%= Colors.doc_title %>;
      }
 
+
+p.synopsis { margin-top: 0;
+             margin-bottom: 0.6em;}

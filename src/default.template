@@ -80,7 +80,10 @@
       </div> <!-- End of center division -->
 
       <div id="footer" class="fullwidth">
-	<p><a href="#header">Back to top</a>
+	  <p style="float: left;">
+	  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11-blue"
+	  alt="Valid XHTML 1.1" height="31" width="88" /></a></p>
+	  <p><a href="#header">Back to top</a>
 	  &copy; 2007, 2008, 2009 by 
 	  Vincent Fourmond and Jean-Julien Fleck| Generated
 	  by <a href="http://webgen.rubyforge.org">webgen</a><br/>      

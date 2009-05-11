@@ -230,7 +230,3 @@ span.bold { font-weight: bold; }
 h4 { color: <%= Colors.doc_title %>;
      border-bottom: 1px solid <%= Colors.doc_title %>;
      }
-
-
-p.synopsis { margin-top: 0;
-             margin-bottom: 0.6em;}

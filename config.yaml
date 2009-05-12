@@ -9,3 +9,5 @@ Tag/SVNAuthor:
     bpaxton: "Bill Paxton"
   defaultName: "Jean-Julien Fleck"
   # Jean-Julien is reponsible for pages not in SVN
+File/CopyHandler:
+  paths: [ "**/*.dat" ]

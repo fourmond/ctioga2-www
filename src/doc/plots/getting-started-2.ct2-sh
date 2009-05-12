@@ -1,0 +1,1 @@
+ctioga2 -X data.dat data.dat@1:3 --title 'A nice title'

@@ -76,6 +76,7 @@ class NewsFeed < FileHandlers::DefaultHandler
   param 'title', 'News about ctioga2', "The title of the feed"
   param 'link', "http://ctioga2.rubyforge.org", "The link from the description"
   param 'description', "All news about ctioga2", "Description"
+  param 'verbose', false, "Whether to be verbose or quiet"
 
   def initialize( plugin_manager )
     super

@@ -49,7 +49,42 @@ bigger, and the @/color@ option to turn it blue.
 
 {ctCmdline: plots/getting-started-3.ct2-sh }
 
+h3. Command files
 
+One of the uniques features of @ctioga2@ is that it is possible to use
+it both on the command-line and from a command-file. Commands from the
+command-file most often have the same name as when they are used from
+the command-line (the double-dash form). They take the same
+options. The following file is the exact translation of the
+command-line above:
+
+{ctCmdfile: plots/getting-started-4.ct2 }
+
+You run @ctioga2@ on the command-file this way:
+
+<pre class='examples-cmdline'>
+ctioga2 -f getting-started-4.ct2
+</pre>
+
+@ctioga2@ does not care about the extension of the files. @.ct2@ is
+neat though.
+
+h3. Intermixing command files and command line
+
+Command files can be mixed freely with command-line. Observe the
+effect:
+
+{ctCmdline: plots/getting-started-5.ct2-sh }
+
+Here, in addition to what is specified in the command file, we plot
+<code>data.dat@'$1:$2*0.5'</code> *before* the command-file and
+<code>data.dat@'$1:0.5 * ($2-$3)'</code> *after* the
+command-file. These datasets also demonstrate another possibility of
+@ctioga2@: arbitrary expressions can be applied to columns: just stick
+a dollar sign before all column numbers. You can arbitrarily mix
+columns.
+
+TODO: finish this page
 
 
 Here, a very small tutorial, demonstrating:

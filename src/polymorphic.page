@@ -16,7 +16,7 @@ different ways:
 
 For instance, running
 
-<pre class='examples'>
+<pre class='examples-cmdline'>
 ctioga2 --title 'A nice title, for sure' --math 'sin(x)' \
     -x 'The X label' -y 'The Y label'
 </pre>
@@ -24,7 +24,7 @@ ctioga2 --title 'A nice title, for sure' --math 'sin(x)' \
 produces the same graph as running @ctioga2 -f@ on a file containing
 this:
 
-<pre class='examples'>
+<pre class='examples-cmdfile'>
 title('A nice title, for sure')
 math()
 plot('sin(x)')

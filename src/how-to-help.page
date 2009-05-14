@@ -4,4 +4,21 @@ inMenu: true
 ---
 h2. How to help @ctioga2@ development ?
 
-@ctioga2@ is developed by volunteers during their free time. 
+@ctioga2@ is developed by volunteers during their free time. So help
+is always welcome. Here are various things where you could get
+involved:
+
+* Documentation: @ctioga2@ is always in dire need of clear and precise
+  documentation assorted with good examples. If you like to write but
+  not too much to code, this is a job for you.
+* Porting features from the old @ctioga@: @ctioga2@ is far behind
+  @ctioga@ in terms of te quantity of features implemented, even if
+  what is already implemented is now much better done. Pick up what
+  you need and code !
+* Adding new features to @ctioga2@. You need something ? Just write it
+  !
+
+In any case, for help and advice, either use the
+"forums":http://rubyforge.org/forum/?group_id=8218 or the
+"@ctioga2-users@":http://rubyforge.org/mailman/listinfo/ctioga2-users
+mailing list.

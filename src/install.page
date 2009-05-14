@@ -2,6 +2,31 @@
 title: Installation
 inMenu: true
 ---
+
+h2. @ctioga2@ prerequisites
+
+To have a working copy of @ctioga2@, you need :
+
+* "Ruby":http://www.ruby-lang.org/en/;
+* a LaTeX distribution, such as "TeXLive":http://www.tug.org/texlive/;
+* a recent version of "Tioga":http://tioga.rubyforge.org.
+
 h2. Installation
 
-installation instructions...
+So far, @ctioga2@ has not been released as a tarball, but you can get
+it from the SVN repository. For that, get a "SVN
+client":http://subversion.tigris.org/ and get a working copy of the
+repository using this command:
+
+<pre class='examples-cmdline'>
+svn checkout http://ctioga2.rubyforge.org/svn/trunk/ctioga2
+</pre>
+
+@ctioga2@ is using
+"@setup.rb@":http://i.loveruby.net/en/projects/setup/doc/usage.html
+for handling its installation. In short, in the @ctioga2/@ directory,
+this should get you started, as @root@:
+
+<pre class='examples-cmdline'>
+ruby setup.rb
+</pre>

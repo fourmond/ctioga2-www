@@ -1,0 +1,2 @@
+ctioga2 data.dat@'$1:$2*0.5' -f getting-started-4.ct2 \
+	data.dat@'$1:0.5 * ($2-$3)'

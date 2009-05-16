@@ -208,9 +208,16 @@ h3 {
 .examples-cmdfile {overflow: auto;
                     text-align: left;
                     padding: 0.5em;
-                    background-color: <%= Colors.pre_bg %>;
-                    border: 1pt solid <%= Colors.borders %>;
                     margin: 2% 10% 2% 5%;
+                    }
+.examples-cmdline { 
+                    background-color: <%= Colors.cmdline_bg %>;
+                    border: 1px solid <%= Colors.cmdline_border %>;
+                    }
+
+.examples-cmdfile { 
+                    background-color: <%= Colors.cmdfile_bg %>;
+                    border: 1px solid <%= Colors.cmdfile_border %>;
                     }
 
 p.example-image { 

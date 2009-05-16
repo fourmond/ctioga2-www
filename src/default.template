@@ -10,6 +10,9 @@
 	  content="ctioga2, ctioga, plotting program, polymorphic" />
     <meta name="author" content="Vincent Fourmond" />
     <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
+    <!-- Google webmaster tools verification -->
+    <meta name="verify-v1" 
+	  content="mBUMbbHfIu3ElH8ZTo9JIfMhnCOtX9YmeA2dZfLPp6k=" />
     <link rel="stylesheet" type="text/css" 
 	  href="{relocatable:style.css}" media="screen,projection" />
     <link rel="alternate" type="application/rss+xml" 
@@ -87,7 +90,7 @@
 	</p>
       </div>
 
-    </div> <!-- of the main wrap... -->
+    </div> <!-- end of the main wrap... -->
     <!-- Google analytics code -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -98,6 +101,6 @@ try {
 var pageTracker = _gat._getTracker("UA-940352-4");
 pageTracker._trackPageview();
 } catch(err) {}</script>
-    <!-- Enf of Google analytics code -->
+    <!-- End of Google analytics code -->
   </body>
 </html>

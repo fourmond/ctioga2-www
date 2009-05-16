@@ -125,7 +125,7 @@ $bg_away_color = HTMLColor.white # The color in a faraway distance
 $bg_color = HTMLColor.white      # The real background color
 $bg_sides_color = HTMLColor.new("#B0B0B0") # The color just on the sides of the text
 $bg_sides_color = HTMLColor.new("#8ed9d9")
-$bg_sides_color = HTMLColor.new("#1284cd")
+$bg_sides_color = HTMLColor.new("#55ab2f")
 # $bg_sides_color = HTMLColor.new("#B0B0FF") # The color just on the sides of the text
 $bg_stop_color = $bg_sides_color.mix_with(HTMLColor.white, 0.6)
 
@@ -141,8 +141,14 @@ Colors.titles = Colors.main_title
 Colors.title_underline = Colors.titles.mix_with(HTMLColor.white, 0.5)
 Colors.title_underline = Colors.titles
 
-Colors.sidebar = HTMLColor.black.mix_with(HTMLColor.white, 0.6)
+# Colors.sidebar = HTMLColor.black.mix_with(HTMLColor.white, 0.6)
 Colors.sidebar = HTMLColor.black
 
 # The colors for generated documentation
 Colors.doc_title = HTMLColor.new("#1f7172")
+
+Colors.cmdline_border = HTMLColor.new("#037c9a")
+Colors.cmdline_bg = Colors.cmdline_border.mix_with(HTMLColor.white, 0.2)
+
+Colors.cmdfile_border = HTMLColor.new("#4a039a")
+Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)

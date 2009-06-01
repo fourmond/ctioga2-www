@@ -37,7 +37,7 @@ body {
 
 /* Class for things that take the whole width */
 .fullwidth { 
-             width: <%= Full.width %>;
+             width: <%= Full.width %>px;
              padding: 0;
              margin: 0;
 }

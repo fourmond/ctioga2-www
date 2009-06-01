@@ -50,6 +50,16 @@ body {
          margin: 0;
 }
 
+/* Class for quick-jump blocks */
+.quick-jump { 
+              padding: 4px 4px 4px 10px;
+              margin: 0;
+              font-size: 80%;
+              float: right;
+              background: white;
+}
+
+
 /* Header-related things: */
 #header-top { 
               background: <%= $bg_color %> url("style-images/header-top-background.png") center center; 

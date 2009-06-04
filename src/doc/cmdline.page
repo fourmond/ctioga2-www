@@ -1,0 +1,16 @@
+---
+title: Command-line options
+inMenu: true
+---
+h2. Command line options
+
+This page contains a summary of command-line options for @ctioga2@.
+It is generated from the inline documentation of @ctioga2@.
+
+<notextile>
+{execute: {command: ctioga2 --write-html-commandline, processOutput:
+false, escapeHTML: false }}
+</notextile>
+
+Generated for @ctioga2@ version: 
+<notextile><span class='bold'>{execute: ctioga2 --version-raw}</span></notextile>

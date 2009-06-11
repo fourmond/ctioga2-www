@@ -152,3 +152,6 @@ Colors.cmdline_bg = Colors.cmdline_border.mix_with(HTMLColor.white, 0.2)
 
 Colors.cmdfile_border = HTMLColor.new("#4a039a")
 Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)
+
+Colors.examples_border = $bg_sides_color
+Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)

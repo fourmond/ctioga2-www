@@ -215,11 +215,12 @@ h3 {
 /*             } */
 
 .examples-cmdline, 
-.examples-cmdfile {overflow: auto;
-                    text-align: left;
-                    padding: 0.5em;
-                    margin: 2% 10% 2% 5%;
-                    }
+.examples-cmdfile, 
+.examples { overflow: auto;
+            text-align: left;
+            padding: 0.5em;
+            margin: 2% 10% 2% 5%;
+            }
 .examples-cmdline { 
                     background-color: <%= Colors.cmdline_bg %>;
                     border: 1px solid <%= Colors.cmdline_border %>;
@@ -229,6 +230,11 @@ h3 {
                     background-color: <%= Colors.cmdfile_bg %>;
                     border: 1px solid <%= Colors.cmdfile_border %>;
                     }
+
+.examples { 
+            background-color: <%= Colors.examples_bg %>;
+            border: 1px solid <%= Colors.examples_border %>;
+            }
 
 p.example-image { 
           text-align: center;
@@ -251,4 +257,10 @@ span.bold { font-weight: bold; }
 h4 { color: <%= Colors.doc_title %>;
      border-bottom: 1px solid <%= Colors.doc_title %>;
      }
+
+/* Summary table of command-lines switches */
+th { 
+     padding-top: 6px;
+     padding-bottom: 2px;
+ }
 

@@ -1,0 +1,33 @@
+---
+title: ctioga to ctioga2
+inMenu: true
+---
+h2. How to port from @ctioga@ to @ctioga2@
+
+This page is of interest for people who are using 
+"@ctioga@":http://sciyag.rubyforge.org/ctioga
+and who would like to switch to @ctioga2@.
+
+For the simplest plots, simply changing @ctioga@ to @ctioga2@ should
+do the trick. The rest of this page will, _eventually_, cover the most
+important specific details.
+
+h3. Themes
+
+Support for themes was dropped completely in @ctioga2@, as they were
+more a nuisance than a gain. Equivalent functionality should be easy
+to obtain with the various @-set@ commands, especially now that the
+sets can be specified easily on the command-line:
+
+<pre class='examples-cmdline'>
+ctioga2 --color-set 'Blue|Green|Pink|Orange' 'sin(x + 0##3)'
+</pre>
+
+
+h3. Unimplemented features
+
+As of now, many of @ctioga@'s features have not been ported yet to
+@ctioga2@. The reason is simply that I have not had the time or seen
+the utility of those features. If you desperately need them, please
+ping me at
+"@ctioga2-users@":http://rubyforge.org/mailman/listinfo/ctioga2-users.

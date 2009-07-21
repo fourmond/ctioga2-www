@@ -1,0 +1,23 @@
+---
+title: Status
+inMenu: true
+---
+h2. @ctioga2@ status
+
+Currently, @ctioga2@ is in a alpha stage, and lacks several features
+that were important in @ctioga@, such as:
+* tangents
+* error bars
+* filled curves
+* histograms
+* many filters 
+* transparency
+* region delimitation and coloring
+* double X or Y graphs
+* and many more for now
+
+However, @ctioga2@ has already proven much easier to maintain, develop
+and extend. There are quite a few functionalities that were completely
+absent in @ctioga@, mostly because they were too cumbersome or too
+delicate to implement. In particular, @ctioga2@ offers much more
+control over the look of things that the old @ctioga@ did.

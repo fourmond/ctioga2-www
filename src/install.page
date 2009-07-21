@@ -13,20 +13,51 @@ To have a working copy of @ctioga2@, you need :
 
 h2. Installation
 
-So far, @ctioga2@ has not been released as a tarball, but you can get
-it from the SVN repository. For that, get a "SVN
-client":http://subversion.tigris.org/ and get a working copy of the
-repository using this command:
+h3. Tarballs
+
+Download the latest tarball of @ctioga2@ at the 
+"download page":http://rubyforge.org/frs/?group_id=8218. Let us assume
+the file is named @ctioga2-0.0.tar.gz@. 
+
+First, extract the tarball this way:
+
+<pre class='examples-cmdline'>
+tar xvzf ctioga2-0.0.tar.gz
+</pre>
+
+Then @cd@ to the directory created. Here, it is @ctioga2-0.0@:
+
+<pre class='examples-cmdline'>
+cd ctioga2-0.0
+</pre>
+
+@ctioga2@ is using
+"@setup.rb@":http://i.loveruby.net/en/projects/setup/doc/usage.html
+for handling its installation. In short, run this command as root.
+
+<pre class='examples-cmdline'>
+ruby setup.rb
+</pre>
+
+h3. Gems
+
+Gems are published for @ctioga2@. Installing them is just a matter of
+running:
+
+<pre class='examples-cmdline'>
+gem install ctioga2
+</pre>
+
+h3. SVN repository
+
+The code of @ctioga2@ is developed in a 
+"SVN repository":http://rubyforge.org/scm/?group_id=8218. To make use of
+it, get a "SVN client":http://subversion.tigris.org/ and get a working
+copy of the repository using this command:
 
 <pre class='examples-cmdline'>
 svn checkout http://ctioga2.rubyforge.org/svn/trunk/ctioga2
 </pre>
 
-@ctioga2@ is using
-"@setup.rb@":http://i.loveruby.net/en/projects/setup/doc/usage.html
-for handling its installation. In short, in the @ctioga2/@ directory,
-this should get you started, as @root@:
+Then use the instructions as above for the installation using the tarball.
 
-<pre class='examples-cmdline'>
-ruby setup.rb
-</pre>

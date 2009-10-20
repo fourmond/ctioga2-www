@@ -1,0 +1,22 @@
+---
+title: Backends
+inMenu: true
+---
+h2. ctioga2's backends
+
+@ctioga2@ acquires all the data it plots using *backends*: these are
+abstract sources of data that can map to basically anything: text
+files, mathematical formulas, gnuplot files, and why not, differential
+equations, binary data, databases... They are selected using the 
+"command":commands.html corresponding to their name.
+
+This page documents all the backends for @ctioga2@; it is generated
+automatically from the inline documentation of @ctioga2@.
+
+<notextile>
+{execute: {command: ctioga2 --write-html-backends, processOutput:
+false, escapeHTML: false }}
+</notextile>
+
+Generated for @ctioga2@ version: 
+<notextile><span class='bold'>{execute: ctioga2 --version-raw}</span></notextile>

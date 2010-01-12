@@ -9,6 +9,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   param 'file', false, "The file containing the command-line"
   param 'alt', false, 'The alternative text'
   param 'cls', 'examples-cmdline', "The class used for the <pre> elements"
+  # Todo: make that relocatable ?
+  param 'cmdbase', "/doc/commands.html", 'The base URL for commands links. False to deactivate'
   
   set_mandatory 'file', true
 
@@ -22,7 +24,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
       return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
         begin
-          IO.readlines(filename).join 
+          link_commands(IO.readlines(filename).join)
         rescue
           "<b>IO problem reading file #{cmdline}</b>"
         end  + "</pre>" +
@@ -31,6 +33,21 @@ class CTiogaCmdlineTag < Tags::DefaultTag
         "<img src=\"#{thumb}\" alt=\"#{alt}\"/></a>"
     else
       return "Ourgh"
+    end
+  end
+
+  # Transforms commands into links to the appropriate point in the
+  # documentation.
+  def link_commands(string)
+    base = param('cmdbase')
+    if base
+      # TODO: also process single letter options, though it is
+      # significantly more difficult.
+      return string.gsub(/--(\S+)/) do 
+        a = "<a href=\"#{base}#command-#{$1}\">--#{$1}</a>"
+      end
+    else
+      return string
     end
   end
 
@@ -48,5 +65,19 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
   param 'file', false, "The file containing the command-line"
 
   set_mandatory 'file', true
+
+  # Transforms commands into links to the appropriate point in the
+  # documentation.
+  def link_commands(string)
+    base = param('cmdbase')
+    if base
+      return string.gsub(/([^ ()\n\t]+)\(/) do 
+        a = "<a href=\"#{base}#command-#{$1}\">#{$1}</a>("
+      end
+    else
+      return string
+    end
+  end
+
 
 end

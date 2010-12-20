@@ -19,248 +19,204 @@ http://andreasviklund.com */
 <% $: << "./src/css" %>
 <% load "style.rb" %>
 
-body {
-      background:<%= $bg_color %> url("style-images/background.png") top center repeat-y;
-      margin:0;
-      padding:0;
+/* The outermost container */
+.container {
+    width:850px;margin:0 auto;
 }
 
-/************************************************************/
-/* The main layout elements */
-
-/* The main wrap, ie where everything ends up */
-#full{
-       width:<%= Full.width %>px;
-       padding:0;
-       margin: 5px auto 10px;
+/* Rounded things */
+.rounded { 
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
 }
 
-/* Class for things that take the whole width */
-.fullwidth { 
-             width: <%= Full.width %>px;
-             padding: 0;
-             margin: 0;
+.bar {
+    padding: 8px;
+    margin: 8px 0px;
+    text-align: center;
+    background:<%= Colors.bars_bg %>;
 }
 
-/* Class for dummy blocks here only for rounding the corners */
-.round { 
-         width: <%= Full.width %>px;
-         height: <%= Round.ray %>px;
-         padding: 0;
-         margin: 0;
-}
 
 /* Class for quick-jump blocks */
-.quick-jump { 
+.quick-jump {
               padding: 4px 4px 4px 10px;
-              margin: 0;
-              font-size: 80%;
+              margin: 5px;
+              font-size: 90%;
               float: right;
               background: white;
+	      border: 1px solid black;
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
 }
 
 
-/* Header-related things: */
-#header-top { 
-              background: <%= $bg_color %> url("style-images/header-top-background.png") center center; 
-}
-
-#header-bottom { 
-                 background: <%= $bg_color %> url("style-images/header-bottom-background.png") center center; 
-                 }
-
-#header-inner {
-                width:<%= Full.usable_width %>px;
-                margin: <%= Round.neg_margin %>px auto;
-          }
-/* Last but not least: the background for the header: */
-#header {
-          background: <%= $bg_color %> url("style-images/header-background.png") center repeat-y; 
-          }
-
-
-/* Now, things about the center */
-#center-top {
-              background: <%= $bg_color %> url("style-images/header-top-background.png") center center; 
-              }
-
-
-#center-bottom { 
-                 background: <%= $bg_color %> url("style-images/header-bottom-background.png") center center; 
-                 }
-
-#center-inner {
-                width:<%= Full.usable_width %>px;
-                margin: <%= Round.neg_margin %>px auto;
-          }
-
-#center { 
-          background: <%= $bg_color %> url("style-images/header-background.png") center repeat-y; 
-}
-
-#content{
-          width:<%= Contents.width %>px;
-          text-align:left;
-          margin:0;
-          padding:<%= Contents.padding %>px;
-          float: right;
-          }
-
-#sidebar{
-          width:<%= SideBar.width %>px;
-          float: left;
-          padding:<%= SideBar.padding %>px;
-}
-
-#footer {
-          width:<%= Full.width %>px;
-          text-align: right;
-          font-size: 75%;
-          }
-
-/* Here come the fine details */
-
-
-/* The text at the top of the page */
-#toplinks { 
-            text-align: right;
-            font-size: 75%;
-            }
-
-
-
-h1{
-    font-size:200%;
-    color: <%= Colors.main_title %>;
-}
-
-h1.maintitle {
-               font-size: 180%;
-               text-align: center;
-}
-
-/* Links....  */
-/* We dont color links */
-a:hover{text-decoration:underline;}
-a { color:<%= Colors.titles %>;
-    font-weight: bold;
-    text-decoration:none;
-    }
-
-/* We don't want links to show in the main titles/slogans */
-h1 a{text-transform:none; color:<%= Colors.main_title %>;}
-
-
-#slogan { 
-          width: <%= SideBar.width %>px;
-          float: left;
-          text-align: center;
-          }
-
-#slogan h1 { 
+#titlebar h1 {
              padding-bottom: 0;
-             margin-bottom: -0.5em;
+             margin-bottom: 0;
              margin-top: 0em;
 }
 
-#slogan p {
+#titlebar p {
             font-size: 110%;
             font-weight: bold;
             padding: 0;
+	    margin: 0;
             font-family: sans;
             letter-spacing: -0.05em;
             color: <%= Colors.slogan %>;
 }
 
-/* Fonts of headers: */
-h1, h2, h3{ 
-         font-family: sans;
-         font-weight: bold;
-         }
-
-h2, h3 { color: <%= Colors.titles %>; }
-
-h2 {
-     border-bottom:4px solid <%= Colors.title_underline %>;
-     }
-
-h3 {
-     border-bottom:2px solid <%= Colors.title_underline %>;
-     }
-
-
-#sidebar { 
-           color: <%= Colors.sidebar %>;
-           }
-
-#sidebar ul{
-             list-style:none;
-             font-size: 80%;
-             margin:0;
-             padding:0 0 15px 10px;
+.webgen-menu-horiz ul {
+    padding: 0;
+    margin: 2px;
 }
 
-/* Avoid shrinking to infinity */
-#sidebar ul ul {font-size: 100%;  }
-#sidebar p { font-size: 80%; }
+.webgen-menu-horiz li {
+    padding: 0.5em;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.webgen-menu-submenu {
+    font-size: 90%;
+}
+
+/* #footer { */
+/*           width:<%= Full.width %>px; */
+/*           text-align: right; */
+/*           font-size: 75%; */
+/*           } */
+
+/* /\* Here come the fine details *\/ */
 
 
-/* Various styles */
-/* .examples-ctioga, .examples-gnuplot {  */
-/*             overflow: auto; */
-/*             text-align: left; */
-/*             padding: 0.5em; */
-/*             background-color: <%= Colors.pre_bg %>; */
-/*             border: 1pt solid <%= Colors.borders %>; */
+/* /\* The text at the top of the page *\/ */
+/* #toplinks {  */
+/*             text-align: right; */
+/*             font-size: 75%; */
 /*             } */
 
-.examples-cmdline, 
-.examples-cmdfile, 
+
+
+/* h1{ */
+/*     font-size:200%; */
+/*     color: <%= Colors.main_title %>; */
+/* } */
+
+/* h1.maintitle { */
+/*                font-size: 180%; */
+/*                text-align: center; */
+/* } */
+
+/* /\* Links....  *\/ */
+/* /\* We dont color links *\/ */
+/* a:hover{text-decoration:underline;} */
+/* a { color:<%= Colors.titles %>; */
+/*     font-weight: bold; */
+/*     text-decoration:none; */
+/*     } */
+
+/* /\* We don't want links to show in the main titles/slogans *\/ */
+/* h1 a{text-transform:none; color:<%= Colors.main_title %>;} */
+
+
+/* #slogan {  */
+/*           width: <%= SideBar.width %>px; */
+/*           float: left; */
+/*           text-align: center; */
+/*           } */
+
+
+/* /\* Fonts of headers: *\/ */
+/* h1, h2, h3{  */
+/*          font-family: sans; */
+/*          font-weight: bold; */
+/*          } */
+
+/* h2, h3 { color: <%= Colors.titles %>; } */
+
+/* h2 { */
+/*      border-bottom:4px solid <%= Colors.title_underline %>; */
+/*      } */
+
+/* h3 { */
+/*      border-bottom:2px solid <%= Colors.title_underline %>; */
+/*      } */
+
+
+/* #sidebar {  */
+/*            color: <%= Colors.sidebar %>; */
+/*            } */
+
+/* #sidebar ul{ */
+/*              list-style:none; */
+/*              font-size: 80%; */
+/*              margin:0; */
+/*              padding:0 0 15px 10px; */
+/* } */
+
+/* /\* Avoid shrinking to infinity *\/ */
+/* #sidebar ul ul {font-size: 100%;  } */
+/* #sidebar p { font-size: 80%; } */
+
+
+/* /\* Various styles *\/ */
+/* /\* .examples-ctioga, .examples-gnuplot {  *\/ */
+/* /\*             overflow: auto; *\/ */
+/* /\*             text-align: left; *\/ */
+/* /\*             padding: 0.5em; *\/ */
+/* /\*             background-color: <%= Colors.pre_bg %>; *\/ */
+/* /\*             border: 1pt solid <%= Colors.borders %>; *\/ */
+/* /\*             } *\/ */
+
+.examples-cmdline,
+.examples-cmdfile,
 .examples { overflow: auto;
             text-align: left;
             padding: 0.5em;
             margin: 2% 10% 2% 5%;
             }
-.examples-cmdline { 
+.examples-cmdline {
                     background-color: <%= Colors.cmdline_bg %>;
                     border: 1px solid <%= Colors.cmdline_border %>;
                     }
 
-.examples-cmdfile { 
+.examples-cmdfile {
                     background-color: <%= Colors.cmdfile_bg %>;
                     border: 1px solid <%= Colors.cmdfile_border %>;
                     }
 
-.examples { 
+.examples {
             background-color: <%= Colors.examples_bg %>;
             border: 1px solid <%= Colors.examples_border %>;
             }
 
-p.example-image { 
+p.example-image {
           text-align: center;
           }
 
 
-/* News items: */
-h3.news { 
-          border-bottom: none;
-          font-size: 110%;
-          }
+/* /\* News items: *\/ */
+/* h3.news {  */
+/*           border-bottom: none; */
+/*           font-size: 110%; */
+/*           } */
 
-p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;}
-span.news-author { font-weight: bold; }
-span.news-date { font-style: italic; }
+/* p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;} */
+/* span.news-author { font-weight: bold; } */
+/* span.news-date { font-style: italic; } */
 
-span.bold { font-weight: bold; }
+/* span.bold { font-weight: bold; } */
 
-/* Automatically generated documentation */
-h4 { color: <%= Colors.doc_title %>;
-     border-bottom: 1px solid <%= Colors.doc_title %>;
-     }
+/* /\* Automatically generated documentation *\/ */
+/* h4 { color: <%= Colors.doc_title %>; */
+/*      border-bottom: 1px solid <%= Colors.doc_title %>; */
+/*      } */
 
-/* Summary table of command-lines switches */
-th { 
-     padding-top: 6px;
-     padding-bottom: 2px;
- }
+/* /\* Summary table of command-lines switches *\/ */
+/* th {  */
+/*      padding-top: 6px; */
+/*      padding-bottom: 2px; */
+/*  } */
 

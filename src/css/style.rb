@@ -35,7 +35,7 @@ Full.usable_width = Full.width - 2 * Full.margin
 
 Contents = OpenStruct.new
 Contents.padding = 3
-Contents.width = 750
+Contents.width = 788
 
 SideBar = OpenStruct.new
 SideBar.padding = 3
@@ -155,3 +155,5 @@ Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)
 
 Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
+
+Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)

@@ -6,8 +6,8 @@ h2. Command line switches
 
 This page contains a summary of command-line switches for
 @ctioga2@. Every single of the switches corresponds to one of
-@ctioga2@'s "commands":commands.html. This page is automatically
-generated from the inline documentation of @ctioga2@.
+<code>ctioga2</code>'s "commands":commands.html. This page is
+automatically generated from the inline documentation of @ctioga2@.
 
 <notextile>
 {execute: {command: ctioga2 --write-html-commandline, processOutput:

@@ -7,33 +7,51 @@
     <meta name="description" 
 	  content="ctioga2: the polymorphic plotting program" />
     <meta name="keywords" 
-	  content="ctioga2, ctioga, program, polymorphic, scientific data" />
+	  content="ctioga2, ctioga, plotting, polymorphic, 
+		   scientific data" />
     <meta name="author" content="Vincent Fourmond" />
     <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
     <!-- Google webmaster tools verification -->
     <meta name="verify-v1" 
 	  content="mBUMbbHfIu3ElH8ZTo9JIfMhnCOtX9YmeA2dZfLPp6k=" />
-    <!-- End of webmaster tools verification -->
-    <!-- <link rel="stylesheet" type="text/css"  -->
-    <!-- 	  href="{relocatable:css/style.css}" media="screen,projection" /> -->
+    <!-- end of google webmaster tools verification -->
     <link rel="stylesheet" type="text/css"
-    	  href="{resource: webgen-css}" media="screen,projection" />
+	  href="{resource: webgen-css}" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" 
+	  href="{relocatable:css/typography.css}" media="screen,projection" />
+    <link rel="stylesheet" type="text/css"
+    	  href="{relocatable:css/style.css}" media="screen,projection" />
     <link rel="alternate" type="application/rss+xml" 
 	  title="ctioga2 news" href="{relocatable:news.xml}" />
     <title>{title: }</title>
   </head>
 
   <body>
-    <div id="titlebar">
-      ctioga2, the polymorphic plotting program
-    </div>
-    <div id="menubar">
-      {menu: {menuStyle: horizontal, options: {startLevel: 1, maxLevels: 2}}}
-
-      <!-- {menu: {menuStyle: horizontal, options: {startLevel: 2, maxLevels: 2}}} -->
-    </div>
-    <div id="main">
-      {block: }
+    <div class="container">
+      <div id="titlebar" class="rounded bar">
+	<h1><a href="{relocatable:/}">ctioga2</a></h1>
+	<p>the polymorphic plotting program</p>
+      </div>
+      <div id="menubar" class="rounded bar">
+	{menu: {menuStyle: horizontal, options: {startLevel: 1, maxLevels: 2}}}
+      </div>
+      <div id="main">
+	{block: }
+      </div>
+      <div id="footer">
+	<p style="float: left; padding-right: 5px;">
+	  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11-blue"
+	  alt="Valid XHTML 1.1" height="31" width="88" /></a>
+	  <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="width:88px;height:31px"
+	  src="http://jigsaw.w3.org/css-validator/images/vcss-blue" 
+	  alt="Valid CSS!" /></a>
+	</p>
+	<p>&copy; 2007, 2008, 2009 and 2010 by 
+	  Vincent Fourmond and Jean-Julien Fleck | Generated
+	  by <a href="http://webgen.rubyforge.org">webgen</a><br/>      
+	  This page was last modified on <b>{mDate:}</b> by <b>{svnAuthor:}</b>
+	</p>
+      </div>
     </div>
     <!-- Google analytics code -->
 <script type="text/javascript">

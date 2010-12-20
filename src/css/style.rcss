@@ -16,7 +16,7 @@
 xhtml/css website template by Andreas Viklund -
 http://andreasviklund.com */
 
-<% $: << "./src" %>
+<% $: << "./src/css" %>
 <% load "style.rb" %>
 
 body {

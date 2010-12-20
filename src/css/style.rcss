@@ -19,6 +19,8 @@ http://andreasviklund.com */
 <% $: << "./src/css" %>
 <% load "style.rb" %>
 
+/* TODO: the background should be darker for titles with inverted colors */
+
 /* The outermost container */
 .container {
     width:850px;margin:0 auto;
@@ -209,14 +211,14 @@ p.example-image {
 
 /* span.bold { font-weight: bold; } */
 
-/* /\* Automatically generated documentation *\/ */
-/* h4 { color: <%= Colors.doc_title %>; */
-/*      border-bottom: 1px solid <%= Colors.doc_title %>; */
-/*      } */
+/* Automatically generated documentation */
+h4 { color: <%= Colors.doc_title %>;
+     border-bottom: 1px solid <%= Colors.doc_title %>;
+     }
 
-/* /\* Summary table of command-lines switches *\/ */
-/* th {  */
-/*      padding-top: 6px; */
-/*      padding-bottom: 2px; */
-/*  } */
+/* Summary table of command-lines switches */
+th {
+     padding-top: 6px;
+     padding-bottom: 2px;
+ }
 

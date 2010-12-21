@@ -36,7 +36,8 @@ http://andreasviklund.com */
     padding: 8px;
     margin: 8px 0px;
     text-align: center;
-    background:<%= Colors.bars_bg %>;
+    background:<%= Colors.bar_bg %>;
+    color:<%= Colors.bar_fg %>;
 }
 
 
@@ -114,10 +115,12 @@ http://andreasviklund.com */
 /* /\* Links....  *\/ */
 /* /\* We dont color links *\/ */
 /* a:hover{text-decoration:underline;} */
-/* a { color:<%= Colors.titles %>; */
-/*     font-weight: bold; */
-/*     text-decoration:none; */
-/*     } */
+a { color:<%= Colors.titles %>;
+    font-weight: bold;
+    text-decoration:none;
+    }
+
+.bar > a { color:<%= Colors.titles %>; }
 
 /* /\* We don't want links to show in the main titles/slogans *\/ */
 /* h1 a{text-transform:none; color:<%= Colors.main_title %>;} */

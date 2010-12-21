@@ -20,8 +20,6 @@ require 'ostruct'
 # * Write a real structure that could represent a whole "box", with:
 #   - border, background and side colors
 #   - the various parameters of the box
-# * Write a plugin that would take a hash of constants, a well-designed
-#   rsvg file, and spit out a whole series of backgrounds.
 
 # For the "main wrap", 
 Full = OpenStruct.new
@@ -135,7 +133,6 @@ Colors.main_title = HTMLColor.new("#081566")
 Colors.slogan = HTMLColor.black.mix_with(HTMLColor.white, 0.5)
 Colors.borders = $bg_sides_color
 
-
 Colors.pre_bg = Colors.borders.mix_with(HTMLColor.white, 0.2)
 Colors.titles = Colors.main_title
 Colors.title_underline = Colors.titles.mix_with(HTMLColor.white, 0.5)
@@ -156,4 +153,7 @@ Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)
 Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
 
-Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
+# Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
+Colors.bar_bg = HTMLColor.new("#107010")
+Colors.bar_fg = HTMLColor.white
+Colors.bar_link = HTMLColor.white.mix_with(Colors.titles,0.5)

@@ -1,4 +1,4 @@
-# style.rb: bases for the style computations (CSS and SVG)
+# style.rb: bases for the style 
 # Copyright 2009 by Vincent Fourmond
 # 
 # This program is free software; you can redistribute it and/or modify
@@ -20,63 +20,7 @@ require 'ostruct'
 # * Write a real structure that could represent a whole "box", with:
 #   - border, background and side colors
 #   - the various parameters of the box
-
-# For the "main wrap", 
-Full = OpenStruct.new
-# The total width of the stuff.
-Full.width = 1000
-Full.total_width = 1400
-
-# How much space to leave before anything
-Full.margin = 10
-Full.usable_width = Full.width - 2 * Full.margin
-
-Contents = OpenStruct.new
-Contents.padding = 3
-Contents.width = 788
-
-SideBar = OpenStruct.new
-SideBar.padding = 3
-SideBar.width = 200
-
-Round = OpenStruct.new
-# The ray of the rounding
-Round.ray = 15
-Round.neg_margin = -13
-
-Border = OpenStruct.new
-Border.dx = 1
-Border.width = 2
-
-Round.ray_eff = Round.ray - Border.dx
-
-
-# Total width of the background image:
-$total_width = 1400
-$mw_padding = 10
-
-$bg_away_distance = 120              # The distance after which we
-                                     # reach the 'far away color'
-
-# The width of the full-color margin of the background
-$bg_margin_bar = 2
-
-$bg_left = ($total_width - Full.width - 2*$mw_padding)/2 + 2 * $bg_margin_bar
-$bg_right = $total_width - $bg_left + 2 * $bg_margin_bar
-
-
-# The height of the background image. Should be 1 to minimize
-$bg_pix_height = 1
-
-# The height of the header
-$head_height = 90
-
-# Header vertical padding
-$head_above = 10
-$head_below = 20
-
-$head_extra_padding = 5
-
+# * write small functions for common stuff (round borders, for instance)
 
 # Colors...
 class HTMLColor
@@ -130,7 +74,7 @@ $bg_stop_color = $bg_sides_color.mix_with(HTMLColor.white, 0.6)
 
 Colors.main_title = HTMLColor.new("#389de9")
 Colors.main_title = HTMLColor.new("#081566")
-Colors.slogan = HTMLColor.black.mix_with(HTMLColor.white, 0.5)
+Colors.slogan = HTMLColor.black.mix_with(HTMLColor.white, 0.3)
 Colors.borders = $bg_sides_color
 
 Colors.pre_bg = Colors.borders.mix_with(HTMLColor.white, 0.2)
@@ -154,6 +98,14 @@ Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
 
 # Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
-Colors.bar_bg = HTMLColor.new("#107010")
+Colors.bar_bg = HTMLColor.new("#129974") # HSV: 164,88,60
 Colors.bar_fg = HTMLColor.white
-Colors.bar_link = HTMLColor.white.mix_with(Colors.titles,0.5)
+Colors.bar_link = Colors.titles
+
+# Top-left box
+Colors.box_outer_bg = HTMLColor.new("#D02020")
+Colors.box_outer_fg = HTMLColor.new("#FFFFFF")
+
+Colors.box_inner_bg = HTMLColor.new("#DDDDDD")
+Colors.box_inner_fg = HTMLColor.new("#000000")
+

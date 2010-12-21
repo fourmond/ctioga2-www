@@ -3,6 +3,16 @@ title: Home
 inMenu: true
 orderInfo: -1
 ---
+
+<div class='top-left-outer'>
+h2. News
+
+<div class='top-left-inner'>
+{news: {number: 1}}
+"News archive":http://rubyforge.org/news/?group_id=8218
+</div>
+</div>
+
 h2. What is ctioga2 ?
 
 ctioga2 is a powerful non-interactive "polymorphic":polymorphic.html
@@ -21,9 +31,6 @@ particular which mistakes to avoid. It features an original
 "polymorphic":polymorphic.html interface, which can be driven either
 using directly the command-line or through command-files.
 
-h2. "News":http://rubyforge.org/news/?group_id=8218
-
-{news: {number: 3}}
 
 h2. Support, bugs and feature requests
 

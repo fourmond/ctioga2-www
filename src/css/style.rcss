@@ -28,8 +28,8 @@ http://andreasviklund.com */
 
 /* Rounded things */
 .rounded { 
-  -moz-border-radius: 8px; 
-  -webkit-border-radius: 8px; 
+    border-radius: 8px; 
+    -moz-border-radius: 8px; 
 }
 
 .bar {
@@ -43,31 +43,64 @@ http://andreasviklund.com */
 
 /* Class for quick-jump blocks */
 .quick-jump {
-              padding: 4px 4px 4px 10px;
-              margin: 5px;
-              font-size: 90%;
-              float: right;
-              background: white;
-	      border: 1px solid black;
-  -moz-border-radius: 8px; 
-  -webkit-border-radius: 8px; 
+    padding: 4px 4px 4px 10px;
+    margin: 5px;
+    margin-right: 0px;
+    font-size: 90%;
+    float: right;
+    background: white;
+    border: 1px solid black;
+
+    -moz-border-radius: 8px; 
+    border-radius: 8px; 
+}
+
+/* Blocks at the top-right of the page */
+.top-left-outer {
+    padding: 4px;
+    margin: 5px;
+    margin-right: 0px;
+    float: right;
+    width: 320px;
+    background: <%= Colors.box_outer_bg %>;
+    color: <%= Colors.box_outer_fg %>;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.top-left-inner {
+    padding: 5px;
+    margin: 2px 3px;
+    background: <%= Colors.box_inner_bg %>;
+    color: <%= Colors.box_inner_fg %>;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.top-left-outer h2 {
+    text-align: center;
+    color: <%= Colors.box_outer_fg %>;
+    padding: 2px;
+    margin: 0px;
 }
 
 
+
+/* Title bar properties: */
 #titlebar h1 {
-             padding-bottom: 0;
-             margin-bottom: 0;
-             margin-top: 0em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0em;
 }
 
 #titlebar p {
-            font-size: 110%;
-            font-weight: bold;
-            padding: 0;
-	    margin: 0;
-            font-family: sans;
-            letter-spacing: -0.05em;
-            color: <%= Colors.slogan %>;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    font-family: sans;
+    letter-spacing: -0.05em;
+    color: <%= Colors.slogan %>;
 }
 
 .webgen-menu-horiz ul {
@@ -85,143 +118,66 @@ http://andreasviklund.com */
     font-size: 90%;
 }
 
-/* #footer { */
-/*           width:<%= Full.width %>px; */
-/*           text-align: right; */
-/*           font-size: 75%; */
-/*           } */
+#footer {
+    font-size: 90%;
+}
 
-/* /\* Here come the fine details *\/ */
-
-
-/* /\* The text at the top of the page *\/ */
-/* #toplinks {  */
-/*             text-align: right; */
-/*             font-size: 75%; */
-/*             } */
-
-
-
-/* h1{ */
-/*     font-size:200%; */
-/*     color: <%= Colors.main_title %>; */
-/* } */
-
-/* h1.maintitle { */
-/*                font-size: 180%; */
-/*                text-align: center; */
-/* } */
-
-/* /\* Links....  *\/ */
-/* /\* We dont color links *\/ */
-/* a:hover{text-decoration:underline;} */
-a { color:<%= Colors.titles %>;
+/* Links */
+a:hover { text-decoration:underline; }
+a { 
+    color:<%= Colors.titles %>;
     font-weight: bold;
     text-decoration:none;
-    }
-
-.bar > a { color:<%= Colors.titles %>; }
-
-/* /\* We don't want links to show in the main titles/slogans *\/ */
-/* h1 a{text-transform:none; color:<%= Colors.main_title %>;} */
+}
 
 
-/* #slogan {  */
-/*           width: <%= SideBar.width %>px; */
-/*           float: left; */
-/*           text-align: center; */
-/*           } */
-
-
-/* /\* Fonts of headers: *\/ */
-/* h1, h2, h3{  */
-/*          font-family: sans; */
-/*          font-weight: bold; */
-/*          } */
-
-/* h2, h3 { color: <%= Colors.titles %>; } */
-
-/* h2 { */
-/*      border-bottom:4px solid <%= Colors.title_underline %>; */
-/*      } */
-
-/* h3 { */
-/*      border-bottom:2px solid <%= Colors.title_underline %>; */
-/*      } */
-
-
-/* #sidebar {  */
-/*            color: <%= Colors.sidebar %>; */
-/*            } */
-
-/* #sidebar ul{ */
-/*              list-style:none; */
-/*              font-size: 80%; */
-/*              margin:0; */
-/*              padding:0 0 15px 10px; */
-/* } */
-
-/* /\* Avoid shrinking to infinity *\/ */
-/* #sidebar ul ul {font-size: 100%;  } */
-/* #sidebar p { font-size: 80%; } */
-
-
-/* /\* Various styles *\/ */
-/* /\* .examples-ctioga, .examples-gnuplot {  *\/ */
-/* /\*             overflow: auto; *\/ */
-/* /\*             text-align: left; *\/ */
-/* /\*             padding: 0.5em; *\/ */
-/* /\*             background-color: <%= Colors.pre_bg %>; *\/ */
-/* /\*             border: 1pt solid <%= Colors.borders %>; *\/ */
-/* /\*             } *\/ */
-
-.examples-cmdline,
-.examples-cmdfile,
-.examples { overflow: auto;
-            text-align: left;
-            padding: 0.5em;
-            margin: 2% 10% 2% 5%;
-            }
+.examples-cmdline, .examples-cmdfile, .examples { 
+    overflow: auto;
+    text-align: left;
+    padding: 0.5em;
+    margin: 2% 10% 2% 5%;
+}
 .examples-cmdline {
-                    background-color: <%= Colors.cmdline_bg %>;
-                    border: 1px solid <%= Colors.cmdline_border %>;
-                    }
+    background-color: <%= Colors.cmdline_bg %>;
+    border: 1px solid <%= Colors.cmdline_border %>;
+}
 
 .examples-cmdfile {
-                    background-color: <%= Colors.cmdfile_bg %>;
-                    border: 1px solid <%= Colors.cmdfile_border %>;
-                    }
+    background-color: <%= Colors.cmdfile_bg %>;
+    border: 1px solid <%= Colors.cmdfile_border %>;
+}
 
 .examples {
-            background-color: <%= Colors.examples_bg %>;
-            border: 1px solid <%= Colors.examples_border %>;
-            }
+    background-color: <%= Colors.examples_bg %>;
+    border: 1px solid <%= Colors.examples_border %>;
+}
 
 p.example-image {
-          text-align: center;
-          }
+    text-align: center;
+}
 
 
-/* /\* News items: *\/ */
-/* h3.news {  */
-/*           border-bottom: none; */
-/*           font-size: 110%; */
-/*           } */
+/* News items: */
+p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;}
+span.news-author { font-weight: bold; }
+span.news-date { font-style: italic; }
 
-/* p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;} */
-/* span.news-author { font-weight: bold; } */
-/* span.news-date { font-style: italic; } */
-
-/* span.bold { font-weight: bold; } */
+span.bold { font-weight: bold; }
 
 /* Automatically generated documentation */
-h4 { color: <%= Colors.doc_title %>;
-     border-bottom: 1px solid <%= Colors.doc_title %>;
-     }
+h4 { 
+    color: <%= Colors.doc_title %>;
+    border-bottom: 1px solid <%= Colors.doc_title %>;
+    margin-right: 30px;
+}
+
+h3.group, h3.backend {
+    border-bottom: 2px solid black;
+}
 
 /* Summary table of command-lines switches */
 th {
-     padding-top: 6px;
-     padding-bottom: 2px;
- }
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
 

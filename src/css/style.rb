@@ -15,6 +15,10 @@
 
 require 'ostruct'
 
+# We want Tioga, for, mmm, color conversion ?
+require 'Tioga/FigureMaker'
+
+
 # TODO: ??
 #
 # * Write a real structure that could represent a whole "box", with:
@@ -34,11 +38,20 @@ class HTMLColor
       @g = g.to_i
       @b = b.to_i
     else
-      r =~ /#(..)(..)(..)/
-        @r = $1.to_i(16)
+      r =~ /#(..)(..)(..)/ #
+      @r = $1.to_i(16)
       @g = $2.to_i(16)
       @b = $3.to_i(16)
     end
+  end
+
+  # Takes hue, lightness, saturation. Hue is in degrees on the color
+  # wheel.
+  def self.hls(h,l,s)
+   cols = Tioga::FigureMaker.hls_to_rgb([h, l, s]).map do |x|
+      255 * x
+    end
+    return HTMLColor.new(*cols )
   end
 
   def to_s
@@ -98,12 +111,12 @@ Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
 
 # Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
-Colors.bar_bg = HTMLColor.new("#129974") # HSV: 164,88,60
+Colors.bar_bg = HTMLColor.hls(164,0.3,0.5) 
 Colors.bar_fg = HTMLColor.white
 Colors.bar_link = Colors.titles
 
 # Top-left box
-Colors.box_outer_bg = HTMLColor.new("#D02020")
+Colors.box_outer_bg = HTMLColor.hls(0,0.3,0.3) 
 Colors.box_outer_fg = HTMLColor.new("#FFFFFF")
 
 Colors.box_inner_bg = HTMLColor.new("#DDDDDD")

@@ -1,9 +1,17 @@
 --- 
 - :author: Vincent Fourmond
+  :title: ctioga2 is still alive !
+  :contents: |-
+    Well, it might not be that obvious looking at the Rubyforge project page, but ctioga2 is alive (and kicking, for that matter). I've been too busy lately to advertise any of my work on ctioga2, but many features have been added since the 0.0 release, and I hope to gather that into a proper release some time soon.
+    
+    Meanwhile, I'm working on a redesign of the website too, and trying to get decent documentation (but that takes time, and that's precisely what I don't have for now !).
+  :id: 38446
+  :date: 2010-12-21 21:52:00 +01:00
+- :author: Vincent Fourmond
   :title: New home for the ctioga2 project
   :contents: |-
     So far, the efforts in developing the successor of ctioga were located in the SciYAG project (<a href="http://sciyag.rubyforge.org" target="_new">http://sciyag.rubyforge.org</a>). Now, thanks to the rubyforge team, ctioga2 has a new home, <a href="http://rubyforge.org/projects/ctioga2" target="_new">http://rubyforge.org/projects/ctioga2</a>. Development is under way in the SVN repository, and a web page is being written. 
     
     The first release of ctioga2 should be expected reasonably soon !
   :id: 31886
-  :date: 2009-04-26 00:35:00 +02:00
+  :date: 2009-04-27 17:26:00 +02:00

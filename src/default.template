@@ -23,7 +23,7 @@
     	  href="{relocatable:css/style.css}" media="screen,projection" />
     <link rel="alternate" type="application/rss+xml" 
 	  title="ctioga2 news" href="{relocatable:news.xml}" />
-    <title>{title: }</title>
+    <title>ctioga2: {title: }</title>
   </head>
 
   <body>

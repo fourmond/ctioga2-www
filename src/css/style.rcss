@@ -164,6 +164,18 @@ span.news-date { font-style: italic; }
 
 span.bold { font-weight: bold; }
 
+code {
+    color: <%= Colors.code %>;
+}
+
+a > code {
+    color: inherit;
+}
+
+h4 > code {
+    color: inherit;
+}
+
 /* Automatically generated documentation */
 h4 { 
     color: <%= Colors.doc_title %>;

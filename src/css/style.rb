@@ -122,3 +122,4 @@ Colors.box_outer_fg = HTMLColor.new("#FFFFFF")
 Colors.box_inner_bg = HTMLColor.new("#DDDDDD")
 Colors.box_inner_fg = HTMLColor.new("#000000")
 
+Colors.code = HTMLColor.hls(160,0.3,0.99)

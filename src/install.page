@@ -3,6 +3,20 @@ title: Installation
 inMenu: true
 ---
 
+<div class='top-left-outer'>
+h2. Download
+
+<div class='top-left-inner'>
+Download @ctioga2@ from Rubyforge's 
+"Download page":http://rubyforge.org/frs/?group_id=8218&release_id=37068:
+
+Latest version:
+
+<a href="http://rubyforge.org/frs/download.php/60705/ctioga2-0.0.tar.gz">
+<img src="{resource: webgen-icons-download}" /><code>ctioga2-0.0.tar.gz</code></a>
+</div>
+</div>
+
 h2. @ctioga2@ prerequisites
 
 To have a working copy of @ctioga2@, you need :

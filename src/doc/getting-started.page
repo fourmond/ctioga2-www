@@ -4,6 +4,9 @@ inMenu: true
 ---
 h2. Getting started with @ctioga2@
 
+*NOTE* this should be replaced by a full directory containing a
+step-by-step tutorial going from simple things to advanced topics.
+
 @ctioga2@ is a command-line based program that can be used to display
 quickly data files. For this page, you need the
 "@data.dat@":plots/data.dat file which contains four columns: 

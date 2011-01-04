@@ -1,10 +1,17 @@
 ---
-title: All commands
+title: Commands
 inMenu: true
 ---
 h2. ctioga2's commands
 
-One interacts @ctioga2@ by using commands. This page describes all the
+Independently of the way to use @ctioga2@, though command-line or
+using command files, one interacts @ctioga2@ by using commands.
+
+Most commands take compulsory *arguments*, whose order should be
+respected, and even more of them accept *options*, that can be given
+in any order.
+
+This page describes all the
 commands known to @ctioga2@. It is generated automatically from the
 inline documentation of @ctioga2@. Arguments to the commands, are
 links to the corresponding "type":types.html. So are options.

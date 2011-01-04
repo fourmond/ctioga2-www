@@ -1,11 +1,14 @@
 ---
-title: ctioga2 documentation
+title: Documentation
 inMenu: true
 directoryName: Documentation
 orderInfo: -1
 ---
 h2. ctioga2 documentation
 
+
+<notextile>
+<!--
 First, read "that":getting-started.html to get started.
 
 @ctioga2@ is organized into two distinct elements:
@@ -31,10 +34,6 @@ various aspects of the plots:
 
 * hmm... there will be one day.
 
-
-
-<notextile>
-<!--
 * backends
 * commands (and options)
 * command-line/command files

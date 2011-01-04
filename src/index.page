@@ -34,6 +34,32 @@ using directly the command-line or through command-files.
 
 h2. Why yet another plotting program ?
 
+Well, for sure, because @ctioga2@ is much better than the rest !!
+
+Hmmm... Maybe not. At least not on every single aspect of
+plotting. But I wanted something:
+* *fast*: plotting a data file is done within one or two seconds, just
+  run something like @ctioga2 -X data.dat@ from a terminal
+* *beautiful*: it is based on "Tioga":http://tioga.rubyforge.org, that
+  produces high-quality PDF files
+* *powerful*: @ctioga2@ offers many features that are not found on
+  other plotting systems (at least not all at once), such as gradients
+  for successive curves, color maps and countours, nice filled
+  curves... Have a look at the "gallery":galleries/ !
+* *scriptable*: being a command-line utility, it integrates naturally
+  into the power of command-line scripting. It is very easy to animate
+  graphs into a "movie":doc/tutorial/movie.html !
+
+<notextile>
+<!-- I really should put a neat movie on the web site ! -->
+</notextile>
+
+h2. Authors
+
+@ctioga2@ was written by 
+"Vincent Fourmond":http://vince-debian.blogspot.com/. 
+It is under continuous work.
+
 
 h2. Support, bugs and feature requests
 

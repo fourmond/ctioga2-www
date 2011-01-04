@@ -1,8 +1,12 @@
 ---
-title: All types
+title: Types
 inMenu: true
 ---
 h2. ctioga2's types
+
+Many of the arguments to <code>ctioga2</code>'s
+"commands":commands.html or options have a well-defined type. Their
+syntax and signification are documented here.
 
 <notextile>
 {execute: {command: ctioga2 --write-html-types, processOutput:

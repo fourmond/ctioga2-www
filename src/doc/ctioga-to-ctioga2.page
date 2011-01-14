@@ -26,8 +26,8 @@ ctioga2 --color-set 'Blue|Green|Pink|Orange' 'sin(x + 0##3)'
 
 h3. Unimplemented features
 
-As of now, many of @ctioga@'s features have not been ported yet to
-@ctioga2@. The reason is simply that I have not had the time or seen
-the utility of those features. If you desperately need them, please
-ping me at
+As of now, many of <code>ctioga</code>'s features have not been ported
+yet to @ctioga2@. The reason is simply that I have not had the time or
+seen the utility of those features. If you desperately need them,
+please ping me at
 "@ctioga2-users@":http://rubyforge.org/mailman/listinfo/ctioga2-users.

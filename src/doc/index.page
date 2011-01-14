@@ -6,41 +6,17 @@ orderInfo: -1
 ---
 h2. ctioga2 documentation
 
+The documentation is divided into several parts
 
-<notextile>
-<!--
-First, read "that":getting-started.html to get started.
+* a "tutorial":tutorial/ that covers most of the aspects of using
+  @ctioga2@ (or at least, it eventually will)
+* systematic documentations extracted directly from
+  <code>ctioga2</code>'s internal documentation, about
+  "commands":commands.html, "types":types.html and
+  "backends":backends.html. It may be sparse, but it is always
+  up-to-date by construction.
+* a list of "command-line switches":cmdline.html
 
-@ctioga2@ is organized into two distinct elements:
-* so-called "backends", whose job is to acquire data from whichever
-  source you need (text files, mathematical formulas, databases, plain
-  binary files). 
-* the plotmaker architecture, whose job is to display this data
-  according to the current stylistic preferences.
-
-All interaction with @ctioga2@ is done via "commands", that can take
-arguments and sometimes optional arguments. The documentation for the
-commands is generated automatically from the documentation included
-inside @ctioga2@ itself, it can be found "there":commands.html. 
-
-Arguments for the command can have different "types", i.e. values
-which are legal for their use, such as numbers, arbitrary text,
-predefined values. The documentation for the types in use by @ctioga2@
-is also generated automatically from the command-line. It can be found
-"there":types.html.
-
-In addition to that, there are examples that demonstrate how to change
-various aspects of the plots: 
-
-* hmm... there will be one day.
-
-* backends
-* commands (and options)
-* command-line/command files
-* a list of all commands ?
-* manual page
-* examples
-* types: points, distances, and so on (see overlap with the manual
-  page ?)
--->
-</notextile>
+I wish this documentation was more detailed, but unfortunately, I
+spend more time developing new features of @ctioga2@ than documenting
+the old ones. You're welcome to join in, though !

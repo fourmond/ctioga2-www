@@ -1,0 +1,16 @@
+---
+title: Tutorial
+inMenu: true
+directoryName: Tutorial
+orderInfo: -1
+---
+h2. How to get going with @ctioga2@
+
+This tutorial covers quite a few aspects of the making of plots with
+@ctioga2@, including:
+
+* basic plotting of "data files":datafiles.html
+* axes and label tweaks
+* legend tweaks
+* plots of 3D data
+* complex plot layouts

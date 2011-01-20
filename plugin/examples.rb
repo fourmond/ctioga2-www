@@ -9,7 +9,6 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   param 'file', false, "The file containing the command-line"
   param 'alt', false, 'The alternative text'
   param 'cls', 'examples-cmdline', "The class used for the <pre> elements"
-  # Todo: make that relocatable ?
   param 'cmdbase', "/doc/commands.html", 'The base URL for commands links. False to deactivate'
   
   set_mandatory 'file', true
@@ -24,9 +23,9 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
       return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
         begin
-          link_commands(IO.readlines(filename).join)
-        rescue
-          "<b>IO problem reading file #{cmdline}</b>"
+          link_commands(IO.readlines(filename).join, chain)
+        rescue Exception => e
+          "<b>IO problem reading file #{cmdline}: #{e.inspect}</b>"
         end  + "</pre>" +
         "<p class='example-image'>\n" +
         "<a href=\"#{image}\" id=\"img-#{id_base}\">" +
@@ -38,19 +37,26 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   # Transforms commands into links to the appropriate point in the
   # documentation.
-  def link_commands(string)
+  def link_commands(string, chain)
     base = param('cmdbase')
     if base
       # TODO: also process single letter options, though it is
       # significantly more difficult.
+      cmdlocation = resolve_path(base, chain)
       return string.gsub(/--(\S+)/) do 
-        a = "<a href=\"#{base}#command-#{$1}\">--#{$1}</a>"
+        a = "<a href=\"#{cmdlocation}#command-#{$1}\">--#{$1}</a>"
       end
     else
       return string
     end
   end
 
+  def resolve_path(uri, chain )
+    dest_node = chain.first.resolve_node( uri )
+    chain.last.route_to(dest_node)
+  end
+
+  
 end
 
 
@@ -68,11 +74,12 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
 
   # Transforms commands into links to the appropriate point in the
   # documentation.
-  def link_commands(string)
+  def link_commands(string, chain)
     base = param('cmdbase')
     if base
+      cmdlocation = resolve_path(base, chain)
       return string.gsub(/([^ ()\n\t]+)\(/) do 
-        a = "<a href=\"#{base}#command-#{$1}\">#{$1}</a>("
+        a = "<a href=\"#{cmdlocation}#command-#{$1}\">#{$1}</a>("
       end
     else
       return string

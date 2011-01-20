@@ -79,7 +79,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
   def write_node(node)
     if @plugin_manager['Core/FileHandler'].file_modified?( node.node_info[:src], node.full_path )
       n = node.node_info
-      cmdline = "convert -density #{n[:density]} #{n[:src]}" +
+      cmdline = "pdftoppm -r #{n[:density]} #{n[:src]} | convert ppm:- " +
         if n[:trim]; " -trim"; else ""; end +
         " -resize #{n[:size]}x#{n[:size]} #{node.full_path}"
       if param('verbose') 

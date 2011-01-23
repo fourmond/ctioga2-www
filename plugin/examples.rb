@@ -53,6 +53,12 @@ class CTiogaCmdlineTag < Tags::DefaultTag
     end
   end
 
+  def purify_description(desc)
+    desc.gsub(/\{\w+:([^}]+)\}/) do 
+      $1
+    end
+  end
+
   # Transforms commands into links to the appropriate point in the
   # documentation.
   def link_commands(string, chain)
@@ -67,7 +73,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
         switch = $2
         cmd = CTiogaShortSwitches[switch]
         if cmd
-          "#{init}<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{cmd['short_description']}\">-#{switch}</a>"
+          desc = purify_description(cmd['short_description'])
+          "#{init}<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{desc}\">-#{switch}</a>"
         else
           "#{init}-#{switch}"
         end
@@ -77,7 +84,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
         switch = $1
         cmd = CTiogaSwitches[switch]
         if cmd
-          "<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{cmd['short_description']}\">--#{switch}</a>"
+          desc = purify_description(cmd['short_description'])
+          "<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{desc}\">--#{switch}</a>"
         else
           "--#{switch}"
         end
@@ -118,7 +126,8 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
         command = $1
         cmd = CTiogaCommands[command]
         if cmd
-          a = "<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{cmd['short_description']}\">#{command}</a>("
+          desc = purify_description(cmd['short_description'])
+          a = "<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{desc}\">#{command}</a>("
         else
           "#{command}("
         end

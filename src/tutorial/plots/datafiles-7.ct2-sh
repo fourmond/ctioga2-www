@@ -1,0 +1,3 @@
+ctioga2 -X --marker auto --line-style no \
+	data.dat@'1:2:3' /where 'y2 > -0.5' \
+	@1:3 /where 'y <= -0.5'

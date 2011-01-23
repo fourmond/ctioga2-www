@@ -1,0 +1,1 @@
+ctioga2 -X data.dat@1:2 @'$1:$2+1' /where 'x > -1'

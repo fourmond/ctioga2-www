@@ -1,0 +1,1 @@
+ctioga2 -X --text-separator , data.csv @1:3

@@ -1,0 +1,2 @@
+ctioga2 -X --math /trange -3.1415:3.1415 /samples 101 'sin(t):cos(t)' \
+	-t "A neat (parametric) circle"

@@ -30,4 +30,48 @@ of @ctioga2@: the possibility to plot individual data points using a
 small symbol called a @marker@ in "Tioga"http://tioga.rubyforge.org
 terminology (we'll come back to that "later":TODO).
 
+The mathematical backend can also generate parametric plots when
+giving @:@-separated functions of @t@:
+
+{ctCmdline: plots/datafiles-3.ct2-sh }
+
 h3. Dirty tricks with text files
+
+The default @text@ backend allows for quite a few dirty tricks. First
+of all, it can parse CSV(comma-separated values) files, such as 
+"this one":plots/data.csv, if you ask it correctly:
+
+{ctCmdline: plots/datafiles-4.ct2-sh }
+
+Heh, comma-separated value, so you just set the input separator to @,@
+using @--text-separator@. Simple, isn't it ? The
+<notextile>@1:3</notextile> specification, in the absence of data file
+to be loaded, applies the the last datafile loaded.
+
+More importantly, is it possible to use any valid Ruby expression as 
+column specifications, such as those: 
+
+{ctCmdline: plots/datafiles-5.ct2-sh }
+
+Here, we plot column 3 times the cube of column 2 as a function of
+the square of column 1.
+
+Any data point whose X or Y value is @nan@, (not a number, i.e. the
+result of @0.0/0.0@ for instance) is ignored by @ctioga2@. This is the
+case for column containing text, for instance. This can be used to
+some extent to exclude some data from the plot, using a specification
+in the spirit of @if $1 > 10; then $1; else 0.0/0.0; end@. However,
+this is rather cumbersome; it is much more interesting to use the
+@/where@ option of the @plot@ command:
+
+{ctCmdline: plots/datafiles-6.ct2-sh }
+
+This can be tweaked into very complex relations, if you take into
+account the possibility to load more than two columns using the @text@
+backend: 
+
+{ctCmdline: plots/datafiles-7.ct2-sh }
+
+This is just a plot of the first two columns at the points wherer the
+third one is greater than @-0.5@. We have used markers and disabled
+the plotting of the lines to make this more visible.

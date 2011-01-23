@@ -86,15 +86,3 @@ command-file. These datasets also demonstrate another possibility of
 @ctioga2@: arbitrary expressions can be applied to columns: just stick
 a dollar sign before all column numbers. You can arbitrarily mix
 columns.
-
-TODO: finish this page
-
-
-Here, a very small tutorial, demonstrating:
-* the same example using a file (and how to play with a file)
-* the existence of options to the plot command
-* the use of options for plots on command-line
-* the existence of style-sets...
-
-There should also be a kind of picture explaining how the style is
-chosen for every style item.

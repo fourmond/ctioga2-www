@@ -1,0 +1,1 @@
+ctioga2 -X --math /xrange -1:1 /samples 101 'x**2' 'x' 

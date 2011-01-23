@@ -1,0 +1,33 @@
+---
+title: Data files and mathematical functions
+inMenu: true
+---
+h2. Plotting data and math functions
+
+@ctioga2@ has access to quite a few source of data, through the use of 
+"backends":../doc/backends.html. These are objects that acquire data,
+usually though the reading of files, but also generating it using
+mathematical functions, and make it available to @ctioga2@.
+
+h3. Mathematical functions
+
+By default, @ctioga2@ acquires data using the @text@ backend, that
+reads space-separated files (spaces also include tabs). It is possible
+to switch to mathematical functions this way:
+
+{ctCmdline: plots/datafiles-1.ct2-sh }
+
+In that example, the X range of the math backend is specified using
+the @/xrange@ option (default is @-10:10@, as in @gnuplot@), and the
+number of points sampled using the @samples@. These can also be
+changed using other commands, such as:
+
+{ctCmdline: plots/datafiles-2.ct2-sh }
+
+This demonstrates that the first curve drawn got 31 samples, while the
+second one only got 5. This example also demonstrates another feature
+of @ctioga2@: the possibility to plot individual data points using a
+small symbol called a @marker@ in "Tioga"http://tioga.rubyforge.org
+terminology (we'll come back to that "later":TODO).
+
+h3. Dirty tricks with text files

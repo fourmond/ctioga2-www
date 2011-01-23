@@ -13,6 +13,24 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   
   set_mandatory 'file', true
 
+  CTiogaCommands = YAML.load(`ctioga2 --list-commands /format yaml`)
+
+  begin
+    # Indexing on command-line-switches
+    a = {}
+    for k,v in CTiogaCommands
+      a[v['long_option']] = v
+    end
+    CTiogaSwitches = a
+    b = {}
+    for k,v in CTiogaCommands
+      if v['short_option']
+        b[v['short_option']] = v
+      end
+    end
+    CTiogaShortSwitches = b
+  end
+
   def process_tag( tag, chain )
     if cmdline = param('file')
       base = cmdline.gsub(/\.ct2(-sh)?$/, '')
@@ -40,11 +58,29 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   def link_commands(string, chain)
     base = param('cmdbase')
     if base
-      # TODO: also process single letter options, though it is
-      # significantly more difficult.
       cmdlocation = resolve_path(base, chain)
+      
+      # Now, we need to be a little more subtle...
+
+      string.gsub!(/(\s)-(\w)/) do 
+        init = $1
+        switch = $2
+        cmd = CTiogaShortSwitches[switch]
+        if cmd
+          "#{init}<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{cmd['short_description']}\">-#{switch}</a>"
+        else
+          "#{init}-#{switch}"
+        end
+      end
+
       return string.gsub(/--(\S+)/) do 
-        a = "<a href=\"#{cmdlocation}#command-#{$1}\">--#{$1}</a>"
+        switch = $1
+        cmd = CTiogaSwitches[switch]
+        if cmd
+          "<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{cmd['short_description']}\">--#{switch}</a>"
+        else
+          "--#{switch}"
+        end
       end
     else
       return string
@@ -79,7 +115,13 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
     if base
       cmdlocation = resolve_path(base, chain)
       return string.gsub(/([^ ()\n\t]+)\(/) do 
-        a = "<a href=\"#{cmdlocation}#command-#{$1}\">#{$1}</a>("
+        command = $1
+        cmd = CTiogaCommands[command]
+        if cmd
+          a = "<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{cmd['short_description']}\">#{command}</a>("
+        else
+          "#{command}("
+        end
       end
     else
       return string

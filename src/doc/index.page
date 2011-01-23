@@ -8,14 +8,15 @@ h2. ctioga2 documentation
 
 The documentation is divided into several parts
 
-* a "tutorial":tutorial/ that covers most of the aspects of using
+* a "tutorial":../tutorial/ that covers most of the aspects of using
   @ctioga2@ (or at least, it eventually will)
 * systematic documentations extracted directly from
   <code>ctioga2</code>'s internal documentation, about
   "commands":commands.html, "types":types.html and
   "backends":backends.html. It may be sparse, but it is always
   up-to-date by construction.
-* a list of "command-line switches":cmdline.html
+* a list of "command-line switches":cmdline.html, also always
+  up-to-date
 
 I wish this documentation was more detailed, but unfortunately, I
 spend more time developing new features of @ctioga2@ than documenting

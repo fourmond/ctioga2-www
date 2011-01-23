@@ -4,9 +4,6 @@ inMenu: true
 ---
 h2. Getting started with @ctioga2@
 
-*NOTE* this should be replaced by a full directory containing a
-step-by-step tutorial going from simple things to advanced topics.
-
 @ctioga2@ is a command-line based program that can be used to display
 quickly data files. For this page, you need the
 "@data.dat@":plots/data.dat file which contains four columns: 
@@ -19,12 +16,12 @@ first. We do that this way:
 
 {ctCmdline: plots/getting-started-1.ct2-sh }
 
-The @-X@ option asks @ctioga2@ to run
-"Xpdf":http://www.foolabs.com/xpdf/ on the produced PDF file
-afterwards. The <notextile><code>@1:3</code></notextile> bit after the
-second instance of @data.dat@ is simply asking @ctioga2@ to plot the
+The @-X@ "command-line switch":../doc/cmdline.html asks @ctioga2@ to run
+"Xpdf":http://www.foolabs.com/xpdf/ on the resulting PDF file. The
+<notextile><code>@1:3</code></notextile> bit after the 
+second instance of @data.dat@ asks @ctioga2@ to plot the
 third column as a function of the first (instead of the second as a
-function of the first, which is the default).
+function of the first, the default).
 
 Well this plot lacks a title. We can add one using the @--title@
 command:
@@ -44,13 +41,16 @@ h3. Options
 Well, that is very well, but the title could be made more visible
 using a bigger font and color. To achieve that, we will use options to
 the @--title@ command.  Many commands accept options; they are listed
-in the "commands documentation":commands.html. They start with a @/@;
+in the "commands documentation":../doc/commands.html. They start with a @/@;
 a value is given to them using an equal sign. They must be place after
 the arguments of the command they apply to. In this case, we will use
 the @/scale@ option of the command @--title@ to make the title a bit
 bigger, and the @/color@ option to turn it blue.
 
 {ctCmdline: plots/getting-started-3.ct2-sh }
+
+As can be seen with the @/color@ option in this case, the @=@ sign is
+optional (on the command-line).
 
 h3. Command files
 

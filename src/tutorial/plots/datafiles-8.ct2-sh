@@ -1,0 +1,2 @@
+ctioga2 -X --gnuplot gnuplot.gnu gnuplot.gnu@2 \
+	gnuplot.gnu@2:a=3 gnuplot.gnu@2:a=5

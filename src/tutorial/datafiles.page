@@ -75,3 +75,30 @@ backend:
 This is just a plot of the first two columns at the points wherer the
 third one is greater than @-0.5@. We have used markers and disabled
 the plotting of the lines to make this more visible.
+
+h3. Extracting data from gnuplot files
+
+I often use "gnuplot":http://gnuplot.info to plot mathematical
+functions, as it is more interactive and more flexible than @ctioga2@
+when the aim is to have a feeling about what is it you're plotting
+(especially along with "emacs":http://www.gnu.org/software/emacs/ and
+"gnuplot-mode":http://xafs.org/BruceRavel/GnuplotMode). But I don't
+like how it looks. So, I wrote a backend to allow @ctioga2@ to plot
+data built using @gnuplot@. Imagine you have a
+file "@gnuplot.gnu@":plots/gnuplot.gnu that contains the code:
+
+<pre class='examples'>
+{includeFile: {filename: plots/gnuplot.gnu, processOutput: false}}
+</pre>
+
+You can use the following @ctioga2@ commands to plot @f(x)@ and
+@g(x)@, possibly with modifications to the variables:
+
+{ctCmdline: plots/datafiles-8.ct2-sh }
+
+In this example we plot the results of the first plot command (ie
+@f(x)@) by simply giving the @gnuplot.gnu@ as
+argument. <code>@2</code> selects the second plot, while the @:a=3@
+suffix allows to modify the contents of the variables before running
+the plots commands. You can actually write any code there, so long as
+it is valid @gnuplot@ code.

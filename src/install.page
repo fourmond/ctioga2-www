@@ -13,7 +13,7 @@ Download @ctioga2@ from Rubyforge's
 Latest version:
 
 <a href="http://rubyforge.org/frs/download.php/60705/ctioga2-0.0.tar.gz">
-<img src="{resource: webgen-icons-download}" /><code>ctioga2-0.0.tar.gz</code></a>
+<img src="{resource: webgen-icons-download}" alt="Download" /><code>ctioga2-0.0.tar.gz</code></a>
 </div>
 </div>
 
@@ -74,4 +74,3 @@ svn checkout http://ctioga2.rubyforge.org/svn/trunk/ctioga2
 </pre>
 
 Then use the instructions as above for the installation using the tarball.
-

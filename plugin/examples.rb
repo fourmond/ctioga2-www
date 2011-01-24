@@ -53,6 +53,11 @@ class CTiogaCmdlineTag < Tags::DefaultTag
     end
   end
 
+  def escape_HTML!(str)
+    str.gsub!(">", "&gt;")
+    str.gsub!("<", "&lt;")
+  end
+
   def purify_description(desc)
     desc.gsub(/\{\w+:([^}]+)\}/) do 
       $1
@@ -67,6 +72,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       cmdlocation = resolve_path(base, chain)
       
       # Now, we need to be a little more subtle...
+      escape_HTML!(string)
 
       string.gsub!(/(\s)-(\w)/) do 
         init = $1
@@ -122,6 +128,7 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
     base = param('cmdbase')
     if base
       cmdlocation = resolve_path(base, chain)
+      escape_HTML!(string)
       return string.gsub(/([^ ()\n\t]+)\(/) do 
         command = $1
         cmd = CTiogaCommands[command]

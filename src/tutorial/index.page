@@ -12,8 +12,14 @@ This tutorial covers quite a few aspects of the making of plots with
 * a quick way to "get started":getting-started.html
 * "data files and mathematical functions":datafiles.html (including a
   small trick to extract data from "gnuplot":http//gnuplot.info files
+* how to tweak the look of "plain curves":curve-style.html
+
+<notextile>
+<!-- 
 * axes and label tweaks
 * legend tweaks
 * plots of 3D data
-* complex plot layouts
+* complex plot layouts 
+-->
+</notextile>
 

@@ -3,3 +3,46 @@ title: Curve style
 inMenu: true
 ---
 h2. Customizing the style of curves
+
+@ctioga2@ provides an automatic styling of curves:
+
+{ctCmdline: plots/curve-style-1.ct2-sh }
+
+As can be seen, the first curves are displayed in various colors (red,
+green, blue and cyan), up to the @--color-set pastel1@ command, that instructs
+@ctioga2@ to use another color set, @pastel1@, for subsequent
+curves. Line style had not changed so far, but it starts to change at
+each curve after the @--line-style auto@ command. As a side note,
+@--yoffset@ is used here to shift the second set of curves from the
+first one.
+
+h3. Overrides
+
+It is possible to override some of the styles either for one curve, or
+definitely for the following curves:
+
+{ctCmdline: plots/curve-style-2.ct2-sh }
+
+Commands, such as @--line-style Solid@ override until further use of
+this command; using @auto@ as a parameter lifts the overrides. Using
+an option, such as here @/color Purple@ allows one to override the
+style element just for a single curve.
+
+Commands handling the sets or overrides are all found within the
+"curve style":../doc/commands.html#group-curve-style command group.
+
+h3. Markers
+
+It is possible to indicate the position of data points on a curve with
+symbols, that are called markers in Tioga's nomenclature: 
+
+{ctCmdline: plots/curve-style-3.ct2-sh }
+
+As can be seen above, the markers symbol, size and color can be tuned
+using the options or the corresponding commands. The list of accepted
+symbol names can be found in 
+"Tioga's documentation":http://tioga.rubyforge.org/doc/classes/Tioga/MarkerConstants.html.
+
+h3. Error bars
+
+h3. Filled curves

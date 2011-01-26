@@ -1,0 +1,2 @@
+ctioga2 -X --math --line-style auto 'sin(x)' 'sin(x+1)' --line-style Solid \
+	'sin(x+2)' /color Purple 'sin(x+3)' 

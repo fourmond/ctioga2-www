@@ -16,12 +16,13 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
                   '**/*.ct2-sh'], 'The path patterns which match the '
   'PDF files that should get converted by this handler.'
   
-  param 'thumbsize', 200, "The size of the thumbnail"
+  param 'thumbsize', 300, "The size of the thumbnail"
   param 'pngsize', 900, "The size of the PNG image produced"
   param 'density', 250, "The -density parameter of convert"
   param 'verbose', true, "Display information about files as they "+
     "are regenerated"
   param 'trim', false, "Whether to remove the borders of the pictures"
+  param 'ctstyle', "-r 9cmx6cm", "Additional styling command for ctioga2"
   
   def initialize( plugin_manager )
     super
@@ -36,7 +37,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       if !File.exist?(path) || File.mtime(source) > File.mtime(path)
         puts "Regenerating #{path} from #{source}" if param("verbose")
         system "cd #{File.dirname(source)}; " +
-          "DISPLAY='' ctioga2 -f #{name}.ct2"
+          "CTIOGA2_PRE='#{param('ctstyle')}' DISPLAY='' ctioga2 -f #{name}.ct2"
         system "touch -r #{source} #{path}"
       end
     elsif path =~ /\.ct2-sh$/   # Shell script
@@ -46,7 +47,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       if !File.exist?(path) || File.mtime(source) > File.mtime(path)
         puts "Regenerating #{path} from #{source}" if param("verbose")
         system "cd #{File.dirname(source)}; " +
-          "CTIOGA2_POST='--name \"#{name}\"' DISPLAY='' sh #{name}.ct2-sh"
+          "CTIOGA2_PRE='#{param('ctstyle')}' CTIOGA2_POST='--name \"#{name}\"' DISPLAY='' sh #{name}.ct2-sh"
         system "touch -r #{source} #{path}"
       end
     else

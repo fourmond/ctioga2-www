@@ -1,0 +1,1 @@
+ctioga2 -X --math --fill axis 'sin(x)' /fill-color '#fcc'

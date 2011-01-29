@@ -1,0 +1,3 @@
+ctioga2 -X --math /samples 31 --marker auto 'sin(x)' \
+	--line-style no 'sin(x+1)' /marker-color Pink \
+	/marker-scale 1 'sin(x+2)' /marker CircleOpen

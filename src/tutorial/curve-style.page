@@ -43,6 +43,57 @@ using the options or the corresponding commands. The list of accepted
 symbol names can be found in 
 "Tioga's documentation":http://tioga.rubyforge.org/doc/classes/Tioga/MarkerConstants.html.
 
+Something that comes in useful with markers is the possibility to
+disable lines altogether this way:
+
+{ctCmdline: plots/curve-style-4.ct2-sh }
+
+
 h3. Error bars
 
+This is still to be written.
+
 h3. Filled curves
+
+Curves in @ctioga2@ can be filled to a certain level using the
+@--fill@ command, that takes precisely this level as an argument. See:
+
+{ctCmdline: plots/curve-style-5.ct2-sh }
+
+By default, the filling has the same color as the lines of the curve,
+and it can be made transparent, which allows for neat effects such as:
+
+{ctCmdline: plots/curve-style-6.ct2-sh }
+
+@ctioga2@ can also fill the region between two curves, but that is
+another story told "somewhere else":region.html...
+
+h3. Gradients
+
+@ctioga2@ provides a neat way to plot lots of curves with a linearly
+changing color. Behold:
+
+{ctCmdline: plots/curve-style-7.ct2-sh }
+
+Here, a trick needs to be explained: the @0##12@ is expanded by
+@ctioga2@ into several dataset as @0@, @1@, @2@... up until @12@
+(which is the reason why there are 13 curves).
+
+The old way of making gradient in @ctioga@, using a @gradient: @
+dataset is still supported, but is clearly behing the new way.
+
+h3. More about sets
+
+While predefined sets may suit you, it is possible to build custom
+sets directly on the fly:
+
+{ctCmdline: plots/curve-style-8.ct2-sh }
+
+Let's analyse in details. We have 7 curves (from @0@ to @6@, ie from
+bottom to top). The color set specification, @Red|Blue|Green@
+instructs @ctioga2@ to use these three colors each in turn for each
+curve. Now, the line style specification, @Solid|Dots*3@, instructs to
+use *3 times* the @Solid@ line style, then *3 times* the @Dots@ line
+style. Combining these possibilities makes for very easy play with
+colors/markers/line styles...
+

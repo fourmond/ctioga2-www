@@ -1,0 +1,2 @@
+ctioga2 -X --math --fill axis --fill-transparency 0.6 \
+	'sin(x)' 'cos(x)' ' -sin(x)'

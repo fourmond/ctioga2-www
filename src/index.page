@@ -44,7 +44,7 @@ plotting. But I wanted something:
 * *powerful*: @ctioga2@ offers many features that are not found on
   other plotting systems (at least not all at once), such as gradients
   for successive curves, color maps and countours, nice filled
-  curves... Have a look at the "gallery":galleries/ !
+  curves... Have a look at the "gallery":galleries.html !
 * *scriptable*: being a command-line utility, it integrates naturally
   into the power of command-line scripting. It is very easy to animate
   graphs into a "movie":doc/tutorial/movie.html !

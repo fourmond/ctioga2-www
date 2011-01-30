@@ -1,0 +1,30 @@
+---
+title: Axes and labels
+inMenu: true
+---
+h2. Customizing the look of axes and labels
+
+Here are ways to tweak various things about axes and things.
+
+h3. Alternative X or Y axes
+
+It is possible to use different axes for different curves in a single
+plot, using @--y2@ or @--x2@:
+
+{ctCmdline: plots/axes-labels-1.ct2-sh }
+
+This example also shows how to define the label for the current X and
+Y axes; the @-x@ and @-y@ commands provide many options to fine-tune
+the look of the labels.
+
+h3. X and Y ranges
+
+It is possible to define the X and Y ranges of the plot thus: 
+
+{ctCmdline: plots/axes-labels-2.ct2-sh }
+
+Alternatively, it is possible to use @--margin@ to leave a certain
+fraction of the plots around the data points; to make the reading
+easier. In this case, we leave 3%:
+
+{ctCmdline: plots/axes-labels-3.ct2-sh }

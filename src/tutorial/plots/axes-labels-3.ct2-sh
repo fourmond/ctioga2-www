@@ -1,0 +1,2 @@
+ctioga2 -X --math --margin 0.03 \
+	'sin(x)' 'cos(x)'

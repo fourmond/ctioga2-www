@@ -1,0 +1,2 @@
+ctioga2 -X --math 'sin(x)' 'cos(x)' \
+	--xrange -20: --yrange -0.8:2

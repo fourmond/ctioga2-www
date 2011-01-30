@@ -13,6 +13,7 @@ This tutorial covers quite a few aspects of the making of plots with
 * "data files and mathematical functions":02-datafiles.html (including a
   small trick to extract data from "gnuplot":http//gnuplot.info files
 * how to tweak the look of "plain curves":03-curve-style.html
+* "axes and labels":04-axes-labels.html
 
 <notextile>
 <!-- 

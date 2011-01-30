@@ -12,25 +12,16 @@ different ways:
 * directly from the command-line, specifying the look of the graph
   through command-line arguments;
 * using a command file, a bit like files you could use with
-  "gnuplot":http://http://gnuplot.info/.
+  "gnuplot":http://gnuplot.info/.
 
 For instance, running
 
-<pre class='examples-cmdline'>
-ctioga2 --title 'A nice title, for sure' --math 'sin(x)' \
-    -x 'The X label' -y 'The Y label'
-</pre>
+{ctCmdline: plots/polymorphic-1.ct2-sh }
 
 produces the same graph as running @ctioga2 -f@ on a file containing
 this:
 
-<pre class='examples-cmdfile'>
-title('A nice title, for sure')
-math()
-plot('sin(x)')
-xlabel(The X label)
-ylabel(The Y label)
-</pre>
+{ctCmdfile: plots/polymorphic-2.ct2 }
 
 If the latter version is more verbose, it is also more easy to edit in
 the case of complex plots.

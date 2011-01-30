@@ -10,4 +10,7 @@ Tag/SVNAuthor:
   defaultName: "Jean-Julien Fleck"
   # Jean-Julien is reponsible for pages not in SVN
 File/CopyHandler:
-  paths: [ "**/*.dat", "**/*.css", "**/gnuplot.gnu" ]
+  paths: [ "**/*.dat", "**/*.csv", "**/*.css", "**/gnuplot.gnu" ]
+
+File/NewsFeed:
+  title: "ctioga2, the polymorphic plotting program"

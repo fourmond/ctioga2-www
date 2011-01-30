@@ -1,0 +1,2 @@
+ctioga2 --title 'A nice title, for sure' --math 'sin(x)' \
+	-x 'The X label' -y 'The Y label'

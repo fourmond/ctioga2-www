@@ -12,7 +12,7 @@ This tutorial covers quite a few aspects of the making of plots with
 
 * a quick way to "get started":01-getting-started.html
 * "data files and mathematical functions":02-datafiles.html (including a
-  small trick to extract data from "gnuplot":http//gnuplot.info files
+  small trick to extract data from "gnuplot":http://gnuplot.info files
 * how to tweak the look of "plain curves":03-curve-style.html
 * "axes and labels":04-axes-labels.html
 * "3D data":05-3D.html
@@ -26,6 +26,9 @@ a few pictures ?
 
 TODO: use tags for commands, in order to do the same trick as for the
 examples.
+
+TODO: use also a tag for ctioga2, in order to change that easily
+should another writing be used ?
 -->
 </notextile>
 

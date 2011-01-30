@@ -1,5 +1,13 @@
 --- 
 - :author: Vincent Fourmond
+  :title: New skin for ctioga2's website
+  :contents: |-
+    I have just finished and uploaded the first version of a new website for ctioga2, featuring among other goodies an updated documentation (corresponding to the current SVN version) and up-to-date galleries.
+    
+    A fresh and shiny release of ctioga2 should be published soon. Have fun !
+  :id: 38736
+  :date: 2011-01-30 21:36:00 +01:00
+- :author: Vincent Fourmond
   :title: ctioga2 is still alive !
   :contents: |-
     Well, it might not be that obvious looking at the Rubyforge project page, but ctioga2 is alive (and kicking, for that matter). I've been too busy lately to advertise any of my work on ctioga2, but many features have been added since the 0.0 release, and I hope to gather that into a proper release some time soon.

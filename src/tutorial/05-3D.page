@@ -1,0 +1,58 @@
+---
+title: 3D plots
+inMenu: true
+---
+h2. How to plot 3D data...
+
+One of the greatests improvements of @ctioga2@ over @ctioga@ is the
+possibility now to handle gracefully 3D data, in the form of XY color
+maps. As an example, we'll use the following 
+"data file":plots/3D-data.dat
+containing @r@ and it sinus cardinal as a function of @x@ and @y@, 
+generated using the following Ruby code:
+
+<pre class='examples'>
+-15.upto(15) do |i|
+  -15.upto(15) do |j|
+    r = (i**2 + j**2)**0.5
+    puts "#{i}\t#{j}\t#{r}\t#{(r > 0 ? Math::sin(r)/r : 1)}"
+  end
+end
+</pre>
+
+h3. Simple display
+
+The most basic thing is to plot this data as a color map. For
+@ctioga2@ to understand you want a XY color map, you need the 
+@--xyz-map@ command:
+
+{ctCmdline: plots/3D-1.ct2-sh }
+
+Note how the <code>@1:2:4</code> is used to say that the @X@ column is
+the first, the @Y@ the second and the @Z@ the fourth.
+
+h3. Adding a legend
+
+That said, even if it is rather easy to recognise the cardinal sinus
+in the plot above, getting precise values is yet another thing. To do
+that, you need to setup a so-called Z axis using @--new-zaxis@ and
+instruct @ctioga2@ to use that axis to display color map:
+
+{ctCmdline: plots/3D-2.ct2-sh }
+
+In addition, using the @--color-map@ command or the corresponding
+option, it is possible to be more precise about which colors to use:
+
+{ctCmdline: plots/3D-3.ct2-sh }
+
+The @#f22--#fff(0)--#22f@ snippet is used to define precisely the
+color gradients. It goes from red (@#f22@) to white (@#fff) at @z = 0@
+to blue (@#22f@). Any number of points can be specified thus, allowing
+for rather complex effects.
+
+h3. Contour plots
+
+Finally, it is possible to draw contour plots using the
+@--draw-contour@ command, that takes as argument the desired Z level:
+
+{ctCmdline: plots/3D-4.ct2-sh }

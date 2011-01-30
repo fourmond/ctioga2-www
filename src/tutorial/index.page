@@ -9,18 +9,23 @@ h2. How to get going with @ctioga2@
 This tutorial covers quite a few aspects of the making of plots with
 @ctioga2@, including:
 
+
 * a quick way to "get started":01-getting-started.html
 * "data files and mathematical functions":02-datafiles.html (including a
   small trick to extract data from "gnuplot":http//gnuplot.info files
 * how to tweak the look of "plain curves":03-curve-style.html
 * "axes and labels":04-axes-labels.html
+* "3D data":05-3D.html
 
 <notextile>
 <!-- 
-* axes and label tweaks
+TODO: this should be transformed in a little more texts, possibly with
+a few pictures ?
 * legend tweaks
-* plots of 3D data
 * complex plot layouts 
+
+TODO: use tags for commands, in order to do the same trick as for the
+examples.
 -->
 </notextile>
 

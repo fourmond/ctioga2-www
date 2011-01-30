@@ -1,0 +1,6 @@
+ctioga2 -X --xyz-map --margin 0.03 \
+	--new-zaxis zvalues /location right \
+    	3D-data.dat@1:2:4  /zaxis zvalues \
+	/color-map '#f22--#fff(0)--#22f' \
+	--draw-contour 0.8 /color Purple \
+	--draw-contour 0 /color Black /style Dots \

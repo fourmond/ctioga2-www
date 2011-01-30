@@ -1,0 +1,2 @@
+ctioga2 --math --color-set 'Blue|Green|Pink|Orange' \
+	'sin(x + 0##3)'

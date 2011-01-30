@@ -5,3 +5,66 @@ inMenu: true
 
 h2. Galleries
 
+There are two galleries: one serving as a demonstration of some of the
+features linking to specific bits of the documentation, and the other
+coming from real publications.
+
+h3. Demo gallery
+
+Images are links to the corresponding code.
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/03-curve-style.html#curve-style-1}
+<br/>
+Simple and powerful styling mechanism
+</td>
+<td>
+{example: /tutorial/03-curve-style.html#curve-style-6}
+<br/>
+Filled curves and transparency
+</td>
+</tr>
+<tr>
+<td>
+{example: /tutorial/03-curve-style.html#curve-style-7}
+<br/>
+Color gradients
+</td>
+<td>
+{example: /tutorial/05-3D.html#3D-4}
+<br/>
+XYZ color maps and contour plots
+</td>
+</tr>
+</table>
+
+h3. Real life examples
+
+These images come from publications. Taken out of their scientific
+context but linking to them can probably be considered
+"fair use":http://en.wikipedia.org/wiki/Fair_use.
+
+You may want me to add your pictures here, just ping me !
+
+
+<table class='gallery'>
+<tr>
+<td>
+<notextile>
+{doilink: {image: /galleries/Fourmond-JACS-2010.jpeg, 
+  doi: 10.1021/ja910685j}}
+</notextile>
+
+Fourmond, _et al_, _J. Am. Chem. Soc._ 2010
+</td>
+<td>
+{doilink: {image: /galleries/Fourmond-Inorg-Chem-2010.jpeg, 
+  doi: 10.1021/ic101187v}}
+
+Fourmond, _et al_, _Inorg. Chem._ 2010
+</td>
+</tr>
+</table>
+

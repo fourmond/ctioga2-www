@@ -79,8 +79,8 @@ Here, a trick needs to be explained: the @0##12@ is expanded by
 @ctioga2@ into several dataset as @0@, @1@, @2@... up until @12@
 (which is the reason why there are 13 curves).
 
-The old way of making gradient in @ctioga@, using a @gradient: @
-dataset is still supported, but is clearly behing the new way.
+The old way of making gradient in @ctioga@, using a @gradient:@
+dataset is still supported, but is clearly behind the new way.
 
 h3. More about sets
 

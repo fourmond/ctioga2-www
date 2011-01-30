@@ -1,0 +1,4 @@
+ctioga2 -X --math 'sin(x)' 'cos(x)' \
+	--top off --bottom major-num /stroke_color Blue \
+	--axis-style right /decoration major \
+	--label-style bottom /color Blue 

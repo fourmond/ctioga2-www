@@ -28,3 +28,21 @@ fraction of the plots around the data points; to make the reading
 easier. In this case, we leave 3%:
 
 {ctCmdline: plots/axes-labels-3.ct2-sh }
+
+h3. Log plots
+
+It is possible to use a log scale by passing the @--xlog@ or @--ylog@
+commands:
+
+{ctCmdline: plots/axes-labels-4.ct2-sh }
+
+
+h3. Tweaking the looks of axes
+
+It is possible to change the look of each of the sides of the plot
+individually using the @--axis-style@ and the companion
+@--label-style@ commands that set the style of the axis and of the
+labels respectively.
+
+{ctCmdline: plots/axes-labels-5.ct2-sh }
+

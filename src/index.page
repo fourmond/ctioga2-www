@@ -5,7 +5,7 @@ orderInfo: -1
 ---
 
 <div class='top-left-outer'>
-h2. News
+h2. Latest news
 
 <div class='top-left-inner'>{news: {number: 1}}
 "News archive":http://rubyforge.org/news/?group_id=8218

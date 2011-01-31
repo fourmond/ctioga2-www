@@ -12,8 +12,10 @@ Download @ctioga2@ from Rubyforge's
 
 Latest version:
 
-<a href="http://rubyforge.org/frs/download.php/60705/ctioga2-0.0.tar.gz">
-<img src="{resource: webgen-icons-download}" alt="Download" /><code>ctioga2-0.0.tar.gz</code></a>
+<a href="http://rubyforge.org/frs/download.php/74136/ctioga2-0.1.tar.bz2">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.1.tar.bz2</code></a>
+
+Current "Changelog":Changelog
 </div>
 </div>
 
@@ -36,13 +38,13 @@ the file is named @ctioga2-0.0.tar.gz@.
 First, extract the tarball this way:
 
 <pre class='examples-cmdline'>
-tar xvzf ctioga2-0.0.tar.gz
+tar xvjf ctioga2-0.1.tar.gz
 </pre>
 
 Then @cd@ to the directory created. Here, it is @ctioga2-0.0@:
 
 <pre class='examples-cmdline'>
-cd ctioga2-0.0
+cd ctioga2-0.1
 </pre>
 
 @ctioga2@ is using

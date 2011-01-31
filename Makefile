@@ -1,10 +1,11 @@
 # Makefile for the website of ctioga2 (at http://ctioga2.rubyforge.org)
-# Copyright 2009 by Vincent Fourmond
+# Copyright 2009, 2011 by Vincent Fourmond
 
 # The game is to make my life easier
 
 website:
 	webgen
+	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 
 regenerate-styles:
 	rm -f output/style.css

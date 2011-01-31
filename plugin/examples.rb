@@ -8,6 +8,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   param 'file', false, "The file containing the command-line"
   param 'alt', false, 'The alternative text'
+  # @todo implement that
+  param 'image', true, "Whether the image should be displayed and linked or not"
   param 'cls', 'examples-cmdline', "The class used for the <pre> elements"
   param 'cmdbase', "/doc/commands.html", 'The base URL for commands links. False to deactivate'
   

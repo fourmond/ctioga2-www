@@ -38,6 +38,18 @@ Color gradients
 XYZ color maps and contour plots
 </td>
 </tr>
+<tr>
+<td>
+{example: /tutorial/06-complex-layouts.html#complex-layouts-2}
+<br/>
+Easy setup of insets... 
+</td>
+<td>
+{example: /tutorial/06-complex-layouts.html#complex-layouts-3}
+<br/>
+... and complex grid-like plots
+</td>
+</tr>
 </table>
 
 h3. Real life examples

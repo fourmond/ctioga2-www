@@ -13,6 +13,8 @@ However, there are still a few minor things that are not handled yet by
 * histograms
 * many of the old filters
 * the binner backend
+* zoom inset -- but normal insets are handled
+* there is no @ctable@
 * and possibly a few more...
 
 In addition, even if for the most common cases @ctioga2@ is just a

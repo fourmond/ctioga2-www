@@ -1,0 +1,2 @@
+ctioga2 -X --math 'x**2' --inset 'tl:0.2,0.8:0.4,0.3' \
+	'cos(x)' -t 'Inset !' --end 'x'

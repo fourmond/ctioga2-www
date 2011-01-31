@@ -1,0 +1,4 @@
+ctioga2 -X --math --setup-grid 2x2 /top 5mm \
+	--inset grid:0,0 'sin(x)' \
+	--next-inset grid:0,1 'x**2' \
+	--next-inset grid:1,1 'x**3'

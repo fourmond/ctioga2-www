@@ -1,0 +1,49 @@
+---
+title: Complex layouts
+inMenu: true
+---
+h2. Complex layouts
+
+This page shows you how it is easy to change the layout of plots,
+starting from the size to insets and complex grid layouts.
+
+h3. Plot size
+
+By default, @ctioga2@ produces a square plot of exactly @12cm@ by
+@12cm@. This can be changed using the @--page-size@ command (or @-r@
+for short):
+
+{ctCmdline: plots/complex-layouts-1.ct2-sh}
+
+The plots generated in this documentation have a @-r 9cmx6cm@
+transparently prepended to the commands in order to get a
+rectangular output.
+
+h3. Insets
+
+@ctioga2@ supports insets, just like the old @ctioga@ did. Only, the
+inset specifications are slightly different than before. See:
+
+{ctCmdline: plots/complex-layouts-2.ct2-sh}
+
+The @tl:0.2,0.8:0.4,0.3@ bit signifies: place the inset's top left
+(@tl@) at the position @X = 0.2, Y = 0.8@ (frame positions: @0@ is left or
+bottom, @1@ is top or right), and make it @0.4@ in width and @0.3@ in
+height. See how the @--end@ command switches back to the main plot,
+and how the @--title@ command applies to the inset.
+
+h3. Grids
+
+@ctioga@ featured a way to arrange plots as "grids". It was neither
+easy to use nor very satisfying. @ctioga2@ provides a completely
+different way to handle the things, through the command
+@--setup-grid@. See: 
+
+{ctCmdline: plots/complex-layouts-3.ct2-sh}
+
+Once @--setup-grid@ has been used, start the first plot with @--inset@
+and the next ones with @--next-inset@. @--setup-grid@ takes many
+options to control which space should be left on the sides of the
+whole plot (@left@, @top@, @bottom@ and @right@) and how much space
+should be inserted between the individual "insets" (@dx@, @dy@).
+

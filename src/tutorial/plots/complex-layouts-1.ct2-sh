@@ -1,0 +1,1 @@
+ctioga2 -X --math 'sin(x)' --page-size '7cmx12cm'

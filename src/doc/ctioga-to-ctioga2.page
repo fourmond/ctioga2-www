@@ -24,6 +24,18 @@ sets can be specified easily on the command-line:
 
 {ctCmdline: plots/ct2ct2-1.ct2-sh}
 
+h3. And what about @ctable@ ?
+
+@ctioga@ came along with a small helper program, @ctable@, that
+paralleled the @table@ terminal of "gnuplot":http://gnuplot.info, and
+that could be used to quickly manipulate data files. @ctable@ does not
+exists with @ctioga2@, but you can reproduce its behavior with the
+@--load@ and the @--print-dataset@ commands:
+
+<pre class="examples-cmdline">
+ctioga2 --math -L 'sin(x)' -P
+</pre>
+
 h3. Unimplemented features
 
 As of now, many of <code>ctioga</code>'s features have not been ported

@@ -1,0 +1,8 @@
+# -*- mode: yaml -*-
+---
+baseUrl:
+  http://sciyag.rubyforge.org
+defaultFrequency:
+  weekly
+gzip:
+  true

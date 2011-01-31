@@ -1,5 +1,21 @@
 --- 
 - :author: Vincent Fourmond
+  :title: ctioga2 0.1 is out
+  :contents: |-
+    ctioga2 version 0.1 is out ! It is the first version that truly brings back almost all the functionalities that were in the old ctioga.
+    
+    Get a glimpse of what it looks like there:
+    
+    <a href="http://ctioga2.rubyforge.org/galleries.html" target="_new">http://ctioga2.rubyforge.org/galleries.html</a>
+    
+    And get it there:
+    
+    <a href="http://rubyforge.org/frs/?group_id=8218" target="_new">http://rubyforge.org/frs/?group_id=8218</a>
+    
+    Enjoy !
+  :id: 38738
+  :date: 2011-01-31 20:43:00 +01:00
+- :author: Vincent Fourmond
   :title: New skin for ctioga2's website
   :contents: |-
     I have just finished and uploaded the first version of a new website for ctioga2, featuring among other goodies an updated documentation (corresponding to the current SVN version) and up-to-date galleries.

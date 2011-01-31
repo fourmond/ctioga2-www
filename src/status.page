@@ -4,20 +4,18 @@ inMenu: true
 ---
 h2. @ctioga2@ status
 
-Currently, @ctioga2@ is in a alpha stage, and lacks several features
-that were important in @ctioga@, such as:
-* tangents
-* error bars
-* filled curves
-* histograms
-* many filters 
-* transparency
-* region delimitation and coloring
-* double X or Y graphs
-* and many more for now
+@ctioga2@ has matured enough to reach the stage where most of the old
+@ctioga@ features are now available for @ctioga2@. This is why 
+"@ctioga@ has been deprecated":http://rubyforge.org/forum/forum.php?forum_id=38737. 
 
-However, @ctioga2@ has already proven much easier to maintain, develop
-and extend. There are quite a few functionalities that were completely
-absent in @ctioga@, mostly because they were too cumbersome or too
-delicate to implement. In particular, @ctioga2@ offers much more
-control over the look of things that the old @ctioga@ did.
+However, there are still a few minor things that are not handled yet by
+@ctioga2@, such as:
+* histograms
+* many of the old filters
+* the binner backend
+* and possibly a few more...
+
+In addition, even if for the most common cases @ctioga2@ is just a
+drop-in replacement for @ctioga@, it is not always the case. Check out
+the "@ctioga@ to @ctioga2@ page":doc/ctioga-to-ctioga2.html for more
+information.

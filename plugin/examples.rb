@@ -1,3 +1,10 @@
+# examples.rb: a Webgen plugin to display examples
+# 
+# This file is copyright 2011 by Vincent Fourmond, and can be used and
+# redistributed under the same terms as webgen version 0.4 itself.
+
+# @todo There are a lot of things to refactor here
+
 class CTiogaCmdlineTag < Tags::DefaultTag
 
   infos( :name => 'Tag/CTiogaCmdline',
@@ -147,4 +154,47 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
   end
 
 
+end
+
+class CTiogaSwitchTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/CTiogaSwitch',
+         :summary => 
+         "A link to  ctioga command.")
+
+  register_tag 'cmd'
+
+  param 'switch', false, "The command"
+  param 'cmdbase', "/doc/commands.html", 'The base URL for commands links. False to deactivate'
+  
+  set_mandatory 'switch', true
+
+  def purify_description(desc)
+    desc.gsub(/\{\w+:([^}]+)\}/) do 
+      $1
+    end
+  end
+
+  def process_tag( tag, chain )
+    # @todo maybe the plugin should detect if it is a short or long
+    # switch or a command.
+    if switch = param('switch')
+      switch.gsub!(/^\s*(--)?\s*/,'')    # Remove the leading dashes
+      switch.gsub!(/\s*$/,'')    # Remove the leading dashes
+      cmd = CTiogaCmdlineTag::CTiogaSwitches[switch]
+      base = param('cmdbase')
+      cmdlocation = resolve_path(base, chain)
+      if cmd
+        desc = purify_description(cmd['short_description'])
+        return "<code><a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{desc}\">--#{switch}</a></code>"
+      else
+        return "<code>--#{switch}</code>"
+      end
+    end
+  end
+
+  def resolve_path(uri, chain )
+    dest_node = chain.first.resolve_node( uri )
+    chain.last.route_to(dest_node)
+  end
 end

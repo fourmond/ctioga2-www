@@ -77,12 +77,16 @@ You may want me to add your pictures here, just ping me !
 </notextile>
 
 Fourmond, _et al_, _J. Am. Chem. Soc._ 2010
+
+A good demonstration of {cmd: setup-grid} 
 </td>
 <td>
 {doilink: {image: /galleries/Fourmond-Inorg-Chem-2010.jpeg, 
   doi: 10.1021/ic101187v}}
 
 Fourmond, _et al_, _Inorg. Chem._ 2010
+
+The green zone was made using {cmd: region} 
 </td>
 </tr>
 </table>

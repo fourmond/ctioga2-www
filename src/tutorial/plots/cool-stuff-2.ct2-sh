@@ -1,0 +1,4 @@
+ctioga2 -X --math --region /color Blue /transparency 0.7 \
+	/reversed_color '#afa' \
+	'40 - x**2' /region-side below '7*x' /region-side ignore \
+	'x**2' /region-side above

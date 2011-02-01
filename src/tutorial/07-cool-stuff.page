@@ -1,0 +1,26 @@
+---
+title: Cool stuff
+inMenu: true
+---
+h2. Cool stuff
+
+This page contains various neat tricks with @ctioga2@.
+
+
+h3. Colored regions
+
+It is possible to use the @--region@ command to build colored regions
+delimited by plotted curves (which is different than 
+"filled curves":03-curve-style.html#pre-curve-style-6):
+
+{ctCmdline: plots/cool-stuff-1.ct2-sh }
+
+By default, the curve within the @--region@ are alternatively above
+and below the colored region. It is possible to change that for each
+curve individually -- including ignoring the curve:
+
+{ctCmdline: plots/cool-stuff-2.ct2-sh }
+
+This example also demonstrates that it is possible to fill the
+"reverse" of the region with a different color using the
+@/reversed_color@ option.

@@ -1,0 +1,2 @@
+ctioga2 -X --math --region /color Blue /transparency 0.7 \
+	'30 - x**2' 'x**2' 

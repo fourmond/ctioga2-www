@@ -50,6 +50,13 @@ Easy setup of insets...
 ... and complex grid-like plots
 </td>
 </tr>
+<tr>
+<td>
+{example: /tutorial/07-cool-stuff.html#cool-stuff-2}
+<br/>
+Easy way to color a region delimited by curves
+</td>
+</tr>
 </table>
 
 h3. Real life examples

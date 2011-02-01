@@ -1,7 +1,7 @@
 # -*- mode: yaml -*-
 ---
 baseUrl:
-  http://sciyag.rubyforge.org
+  http://ctioga2.rubyforge.org
 defaultFrequency:
   weekly
 gzip:

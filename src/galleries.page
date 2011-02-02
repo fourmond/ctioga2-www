@@ -1,6 +1,7 @@
 ---
 title: Galleries
 inMenu: true
+gPriority: 0.7
 ---
 
 h2. Galleries

@@ -98,14 +98,6 @@ thead th    { background: #c3d9ff; }
 th,td,caption { padding: 4px 10px 4px 5px; }
 
 /* Not interesting for now */
-/* /\* */
-/* 	You can zebra-stripe your tables in outdated browsers by adding  */
-/* 	the class "even" to every other table row.  */
-/*  *\/ */
-/* tbody tr:nth-child(even) td,  */
-/* tbody tr.even td  {  */
-/* 	background: #e5ecf9;  */
-}
 tfoot       { font-style: italic; }
 caption     { background: #eee; }
 

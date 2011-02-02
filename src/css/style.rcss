@@ -187,9 +187,21 @@ h3.group, h3.backend {
     border-bottom: 2px solid black;
 }
 
+/* Tables: */
+
+/*
+  Zebras in command-line switches
+ */
+.cmdline-table tbody tr:nth-child(even) td {
+	background: #e5ecf9;
+}
+
 /* Summary table of command-lines switches */
-th {
+.cmdline-table th {
     padding-top: 6px;
     padding-bottom: 2px;
 }
 
+.gallery td {
+    text-align: center;
+}

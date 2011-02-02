@@ -10,8 +10,10 @@ This page contains a summary of command-line switches for
 automatically generated from the inline documentation of @ctioga2@.
 
 <notextile>
+<div class='cmdline-table'>
 {execute: {command: ctioga2 --write-html-commandline, processOutput:
 false, escapeHTML: false }}
+</div>
 </notextile>
 
 Generated for @ctioga2@ version: 

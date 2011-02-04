@@ -12,6 +12,9 @@ Tag/SVNAuthor:
 File/CopyHandler:
   paths: [ "**/*.dat", "**/*.csv", "**/*.css", "**/gnuplot.gnu", 
   "**/*.jpeg", "**/.htaccess" ]
+Core/FileHandler:
+  useHiddenFiles: true
+  ignorePaths: ["**/.svn{/**/**,/}"]
 
 File/NewsFeed:
   title: "ctioga2, the polymorphic plotting program"

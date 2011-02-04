@@ -17,7 +17,7 @@ class ExampleLinkTag < Tags::DefaultTag
     url, example = link.split(/#(pre-)?/)
     url = resolve_path(url, chain)
     plot = File::dirname(url) + "/" + param('dir') + "/#{example}.thumb.png"
-    return "<a href='#{url}#pre-#{example}'><img src='#{plot}' alt=''></a>"
+    return "<a href='#{url}#pre-#{example}'><img src='#{plot}' alt='' /></a>"
   end
 
   private
@@ -48,7 +48,7 @@ class DOILinkTag < Tags::DefaultTag
     img = param('image')
     doi = param('doi') 
     url = resolve_path(img, chain)
-    img = "<img src='#{url}' alt='#{doi}' title='#{doi}' />"
+    img = "<img src='#{url}' alt='#{doi}' title='Extracted from article DOI: #{doi}' />"
     if doi
       return "<a href='http://dx.doi.org/#{doi}'>#{img}</a>"
     else

@@ -17,7 +17,7 @@ regenerate-full:
 	webgen
 
 TARGET="rubyforge.org:/var/www/gforge-projects/ctioga2"
-RSYNC_OPTS= -avvz --progress
+RSYNC_OPTS= -avvz --progress --delete
 
 rsync:
 	rsync $(RSYNC_OPTS) output/ $(TARGET)

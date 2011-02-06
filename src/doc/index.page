@@ -17,6 +17,11 @@ The documentation is divided into several parts
   up-to-date by construction.
 * a list of "command-line switches":cmdline.html, also always
   up-to-date
+* if you are curious, you may also look at the 
+  "developer documentation":dox/html/, built using 
+  "doxygen":http://www.stack.nl/~dimitri/doxygen/ and the 
+  "doxygen-ruby":https://github.com/fourmond/doxygen-ruby-patch 
+  patch.
 
 I wish this documentation was more detailed, but unfortunately, I
 spend more time developing new features of @ctioga2@ than documenting

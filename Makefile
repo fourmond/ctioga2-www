@@ -19,5 +19,8 @@ regenerate-full:
 TARGET="rubyforge.org:/var/www/gforge-projects/ctioga2"
 RSYNC_OPTS= -avvz --progress --delete
 
+DOX = ../ctioga2/dox
+
 rsync:
-	rsync $(RSYNC_OPTS) output/ $(TARGET)
+	rsync $(RSYNC_OPTS) --exclude 'dox' output/ $(TARGET)
+	test -d  $(DOX) && rsync $(RSYNC_OPTS) $(DOX) $(TARGET)/doc

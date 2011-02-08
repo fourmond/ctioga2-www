@@ -56,3 +56,54 @@ Finally, it is possible to draw contour plots using the
 @--draw-contour@ command, that takes as argument the desired Z level:
 
 {ctCmdline: plots/3D-4.ct2-sh }
+
+h3. Only contours
+
+By setting {cmd: fill-transparency} to 1, it is possible to fully
+disable the display of the maps, which can be useful if you're only
+interested in the countour plots, see:
+
+{ctCmdline: plots/3D-5.ct2-sh }
+
+However, as of version 0.1, a lower value for {cmd: fill-transparency}
+will have no effect, ie partial transparency is not supported yet.
+
+*Important note:* the plots based on {cmd: xyz-map} work only on
+uniform XY grids (at least as far as version 0.1 is
+concerned). However, the next bits will present other ways to display
+non-uniform data.
+
+
+h3. XY Parametric plots
+
+What I call parametric XY plots are plain XY plots where some details
+of the presentation (for now, only colors) depend on Z values.
+
+*Warning:* XY parametric plots are still experimental, and their
+syntax is still not fully defined. Things presented here will probably
+not change much, but they may...
+
+For the sake of the example, we will use the following 
+"data file":plots/parametric-data.dat generated using:
+
+<pre class='examples'>
+0.upto(40) do |i| # X values
+  1.upto(4) do |j| # Z values
+    x = i * 0.2
+    y = 1/(1 + j/x)
+    puts "#{i}\t#{y}\t#{j}"
+  end
+end
+</pre>
+
+They represent various saturation curves with different saturation
+parameters. Its easy to display all the curves in one go:
+
+{ctCmdline: plots/3D-6.ct2-sh }
+
+<notextile>
+<!-- 
+Maybe point to 
+http://sciyag.rubyforge.org/ctioga/gallery/index.html#img-0109490501_2MASS_dxdy
+-->
+</notextile>

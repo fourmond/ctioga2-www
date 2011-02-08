@@ -1,0 +1,2 @@
+ctioga2 -X --xy-parametric --margin 0.03 \
+	--marker auto parametric-data.dat@1:2:3 

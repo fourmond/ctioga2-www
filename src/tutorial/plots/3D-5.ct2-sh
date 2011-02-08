@@ -1,0 +1,5 @@
+ctioga2 -X --xyz-map --margin 0.03 \
+    	3D-data.dat@1:2:4 /fill-transparency 1 \
+	--draw-contour 0.8 /color Blue \
+	--draw-contour 0.4 /color Red /style Dashes \
+	--draw-contour 0 /color Green /style Dots

@@ -1,5 +1,17 @@
 --- 
 - :author: Vincent Fourmond
+  :title: New git mirror for ctioga2 at github
+  :contents: |-
+    To encourage hacking, I have created a git repository for ctioga2 at github:
+    
+    <a href="http://github.com/fourmond/ctioga2" target="_new">http://github.com/fourmond/ctioga2</a>
+    
+    The rubyforge SVN repository remains the master repository, at least for the time being, but SVN commits will get mirrored to the git repository.
+    
+    Have fun !
+  :id: 38775
+  :date: 2011-02-11 21:26:00 +01:00
+- :author: Vincent Fourmond
   :title: ctioga2 0.1 is out
   :contents: |-
     ctioga2 version 0.1 is out ! It is the first version that truly brings back almost all the functionalities that were in the old ctioga.

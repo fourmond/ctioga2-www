@@ -18,6 +18,20 @@ involved:
 * Adding new features to @ctioga2@. You need something ? Just write it
   !
 
+h3. How do I get going ?
+
+You have two options, depending on which SCM you enjoy using
+
+* You can hack directly on the 
+  "master SVN repository":http://rubyforge.org/scm/?group_id=8218
+  at "Rubyforge":http://rubyforge.org. You'll have to use anonymous
+  access.
+* Alternatively, you can clone the 
+  "git mirror":http://github.com/fourmond/ctioga2 at 
+  "github":http://github.com. Using @git@ will probably make it
+  simpler to share patches/commits. However, the @git@ repository may
+  be lagging behind the SVN one at times...
+
 In any case, for help and advice, either use the
 "forums":http://rubyforge.org/forum/?group_id=8218 or the
 "@ctioga2-users@":http://rubyforge.org/mailman/listinfo/ctioga2-users

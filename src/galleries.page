@@ -82,12 +82,36 @@ Fourmond, _et al_, _J. Am. Chem. Soc._ 2010
 A good demonstration of {cmd: setup-grid} 
 </td>
 <td>
+<notextile>
+{doilink: {image: /galleries/Fourmond-EES-2011-2.jpeg, 
+  doi: 10.1039/C0EE00736F}}
+</notextile>
+
+Fourmond, _et al_, _EES._ 2011
+
+Another one, along with {cmd: xyz-maps}
+</td>
+</tr>
+<tr>
+<td>
+<notextile>
 {doilink: {image: /galleries/Fourmond-Inorg-Chem-2010.jpeg, 
   doi: 10.1021/ic101187v}}
+</notextile>
 
 Fourmond, _et al_, _Inorg. Chem._ 2010
 
 The green zone was made using {cmd: region} 
+</td>
+<td>
+<notextile>
+{doilink: {image: /galleries/Fourmond-EES-2011-1.jpeg, 
+  doi: 10.1039/C0EE00736F}}
+</notextile>
+
+Fourmond, _et al_, _EES._ 2011
+
+Another demonstration of {cmd: region} 
 </td>
 </tr>
 </table>

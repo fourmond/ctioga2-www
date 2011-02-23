@@ -28,3 +28,28 @@ legend. When that is not desired, it is possible to use the
 This produces a plot of exactly @9cmx6cm@, counting the legend in,
 while without this option the *graph* has a fixed size, but the space
 allocated for the legend expands as necessary.
+
+h3. Legends inside the plot
+
+I don't like much having the legends on the side, as it tends to leave
+a lot of white space, though admittedly sometimes there's no way
+around it. @ctioga2@ allows to place the legends *inside* the plot,
+using the {cmd: legend-inside} command:
+
+{ctCmdline: plots/legends-4.ct2-sh }
+
+The @tc@ specification requests to place the top center of the legend
+at the top center of the graph. Placement can be refined by giving an
+additional coordinate specification:
+
+{ctCmdline: plots/legends-5.ct2-sh }
+
+This @lt:0.1,0.82@ means: place the top left corner of the legends at
+the position @0.1,0.82@ (counting from the bottom left corner; @1,1@
+is the top right corner of the plot).
+
+It additionally demonstrates the use of options to 
+{cmd: legend-inside} that can be used to tweak the look of the legend,
+such as its size and spacing between consecutive lines. 
+{cmd: legend-style} takes the same options, but without imposing the
+placement (which can be useful to tweak the look of the outer legends).

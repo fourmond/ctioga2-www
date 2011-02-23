@@ -1,0 +1,5 @@
+ctioga2 -X --math \
+	--legend-inside tc \
+	'x' /legend '$x$' \
+	'x**2' /legend '$x^2$' \
+	'x**3' /legend '$x^3$' \

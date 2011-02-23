@@ -16,8 +16,8 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
                   '**/*.ct2-sh'], 'The path patterns which match the '
   'PDF files that should get converted by this handler.'
   
-  param 'thumbsize', 300, "The size of the thumbnail"
-  param 'pngsize', 900, "The size of the PNG image produced"
+  param 'thumbsize', '400x200', "The size of the thumbnail"
+  param 'pngsize', '1200x600', "The size of the PNG image produced"
   param 'density', 250, "The -density parameter of convert"
   param 'verbose', true, "Display information about files as they "+
     "are regenerated"
@@ -82,7 +82,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       n = node.node_info
       cmdline = "pdftoppm -r #{n[:density]} #{n[:src]} | convert ppm:- " +
         if n[:trim]; " -trim"; else ""; end +
-        " -resize #{n[:size]}x#{n[:size]} #{node.full_path}"
+        " -resize #{n[:size]} #{node.full_path}"
       if param('verbose') 
         puts "Running convert to get #{node.path}"
       end

@@ -1,0 +1,2 @@
+ctioga2 -X --math --legend '$\sin x$' 'sin(x)' \
+	'cos(x)' /legend '$\cos x$'

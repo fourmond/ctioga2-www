@@ -1,0 +1,30 @@
+---
+title: Legends
+inMenu: true
+---
+h2. Legends
+
+One important thing with graphs is a legible legend that tells all
+that needs to be said... @ctioga2@ provides various ways to do that.
+
+h3. How to specify legends
+
+Legends can either be specified before using the command {cmd: legend}
+or as an option to the plot:
+
+{ctCmdline: plots/legends-1.ct2-sh }
+
+Additional lines of information can be added using the 
+{cmd: legend-line} command. It can be styled to your taste:
+
+{ctCmdline: plots/legends-2.ct2-sh }
+
+See how in this case the plot gently expands to leave space for the
+legend. When that is not desired, it is possible to use the
+@/count-legend@ option of the {cmd: page-size} command:
+
+{ctCmdline: plots/legends-3.ct2-sh }
+
+This produces a plot of exactly @9cmx6cm@, counting the legend in,
+while without this option the *graph* has a fixed size, but the space
+allocated for the legend expands as necessary.

@@ -17,6 +17,7 @@ This tutorial covers quite a few aspects of the making of plots with
 * "axes and labels":04-axes-labels.html
 * "3D data":05-3D.html
 * "complex plot layouts":06-complex-layouts.html
+* "legends":08-legends.html
 * "other cool stuff":07-cool-stuff.html, such as coloring a region
   between curves
 
@@ -24,10 +25,6 @@ This tutorial covers quite a few aspects of the making of plots with
 <!-- 
 TODO: this should be transformed in a little more texts, possibly with
 a few pictures ?
-* legend tweaks
-
-TODO: use tags for commands, in order to do the same trick as for the
-examples
 
 TODO: use also a tag for ctioga2, in order to change that easily
 should another writing be used ?

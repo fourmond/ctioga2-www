@@ -76,3 +76,14 @@ svn checkout http://ctioga2.rubyforge.org/svn/trunk/ctioga2
 </pre>
 
 Then use the instructions as above for the installation using the tarball.
+
+h3. git mirror
+
+The SVN repository is mirrored to
+"github":http://github.com/fourmond/ctioga2, so, if you're more fluent
+in git, you can also hack the code using
+
+<pre class='examples-cmdline'>
+git clone git://github.com/fourmond/ctioga2.git
+</pre>
+

@@ -1,5 +1,10 @@
 --- 
 - :author: Vincent Fourmond
+  :title: ctioga2 0.2 is out
+  :contents: The version of ctioga2 0.2 is out. It fixes a few small bugs about legends.
+  :id: 38911
+  :date: 2011-02-23 10:21:00 +01:00
+- :author: Vincent Fourmond
   :title: New git mirror for ctioga2 at github
   :contents: |-
     To encourage hacking, I have created a git repository for ctioga2 at github:

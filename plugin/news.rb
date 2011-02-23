@@ -52,7 +52,7 @@ class NewsTag < Tags::DefaultTag
              end
       converter = RedCloth.new(post[:contents])
       converter.hard_breaks = false 
-      result << converter.to_html.gsub!(' target="_new"','')
+      result << converter.to_html.gsub(' target="_new"','')
       result << "\n<p class=\"news-footer\">"
       result << "Posted on <span class=\"news-date\">#{date}</span>"
       result << " by <span class=\"news-author\">#{post[:author]}</span> "

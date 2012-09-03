@@ -1,58 +1,102 @@
---- 
-- :author: Vincent Fourmond
-  :title: ctioga2 0.2 is out
-  :contents: The version of ctioga2 0.2 is out. It fixes a few small bugs about legends.
+---
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    Y3Rpb2dhMiAwLjMgaXMgb3V0
+  :date: 2012-09-04 00:21:00.000000000 +02:00
+  :id: 40981
+  :contents: !binary |-
+    Y3Rpb2dhMiB2ZXJzaW9uIDAuMyBpcyBvdXQgYW5kIGJyaW5ncyBpcyBtb3N0
+    bHkgbW9yZSBjb250cm9sIG9mIHRoZSBkYXRhIHN0YWNrLCBhbmQgZnVydGhl
+    ciBkYXRhIG1hbmlwdWxhdGlvbiBjYXBhY2l0aWVzLgoKRW5qb3kgIQ==
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    Y3Rpb2dhMiAwLjIgaXMgb3V0
+  :date: 2011-02-23 15:21:00.000000000 +01:00
   :id: 38911
-  :date: 2011-02-23 10:21:00 +01:00
-- :author: Vincent Fourmond
-  :title: New git mirror for ctioga2 at github
-  :contents: |-
-    To encourage hacking, I have created a git repository for ctioga2 at github:
-    
-    <a href="http://github.com/fourmond/ctioga2" target="_new">http://github.com/fourmond/ctioga2</a>
-    
-    The rubyforge SVN repository remains the master repository, at least for the time being, but SVN commits will get mirrored to the git repository.
-    
-    Have fun !
+  :contents: !binary |-
+    VGhlIHZlcnNpb24gb2YgY3Rpb2dhMiAwLjIgaXMgb3V0LiBJdCBmaXhlcyBh
+    IGZldyBzbWFsbCBidWdzIGFib3V0IGxlZ2VuZHMu
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    TmV3IGdpdCBtaXJyb3IgZm9yIGN0aW9nYTIgYXQgZ2l0aHVi
+  :date: 2011-02-12 02:26:00.000000000 +01:00
   :id: 38775
-  :date: 2011-02-11 21:26:00 +01:00
-- :author: Vincent Fourmond
-  :title: ctioga2 0.1 is out
-  :contents: |-
-    ctioga2 version 0.1 is out ! It is the first version that truly brings back almost all the functionalities that were in the old ctioga.
-    
-    Get a glimpse of what it looks like there:
-    
-    <a href="http://ctioga2.rubyforge.org/galleries.html" target="_new">http://ctioga2.rubyforge.org/galleries.html</a>
-    
-    And get it there:
-    
-    <a href="http://rubyforge.org/frs/?group_id=8218" target="_new">http://rubyforge.org/frs/?group_id=8218</a>
-    
-    Enjoy !
+  :contents: !binary |-
+    VG8gZW5jb3VyYWdlIGhhY2tpbmcsIEkgaGF2ZSBjcmVhdGVkIGEgZ2l0IHJl
+    cG9zaXRvcnkgZm9yIGN0aW9nYTIgYXQgZ2l0aHViOgoKPGEgaHJlZj0iaHR0
+    cDovL2dpdGh1Yi5jb20vZm91cm1vbmQvY3Rpb2dhMiIgdGFyZ2V0PSJfbmV3
+    Ij5odHRwOi8vZ2l0aHViLmNvbS9mb3VybW9uZC9jdGlvZ2EyPC9hPgoKVGhl
+    IHJ1Ynlmb3JnZSBTVk4gcmVwb3NpdG9yeSByZW1haW5zIHRoZSBtYXN0ZXIg
+    cmVwb3NpdG9yeSwgYXQgbGVhc3QgZm9yIHRoZSB0aW1lIGJlaW5nLCBidXQg
+    U1ZOIGNvbW1pdHMgd2lsbCBnZXQgbWlycm9yZWQgdG8gdGhlIGdpdCByZXBv
+    c2l0b3J5LgoKSGF2ZSBmdW4gIQ==
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    Y3Rpb2dhMiAwLjEgaXMgb3V0
+  :date: 2011-02-01 01:43:00.000000000 +01:00
   :id: 38738
-  :date: 2011-01-31 20:43:00 +01:00
-- :author: Vincent Fourmond
-  :title: New skin for ctioga2's website
-  :contents: |-
-    I have just finished and uploaded the first version of a new website for ctioga2, featuring among other goodies an updated documentation (corresponding to the current SVN version) and up-to-date galleries.
-    
-    A fresh and shiny release of ctioga2 should be published soon. Have fun !
+  :contents: !binary |-
+    Y3Rpb2dhMiB2ZXJzaW9uIDAuMSBpcyBvdXQgISBJdCBpcyB0aGUgZmlyc3Qg
+    dmVyc2lvbiB0aGF0IHRydWx5IGJyaW5ncyBiYWNrIGFsbW9zdCBhbGwgdGhl
+    IGZ1bmN0aW9uYWxpdGllcyB0aGF0IHdlcmUgaW4gdGhlIG9sZCBjdGlvZ2Eu
+    CgpHZXQgYSBnbGltcHNlIG9mIHdoYXQgaXQgbG9va3MgbGlrZSB0aGVyZToK
+    CjxhIGhyZWY9Imh0dHA6Ly9jdGlvZ2EyLnJ1Ynlmb3JnZS5vcmcvZ2FsbGVy
+    aWVzLmh0bWwiIHRhcmdldD0iX25ldyI+aHR0cDovL2N0aW9nYTIucnVieWZv
+    cmdlLm9yZy9nYWxsZXJpZXMuaHRtbDwvYT4KCkFuZCBnZXQgaXQgdGhlcmU6
+    Cgo8YSBocmVmPSJodHRwOi8vcnVieWZvcmdlLm9yZy9mcnMvP2dyb3VwX2lk
+    PTgyMTgiIHRhcmdldD0iX25ldyI+aHR0cDovL3J1Ynlmb3JnZS5vcmcvZnJz
+    Lz9ncm91cF9pZD04MjE4PC9hPgoKRW5qb3kgIQ==
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    TmV3IHNraW4gZm9yIGN0aW9nYTIncyB3ZWJzaXRl
+  :date: 2011-01-31 02:36:00.000000000 +01:00
   :id: 38736
-  :date: 2011-01-30 21:36:00 +01:00
-- :author: Vincent Fourmond
-  :title: ctioga2 is still alive !
-  :contents: |-
-    Well, it might not be that obvious looking at the Rubyforge project page, but ctioga2 is alive (and kicking, for that matter). I've been too busy lately to advertise any of my work on ctioga2, but many features have been added since the 0.0 release, and I hope to gather that into a proper release some time soon.
-    
-    Meanwhile, I'm working on a redesign of the website too, and trying to get decent documentation (but that takes time, and that's precisely what I don't have for now !).
+  :contents: !binary |-
+    SSBoYXZlIGp1c3QgZmluaXNoZWQgYW5kIHVwbG9hZGVkIHRoZSBmaXJzdCB2
+    ZXJzaW9uIG9mIGEgbmV3IHdlYnNpdGUgZm9yIGN0aW9nYTIsIGZlYXR1cmlu
+    ZyBhbW9uZyBvdGhlciBnb29kaWVzIGFuIHVwZGF0ZWQgZG9jdW1lbnRhdGlv
+    biAoY29ycmVzcG9uZGluZyB0byB0aGUgY3VycmVudCBTVk4gdmVyc2lvbikg
+    YW5kIHVwLXRvLWRhdGUgZ2FsbGVyaWVzLgoKQSBmcmVzaCBhbmQgc2hpbnkg
+    cmVsZWFzZSBvZiBjdGlvZ2EyIHNob3VsZCBiZSBwdWJsaXNoZWQgc29vbi4g
+    SGF2ZSBmdW4gIQ==
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    Y3Rpb2dhMiBpcyBzdGlsbCBhbGl2ZSAh
+  :date: 2010-12-22 02:52:00.000000000 +01:00
   :id: 38446
-  :date: 2010-12-21 21:52:00 +01:00
-- :author: Vincent Fourmond
-  :title: New home for the ctioga2 project
-  :contents: |-
-    So far, the efforts in developing the successor of ctioga were located in the SciYAG project (<a href="http://sciyag.rubyforge.org" target="_new">http://sciyag.rubyforge.org</a>). Now, thanks to the rubyforge team, ctioga2 has a new home, <a href="http://rubyforge.org/projects/ctioga2" target="_new">http://rubyforge.org/projects/ctioga2</a>. Development is under way in the SVN repository, and a web page is being written. 
-    
-    The first release of ctioga2 should be expected reasonably soon !
+  :contents: !binary |-
+    V2VsbCwgaXQgbWlnaHQgbm90IGJlIHRoYXQgb2J2aW91cyBsb29raW5nIGF0
+    IHRoZSBSdWJ5Zm9yZ2UgcHJvamVjdCBwYWdlLCBidXQgY3Rpb2dhMiBpcyBh
+    bGl2ZSAoYW5kIGtpY2tpbmcsIGZvciB0aGF0IG1hdHRlcikuIEkndmUgYmVl
+    biB0b28gYnVzeSBsYXRlbHkgdG8gYWR2ZXJ0aXNlIGFueSBvZiBteSB3b3Jr
+    IG9uIGN0aW9nYTIsIGJ1dCBtYW55IGZlYXR1cmVzIGhhdmUgYmVlbiBhZGRl
+    ZCBzaW5jZSB0aGUgMC4wIHJlbGVhc2UsIGFuZCBJIGhvcGUgdG8gZ2F0aGVy
+    IHRoYXQgaW50byBhIHByb3BlciByZWxlYXNlIHNvbWUgdGltZSBzb29uLgoK
+    TWVhbndoaWxlLCBJJ20gd29ya2luZyBvbiBhIHJlZGVzaWduIG9mIHRoZSB3
+    ZWJzaXRlIHRvbywgYW5kIHRyeWluZyB0byBnZXQgZGVjZW50IGRvY3VtZW50
+    YXRpb24gKGJ1dCB0aGF0IHRha2VzIHRpbWUsIGFuZCB0aGF0J3MgcHJlY2lz
+    ZWx5IHdoYXQgSSBkb24ndCBoYXZlIGZvciBub3cgISku
+- :author: !binary |-
+    VmluY2VudCBGb3VybW9uZA==
+  :title: !binary |-
+    TmV3IGhvbWUgZm9yIHRoZSBjdGlvZ2EyIHByb2plY3Q=
+  :date: 2009-04-27 21:26:00.000000000 +02:00
   :id: 31886
-  :date: 2009-04-27 17:26:00 +02:00
+  :contents: !binary |-
+    U28gZmFyLCB0aGUgZWZmb3J0cyBpbiBkZXZlbG9waW5nIHRoZSBzdWNjZXNz
+    b3Igb2YgY3Rpb2dhIHdlcmUgbG9jYXRlZCBpbiB0aGUgU2NpWUFHIHByb2pl
+    Y3QgKDxhIGhyZWY9Imh0dHA6Ly9zY2l5YWcucnVieWZvcmdlLm9yZyIgdGFy
+    Z2V0PSJfbmV3Ij5odHRwOi8vc2NpeWFnLnJ1Ynlmb3JnZS5vcmc8L2E+KS4g
+    Tm93LCB0aGFua3MgdG8gdGhlIHJ1Ynlmb3JnZSB0ZWFtLCBjdGlvZ2EyIGhh
+    cyBhIG5ldyBob21lLCA8YSBocmVmPSJodHRwOi8vcnVieWZvcmdlLm9yZy9w
+    cm9qZWN0cy9jdGlvZ2EyIiB0YXJnZXQ9Il9uZXciPmh0dHA6Ly9ydWJ5Zm9y
+    Z2Uub3JnL3Byb2plY3RzL2N0aW9nYTI8L2E+LiBEZXZlbG9wbWVudCBpcyB1
+    bmRlciB3YXkgaW4gdGhlIFNWTiByZXBvc2l0b3J5LCBhbmQgYSB3ZWIgcGFn
+    ZSBpcyBiZWluZyB3cml0dGVuLiAKClRoZSBmaXJzdCByZWxlYXNlIG9mIGN0
+    aW9nYTIgc2hvdWxkIGJlIGV4cGVjdGVkIHJlYXNvbmFibHkgc29vbiAh

@@ -25,7 +25,9 @@ id = ARGV[0] || "8218"          # group id
 
 http = Net::HTTP.new("rubyforge.org")
 
-resp, data = http.get("/news/?group_id=#{id}")
+resp = http.get("/news/?group_id=#{id}")
+
+data = resp.body
 
 post_ids = []
 
@@ -44,7 +46,8 @@ posts = []
 i = 1
 for id in post_ids
   STDERR.puts "Downloading post #{i} (id: #{id})"
-  resp, data = http.get("/forum/forum.php?forum_id=#{id}")
+  resp = http.get("/forum/forum.php?forum_id=#{id}")
+  data = resp.body
   if data =~ /<strong>(.*?)<p>(.*?)<\/p>/m
     header, contents = $1, $2
     post = {}

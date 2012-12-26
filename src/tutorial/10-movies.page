@@ -43,11 +43,14 @@ ffmpeg -f rawvideo -r 25 -s 400x400 -i - Diffusion.avi
 
 h3. Script
 
-One wraps all with a few ameliorations that into a script:
+One wraps all with a few ameliorations into this script:
 
 <pre class='examples-cmdline'>
 {includeFile: {filename: plots/movie.sh, processOutput: false}}
 </pre>
 
-This generates the following "video":plots/Diffusion.avi.
+This generates the following "video":plots/Diffusion.avi. It generates
+numbered PDF files, but you could do without and reuse the same PDF
+over and over again, although that may make it difficult to debug if
+something goes wrong.
 

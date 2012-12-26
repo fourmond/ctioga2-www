@@ -53,3 +53,14 @@ It additionally demonstrates the use of options to
 such as its size and spacing between consecutive lines. 
 {cmd: legend-style} takes the same options, but without imposing the
 placement (which can be useful to tweak the look of the outer legends).
+
+h3. Fancy legend frames 
+
+Using the @/frame_@ options to {cmd: legend-inside} or to 
+{cmd: legend-style}, one can draw possibly filled frames around the
+legend. Using a fill transparency, it is even possible to dim what is
+underneath (text never gets dimmed this way, though):
+
+{ctCmdline: plots/legends-6.ct2-sh }
+
+Try using a white background too !

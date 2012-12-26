@@ -1,0 +1,7 @@
+ctioga2 -X --math \
+	--legend-inside lc /scale 1.2 /dy 1.1 \
+        /frame_color=Blue /frame_fill_color='Blue!30' \
+        /frame_fill_transparency=0.3 /frame_style=Dots \
+	'x' /legend '$x$' \
+	'x**2' /legend '$x^2$' \
+	'x**3' /legend '$x^3$'

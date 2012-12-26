@@ -1,0 +1,6 @@
+ctioga2 -X --math /xrange -3:3 'sin(3.1415*x)' \
+        --default-arrow-style arrow /color=Blue \
+        /head_color=Purple /style=Dots \
+        --draw-arrow -0.5,0 -0.5,-1 \
+        --draw-arrow 0.5,0 0.5,1 \
+        --draw-arrow 1.5,0 1.5,-1 /color=Green

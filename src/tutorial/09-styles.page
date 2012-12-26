@@ -1,0 +1,60 @@
+---
+title: Styles
+inMenu: true
+---
+h2. Styles
+
+Starting from version 0.4, @ctioga2@ provides a simple but powerful
+mechanism for styling. Imagine you have a complex graph where you draw
+several times the same arrow:
+
+{ctCmdline: plots/styles-1.ct2-sh }
+
+This is very cumbersome, as copy/paste is never desirable, especially
+if you have to change the style later on. While defining variables
+(either shell variables or @ctioga2@ command file variables) may help,
+defining and using styles makes it much easier:
+
+{ctCmdline: plots/styles-2.ct2-sh }
+
+The first command defines the @arrow@ style @arrow1@ (any name
+starting with @arrow@ is a valid name for an arrow style) to draw a
+blue dotted line with a purple head, and the @/base-style=arrow1@ bits
+further on instruct @ctioga2@ to use the @arrow1@ style. As is seen on
+the last arrow, it is still possible to override bits of the style
+later on. 
+
+You could also have redefined the base @arrow@ style that
+automatically applies to all arrows:
+
+{ctCmdline: plots/styles-3.ct2-sh }
+
+This is powerful as it allows to change completely the look of a graph
+by simply prepending a few style definitions, but it may be
+inappropriate should there be different kinds of arrows, for
+instance. In that case, definining two arrow styles would probably be
+a better choice.
+
+This styling possibility applies to all the graphic primitives
+available.
+
+h3. Styling axes and plots
+
+Styling doesn't stop at graphic primitives too. Basically, most if not
+all bits of @ctioga2@'s internals get their default style from the
+style sheet. Here is for instance a reasonably complex plot where axis
+and background are defined through styles:
+
+{ctCmdline: plots/styles-4.ct2-sh }
+
+h3. Position of styling commands
+
+Supported position for the style commands are at the
+beginning. Defining a style after it has been used (i.e. after drawing
+commands for the drawing styles or the first plot element for axes and
+backgrounds) may result in completely undefined behaviour, such as the
+style definition is not taken into account at all or only after the
+definition or for all elements, even those before the style
+definition. Always use style commands at the beginning !
+
+

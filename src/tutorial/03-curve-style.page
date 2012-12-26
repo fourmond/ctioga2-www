@@ -51,7 +51,22 @@ disable lines altogether this way:
 
 h3. Error bars
 
-This is still to be written.
+@ctioga2@ provides quite a bit of customizability of error bars. First
+of all, to have error bars, you need to specify a data column or
+formula specifying the errors. The simplest way to do that using the
+@yerr=@ specification of the {cmd: text} backend
+
+{ctCmdline: plots/curve-style-4+1.ct2-sh }
+
+Here, by using @yerr=$2*0.2@, we force a relative error of 20% both
+below and above the point. Asymetric error bars can be obtained using
+the @ymin@ and @ymax@ specifications.
+
+{ctCmdline: plots/curve-style-4+2.ct2-sh }
+
+It is also possible to set the color of the error bars, and to have
+error bars on the X values too ! Error bars tends to combine better
+with marker curve styles.
 
 h3. Filled curves
 

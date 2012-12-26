@@ -1,0 +1,5 @@
+ctioga2 -X --yrange -1.1:1.1 --line-style no \
+        --marker auto \
+        data.dat@'$1:$2:ymin=$2-0.05:ymax=$2+0.2' \
+        /error-bar-color=Black \
+        data.dat@'$1+2:$2:xerr=$1*0.1'

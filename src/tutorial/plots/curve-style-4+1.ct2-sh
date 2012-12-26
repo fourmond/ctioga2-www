@@ -1,0 +1,1 @@
+ctioga2 -X --yrange -1.1:1.1 data.dat@'$1:$2:yerr=$2*0.2'

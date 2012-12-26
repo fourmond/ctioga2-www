@@ -47,13 +47,7 @@ plotting. But I wanted something:
   curves... Have a look at the "gallery":galleries.html !
 * *scriptable*: being a command-line utility, it integrates naturally
   into the power of command-line scripting. It is very easy to animate
-  graphs into a movie !
-
-<notextile>
-<!-- I really should put a neat movie on the web site ! 
-  And how to make it, for sure...
--->
-</notextile>
+  graphs into a "movie":tutorial/10-movies.html !
 
 h2. Authors
 
@@ -64,7 +58,7 @@ It is under continuous work.
 
 h2. Support, bugs and feature requests
 
-We cannot offer you any support at the moment, as ctioga2 is developed
+We cannot offer you any support at the moment, as @ctioga2@ is developed
 during our free time. However, if you find a bug, we'll be glad to
 tackle it. And if you're interested in a feature that also sounds
 interesting to us, just let us know... or even better, implement it
@@ -75,4 +69,4 @@ page":http://rubyforge.org/projects/ctioga2/. Alternatively, you can
 send an email to the mailing list @ctioga2-users@ at @rubyforge.org@.
 
 You may also be interested in the 
-"Freshmeat project page":http://frme.at/p/COhg1.
+"Freshmeat project page":http://freecode.com/projects/ctioga.

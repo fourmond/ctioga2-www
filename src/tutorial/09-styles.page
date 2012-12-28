@@ -18,14 +18,14 @@ defining and using styles makes it much easier:
 
 {ctCmdline: plots/styles-2.ct2-sh }
 
-The first command defines the @arrow@ style @arrow1@ (any name
-starting with @arrow@ is a valid name for an arrow style) to draw a
-blue dotted line with a purple head, and the @/base-style=arrow1@ bits
-further on instruct @ctioga2@ to use the @arrow1@ style. As is seen on
+The first command defines the @arrow@ style @1@ (you can pick any name
+you want save @base@ who has a special meaning) to draw a
+blue dotted line with a purple head, and the @/base-style=1@ bits
+further on instruct @ctioga2@ to use the @1@ style. As is seen on
 the last arrow, it is still possible to override bits of the style
 later on. 
 
-You could also have redefined the base @arrow@ style that
+You could also have redefined the @base@ style that
 automatically applies to all arrows:
 
 {ctCmdline: plots/styles-3.ct2-sh }

@@ -1,6 +1,6 @@
 ctioga2 -X --math --setup-grid 2x2 /top 5mm \
-        --default-axis-style right /stroke_color=Purple \
-        --default-background-style background /background_color=Purple!10 \
+        --define-axis-style right /stroke_color=Purple \
+        --define-background-style background /background_color=Purple!10 \
 	--inset grid:0,0 'sin(x)' \
 	--next-inset grid:0,1 'x**2' \
 	--next-inset grid:1,1 'x**3'

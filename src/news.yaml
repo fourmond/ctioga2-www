@@ -1,4 +1,18 @@
 --- 
+- :date: 2012-12-30 01:50:00 +01:00
+  :author: Vincent Fourmond
+  :id: 41259
+  :title: ctioga2 0.4 is out
+  :contents: |-
+    ctioga2 version 0.4 is out and brings in a whole bunch of new features, such as a fully-fledge styling system and a few other more. This version of ctioga2 is much more flexible: the styling system now makes it easy to change the whole look of a plot with just a few localized changes !
+    
+    You can get the new version there:
+    
+    <a href="http://rubyforge.org/frs/?group_id=8218" target="_new">http://rubyforge.org/frs/?group_id=8218</a>
+    
+    or using rubygems.
+    
+    Enjoy !
 - :date: 2012-09-04 00:21:00 +02:00
   :author: Vincent Fourmond
   :id: 40981

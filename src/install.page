@@ -12,8 +12,8 @@ Download @ctioga2@ from Rubyforge's
 
 Latest version:
 
-<a href="http://rubyforge.org/frs/download.php/74313/ctioga2-0.2.tar.bz2">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.2.tar.bz2</code></a>
+<a href="http://rubyforge.org/frs/download.php/76648/ctioga2-0.4.tar.bz2">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.4.tar.bz2</code></a>
 
 Current "Changelog":Changelog
 </div>
@@ -33,18 +33,18 @@ h3. Tarballs
 
 Download the latest tarball of @ctioga2@ at the 
 "download page":http://rubyforge.org/frs/?group_id=8218. Let us assume
-the file is named @ctioga2-0.2.tar.bz2@. 
+the file is named @ctioga2-0.4.tar.bz2@. 
 
 First, extract the tarball this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.2.tar.gz
+tar xvjf ctioga2-0.4.tar.bz2
 </pre>
 
-Then @cd@ to the directory created. Here, it is @ctioga2-0.2@:
+Then @cd@ to the directory created. Here, it is @ctioga2-0.4@:
 
 <pre class='examples-cmdline'>
-cd ctioga2-0.2
+cd ctioga2-0.4
 </pre>
 
 @ctioga2@ is using

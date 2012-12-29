@@ -11,7 +11,7 @@ Tag/SVNAuthor:
   # Jean-Julien is reponsible for pages not in SVN
 File/CopyHandler:
   paths: [ "**/*.dat", "**/*.csv", "**/*.css", "**/gnuplot.gnu", 
-  "**/*.jpeg", "**/.htaccess" ]
+  "**/*.jpeg", "**/.htaccess", "**/*.avi"]
 Core/FileHandler:
   useHiddenFiles: true
   ignorePaths: ["**/.svn{/**/**,/}"]

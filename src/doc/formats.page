@@ -1,0 +1,42 @@
+---
+title: File formats
+inMenu: true
+---
+h2. File formats
+
+As of version 0.5, @ctioga2@ supports two file formats, a ``legacy'',
+parenthese-based format and a new simpler, space-based format, that
+share a whole bunch of features.
+
+h3. Space-based format
+
+In the new space-based format, each line starts with the command name,
+and contains a list of space-separated arguments. To include arguments
+containing spaces, you need to "quote":#quotes them:
+
+{ctCmdfile: plots/new-format.ct2 }
+
+Options are introduced by a @/@. You can put spaces around the @=@
+sign if you want, that's optional.
+
+You can define "variables":#variables inside the file to define
+common arguments/options only once.
+
+
+h3. Old parentheses-and-comma format
+
+Before version 0.5, only one file format was available, based on comma
+and parentheses. Don't use it for new stuff, but here is how it looks
+
+{ctCmdfile: plots/old-format.ct2 }
+
+It is deprecated because it was found to be not flexible enough. In
+particular, specification of coordinates in this command files is
+pretty awkward and counter-intuitive.
+
+
+h3(#variables). Variables
+
+Variables can be defined...
+
+h3(#quotes). Quotes

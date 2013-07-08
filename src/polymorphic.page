@@ -23,8 +23,13 @@ this:
 
 {ctCmdfile: plots/polymorphic-2.ct2 }
 
-If the latter version is more verbose, it is also more easy to edit in
-the case of complex plots.
+The use of command-line switches makes it possible to use and abuse
+features of the shell, but the text format is simpler to read. 
+
+We have used both ways in the documentation, you can easily
+distinguish between both by their background colors.
+
+You can read more about the text format "here":doc/formats.html.
 
 
 Both ways can be mixed freely, which means you can override various

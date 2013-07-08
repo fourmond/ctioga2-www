@@ -1,5 +1,5 @@
-title('A nice title, for sure')
-math()
-plot('sin(x)')
-xlabel(The X label)
-ylabel(The Y label)
+title 'A nice title, for sure'
+math
+plot 'sin(x)'
+xlabel 'The X label'
+ylabel 'The Y label'

@@ -1,0 +1,5 @@
+txt = "My title"
+
+math /xrange = -1:1
+plot x**2
+title "$(txt)"

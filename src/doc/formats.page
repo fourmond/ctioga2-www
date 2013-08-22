@@ -23,6 +23,27 @@ You can define "variables":#variables inside the file to define
 common arguments/options only once.
 
 
+
+h3(#variables). Variables
+
+Within a @ctioga2@ command file, you can define and use makefile-like
+variables:
+
+{ctCmdfile: plots/variables.ct2 }
+
+The @$(txt)@ bit is replaced by the actual value of the variable
+@txt@, defined above. It has to be quoted as the expansion contains
+spaces, just like you would need to quote if you typed in directly the
+variable contents.
+
+You can also use environment variables like @$(HOME)@; this makes it
+easier to share plots across several computers where your user name is
+different, for instance. 
+
+
+h3(#quotes). Quotes
+
+
 h3. Old parentheses-and-comma format
 
 Before version 0.5, only one file format was available, based on comma
@@ -34,9 +55,3 @@ It is deprecated because it was found to be not flexible enough. In
 particular, specification of coordinates in this command files is
 pretty awkward and counter-intuitive.
 
-
-h3(#variables). Variables
-
-Variables can be defined...
-
-h3(#quotes). Quotes

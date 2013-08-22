@@ -56,7 +56,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
         end  + "</pre>" +
         "<p class='example-image'>\n" +
         "<a href=\"#{image}\" id=\"img-#{id_base}\">" +
-        "<img src=\"#{thumb}\" alt=\"#{alt}\"/></a>"
+        "<img src=\"#{thumb}\" class='thumbnail' alt=\"#{alt}\"/></a>"
     else
       return "Ourgh"
     end

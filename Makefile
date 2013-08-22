@@ -3,18 +3,20 @@
 
 # The game is to make my life easier
 
+WEBGEN = webgen0.4
+
 website:
-	webgen
+	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 
 regenerate-styles:
 	rm -f output/style.css
 	rm -Rf output/style-images
-	webgen
+	$(WEBGEN)
 
 regenerate-full:
 	rm -Rf output
-	webgen
+	$(WEBGEN)
 
 TARGET="rubyforge.org:/var/www/gforge-projects/ctioga2"
 RSYNC_OPTS= -avvz --progress --delete

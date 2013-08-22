@@ -73,6 +73,9 @@ ctioga2 -f getting-started-4.ct2
 @ctioga2@ does not care about the extension of the files. @.ct2@ is
 neat though.
 
+We have tried to mix between these two approaches in the tutorial. You
+can spot which is which from the background color.
+
 h3. Intermixing command files and command line
 
 Command files can be mixed freely with command-line. Observe the

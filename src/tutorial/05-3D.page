@@ -69,6 +69,9 @@ interested in the countour plots, see:
 However, as of version 0.1, a lower value for {cmd: fill-transparency}
 will have no effect, ie partial transparency is not supported yet.
 
+Starting from @ctioga2@ version 0.5, there is a much better way to
+display contour plots, which we present "below":#contour-real.
+
 *Important note:* the plots based on {cmd: xyz-map} work only on
 uniform XY grids (at least as far as version 0.1 is
 concerned). However, the next bits will present other ways to display
@@ -101,6 +104,18 @@ They represent various saturation curves with different saturation
 parameters. Its easy to display all the curves in one go:
 
 {ctCmdline: plots/3D-6.ct2-sh }
+
+h3(#contour-real). Only contours, second take
+
+Starting from @ctioga2@ version 0.5, it is possible to plot automatic
+contour plots using the {cmd: contour} plot style:
+
+{ctCmdfile: plots/3D-7.ct2}
+
+In this mode, @ctioga2@ computes automatically the level lines and
+draw them using the given color map and line style. The
+@/contour-number@ option controls the number of level lines that are
+drawn.
 
 <notextile>
 <!-- 

@@ -113,13 +113,9 @@ contour plots using the {cmd: contour} plot style:
 {ctCmdfile: plots/3D-7.ct2}
 
 In this mode, @ctioga2@ computes automatically the level lines and
-draw them using the given color map and line style. The
-@/contour-number@ option controls the number of level lines that are
-drawn.
+draw them using the given color map and line style. By default,
+@ctioga2@ draw major and minor level lines (similar to minor and major
+ticks on axes). The @/contour-minor-style@ option controls the line
+style of the minor ticks (while that of the major ticks is controlled
+by the usual @/line-style@ option).
 
-<notextile>
-<!-- 
-Maybe point to 
-http://sciyag.rubyforge.org/ctioga/gallery/index.html#img-0109490501_2MASS_dxdy
--->
-</notextile>

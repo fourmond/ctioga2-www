@@ -65,3 +65,23 @@ underneath (text never gets dimmed this way, though):
 {ctCmdline: plots/legends-6.ct2-sh }
 
 Try using a white background too !
+
+h3. Multicolumn legends
+
+With the {cmd: legend-multicolumn} command, one can lay out parts of
+the legend in several columns:
+
+{ctCmdfile: plots/legends-7.ct2 }
+
+Only the legends of objects between the calls to 
+{cmd: legend-multicolumn} and {cmd: legend-multicolumn-end} are laid
+out in several columns. Spacing between the columns can be fine-tuned
+using the @/dx@ option to {cmd: legend-multicolumn}.
+
+h3. Fine-tuning of legends
+
+Many aspects of the appearance of the legends can be fine-tuned using
+options to {cmd: legend-style} or directly {cmd: legend-inside}, such
+as the overall size of the pictogram and the size of the symbol:
+
+{ctCmdfile: plots/legends-8.ct2 }

@@ -1,0 +1,12 @@
+math /xrange=-1:1
+legend-inside tc  /dy 1.1
+legend-line 'First powers of $x$'
+legend-multicol /columns=2 /dx=4mm
+plot 'x' /legend '$x$'
+plot 'x**2' /legend '$x^2$'
+plot 'x**3' /legend '$x^3$'
+plot 'x**4' /legend '$x^4$'
+legend-line 'Inside'
+plot 'x**5' /legend '$x^5$'
+legend-multicol-end
+legend-line 'End of multicol'

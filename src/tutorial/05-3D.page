@@ -9,14 +9,15 @@ One of the greatests improvements of @ctioga2@ over @ctioga@ is the
 possibility now to handle gracefully 3D data, in the form of XY color
 maps. As an example, we'll use the following 
 "data file":plots/3D-data.dat
-containing @r@ and it sinus cardinal as a function of @x@ and @y@, 
-generated using the following Ruby code:
+containing @r@ and its sinus cardinal as a function of @x@ and @y@,
+together with  @x^2 - y^2@ generated using the following Ruby code:
 
 <pre class='examples'>
 -15.upto(15) do |i|
   -15.upto(15) do |j|
     r = (i**2 + j**2)**0.5
-    puts "#{i}\t#{j}\t#{r}\t#{(r > 0 ? Math::sin(r)/r : 1)}"
+    x2_y2 = i**2 - j**2
+    puts "#{i}\t#{j}\t#{r}\t#{(r > 0 ? Math::sin(r)/r : 1)}\t#{x2_y2}"
   end
 end
 </pre>
@@ -30,7 +31,17 @@ The most basic thing is to plot this data as a color map. For
 {ctCmdline: plots/3D-1.ct2-sh }
 
 Note how the <code>@1:2:4</code> is used to say that the @X@ column is
-the first, the @Y@ the second and the @Z@ the fourth.
+the first, the @Y@ the second and the @Z@ the fourth (ie the sinus
+cardinal).
+
+To plot the last column @x^2 - y^2@, we may have used:
+
+{ctCmdfile: plots/3D-1bis.ct2 }
+
+Here, we also show that it is possible to add normal XY plots after a
+color map. Please be warned though that, for the moment, @ctioga2@
+does not support transparency for color maps, so it is mostly useless
+to try to display several color maps.
 
 h3. Adding a legend
 
@@ -117,5 +128,7 @@ draw them using the given color map and line style. By default,
 @ctioga2@ draw major and minor level lines (similar to minor and major
 ticks on axes). The @/contour-minor-style@ option controls the line
 style of the minor ticks (while that of the major ticks is controlled
-by the usual @/line-style@ option).
+by the usual @/line-style@ option). The @/bar_size@ controls the width
+of the Z axis bar (see that the bar is smaller than in the previous
+examples).
 

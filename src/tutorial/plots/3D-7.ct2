@@ -1,5 +1,5 @@
 contour
 margin 0.03
-new-zaxis zvalues /location right
-plot 3D-data.dat@'$1:$2:1/(1 + $3)**0.5'  /zaxis zvalues \
+new-zaxis zvalues /location right /bar_size=4mm
+plot 3D-data.dat@1:2:5  /zaxis zvalues \
 	/color-map 'Blue--Red' /contour-minor-style Dots

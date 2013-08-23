@@ -1,0 +1,5 @@
+xyz-map 
+plot 3D-data.dat@1:2:5
+xy-plot
+math /xrange -15:15
+plot '5*sin(x)' /color White /line-width 2

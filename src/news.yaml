@@ -1,4 +1,17 @@
 --- 
+- :date: 2013-08-27 02:33:00 +02:00
+  :author: Vincent Fourmond
+  :id: 41601
+  :title: ctioga2 0.5 is out !
+  :contents: Release 0.5 of ctioga2 brings in a whole lot of new features such as a brand new command file format (much simpler to use than the old one), contour plots, multicolumn legends and in general much better error reporting.
+- :date: 2013-08-23 16:55:00 +02:00
+  :author: Vincent Fourmond
+  :id: 41594
+  :title: New version of ctioga2 brewing
+  :contents: |-
+    A new version of ctioga2 is almost ready for publication now, that will feature new fancy things such as automatic contour plots, multicolumn legends and a whole new simpler file format (the old one is still accepted).
+    
+    Stay tuned !
 - :date: 2012-12-30 01:50:00 +01:00
   :author: Vincent Fourmond
   :id: 41259

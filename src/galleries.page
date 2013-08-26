@@ -69,6 +69,11 @@ Multicolumn legends
 <br/>
 Automatic contour plots
 </td>
+<td>
+{example: /tutorial/05-3D.html#3D-6}
+<br/>
+Parametric plots
+</td>
 </tr>
 </table>
 

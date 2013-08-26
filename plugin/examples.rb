@@ -40,6 +40,11 @@ class CTiogaCmdlineTag < Tags::DefaultTag
     CTiogaShortSwitches = b
   end
 
+  # Hook at the end of the pre stuff...
+  def pre_end(tag, chain)
+    return ""
+  end
+
   def process_tag( tag, chain )
     if cmdline = param('file')
       base = cmdline.gsub(/\.ct2(-sh)?$/, '')
@@ -53,7 +58,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
           link_commands(IO.readlines(filename).join, chain)
         rescue Exception => e
           "<b>IO problem reading file #{cmdline}: #{e.inspect}</b>"
-        end  + "</pre>" +
+        end  + "</pre>#{pre_end(tag, chain)}" +
         "<p class='example-image'>\n" +
         "<a href=\"#{image}\" id=\"img-#{id_base}\">" +
         "<img src=\"#{thumb}\" class='thumbnail' alt=\"#{alt}\"/></a>"
@@ -130,6 +135,12 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
   param 'file', false, "The file containing the command-line"
 
   set_mandatory 'file', true
+
+
+  # Hook at the end of the pre stuff...
+  def pre_end(tag, chain)
+    return "<p class='download-link'><a href='#{param('file')}'>Download command file</a></p>"
+  end
 
   # Transforms commands into links to the appropriate point in the
   # documentation.

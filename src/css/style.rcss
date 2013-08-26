@@ -161,6 +161,12 @@ p.example-image {
     text-align: center;
 }
 
+p.download-link {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* News items: */
 p.news-footer { text-align: right; font-size: 80%; margin: 0; padding: 0;}

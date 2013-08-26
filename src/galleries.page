@@ -57,6 +57,18 @@ Easy setup of insets...
 <br/>
 Easy way to color a region delimited by curves
 </td>
+<td>
+{example: /tutorial/08-legends.html#legends-7}
+<br/>
+Multicolumn legends
+</td>
+</tr>
+<tr>
+<td>
+{example: /tutorial/05-3D.html#3D-7}
+<br/>
+Automatic contour plots
+</td>
 </tr>
 </table>
 

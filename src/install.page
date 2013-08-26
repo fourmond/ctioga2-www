@@ -29,6 +29,30 @@ To have a working copy of @ctioga2@, you need :
 
 h2. Installation
 
+h3. Gems
+
+The easiest way of installing @ctioga2@ is to use
+"rubygems":http://rubygems.org. Installing them is just a matter of
+opening a command-line terminal and running:
+
+<pre class='examples-cmdline'>
+gem install ctioga2
+</pre>
+
+This will pull in automatically @tioga@, but you will still need a
+working LaTeX installation.
+
+h3. Your distribution's package manager
+
+For "Debian":http://www.debian.org and "Ubuntu":http://ubuntu.com
+users, install @ctioga2@ using your favorite package manager:
+
+<pre class='examples-cmdline'>
+apt-get install ctioga2
+</pre>
+
+And this will even take care of the LaTeX dependencies.
+
 h3. Tarballs
 
 Download the latest tarball of @ctioga2@ at the 
@@ -55,14 +79,6 @@ for handling its installation. In short, run this command as root.
 ruby setup.rb
 </pre>
 
-h3. Gems
-
-Gems are published for @ctioga2@. Installing them is just a matter of
-running:
-
-<pre class='examples-cmdline'>
-gem install ctioga2
-</pre>
 
 h3. SVN repository
 

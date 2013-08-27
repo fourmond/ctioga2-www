@@ -59,7 +59,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
         puts "Regenerating #{path} from #{source}" if param("verbose")
         gnuplot = IO.popen("gnuplot", 
                            "w")
-        gnuplot.puts "set term pdf"
+        gnuplot.puts "set term pdf size 9cm,6cm"
         gnuplot.puts "set output '#{path}'"
         gnuplot.puts IO.readlines(source).join('')
       end

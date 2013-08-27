@@ -136,7 +136,7 @@ a {
 }
 
 
-.examples-cmdline, .examples-cmdfile, .examples { 
+.examples-cmdline, .examples-cmdfile, .examples, .examples-gnuplot { 
     overflow: auto;
     text-align: left;
     padding: 0.5em;
@@ -152,12 +152,17 @@ a {
     border: 1px solid <%= Colors.cmdfile_border %>;
 }
 
+.examples-gnuplot {
+    background-color: <%= Colors.gnuplot_bg %>;
+    border: 1px solid <%= Colors.gnuplot_border %>;
+}
+
 .examples {
     background-color: <%= Colors.examples_bg %>;
     border: 1px solid <%= Colors.examples_border %>;
 }
 
-p.example-image {
+.example-image {
     text-align: center;
 }
 

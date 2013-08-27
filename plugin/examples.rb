@@ -210,3 +210,45 @@ class CTiogaSwitchTag < Tags::DefaultTag
     chain.last.route_to(dest_node)
   end
 end
+
+
+class CTiogaFight < Tags::DefaultTag
+
+  infos( :name => 'Tag/CTiogaFight',
+         :summary => 
+         "ctioga vs gnuplot")
+
+  register_tag 'fight'
+  param 'cls', 'examples-cmdfile', "The class used for the <pre> elements"
+  param 'file', false, "The file containing the command-line"
+
+  set_mandatory 'file', true
+
+
+  def process_tag( tag, chain )
+    if base = param('file')
+      str = "<table>"
+      image_gplt = base + "-gnuplot.png"
+      thumb_gplt = base + '-gnuplot.thumb.png'
+      
+      image_ct2 = base + "-ct2.png"
+      thumb_ct2 = base + '-ct2.thumb.png'
+      id_base = base
+      file_base = File.join( chain.first.parent.node_info[:src], base ) 
+      str += "<tr><td><pre class='examples-gnuplot'>\n" +
+        IO.readlines("#{file_base}-gnuplot.gplt").join + 
+        "</pre></td><td><pre class='examples-cmdfile'>\n" +
+        IO.readlines("#{file_base}-ct2.ct2").join + 
+        "</pre></td></tr>" +
+        "<tr><td class='example-image'><a href=\"#{image_gplt}\">" +
+        "<img src=\"#{thumb_gplt}\" class='thumbnail' alt=\"\"/></a></td>" +
+        "<td class='example-image'><a href=\"#{image_ct2}\">" +
+        "<img src=\"#{thumb_ct2}\" class='thumbnail' alt=\"\"/></a></td>" +
+        "</tr></table>"
+      return str
+    else
+      return "Ourgh"
+    end
+  end
+
+end

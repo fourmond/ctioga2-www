@@ -110,6 +110,10 @@ Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)
 Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
 
+
+Colors.gnuplot_border = HTMLColor.new("#222222")
+Colors.gnuplot_bg = Colors.gnuplot_border.mix_with(HTMLColor.white, 0.2)
+
 # Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
 Colors.bar_bg = HTMLColor.hls(164,0.3,0.5) 
 Colors.bar_fg = HTMLColor.white

@@ -12,7 +12,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
          :summary => "Makes PNG and thumbnails from PDF files"
          )
 
-  param 'paths', ['**/*.pdf', '**/*.ct2', 
+  param 'paths', ['**/*.pdf', '**/*.ct2', '**/*.gplt',
                   '**/*.ct2-sh'], 'The path patterns which match the '
   'PDF files that should get converted by this handler.'
   
@@ -50,8 +50,20 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
           "CTIOGA2_PRE='#{param('ctstyle')}' CTIOGA2_POST='--name \"#{name}\"' DISPLAY='' sh #{name}.ct2-sh"
         system "touch -r #{source} #{path}"
       end
+    elsif path =~ /\.gplt$/   # Gnuplot script
+      name = File.basename(path, ".gplt")
+      source = path.dup
+      path.gsub!(/\.gplt$/, '.pdf')
+      
+      if !File.exist?(path) || File.mtime(source) > File.mtime(path)
+        puts "Regenerating #{path} from #{source}" if param("verbose")
+        gnuplot = IO.popen("gnuplot", 
+                           "w")
+        gnuplot.puts "set term pdf"
+        gnuplot.puts "set output '#{path}'"
+        gnuplot.puts IO.readlines(source).join('')
+      end
     else
-
       name = File.basename(path, ".pdf") # Remove a .pdf if it is present.
     end
 

@@ -211,8 +211,29 @@ class CTiogaSwitchTag < Tags::DefaultTag
   end
 end
 
+class CTiogaCommandTag < CTiogaSwitchTag
 
-class CTiogaFight < Tags::DefaultTag
+  infos( :name => 'Tag/CTiogaCommand',
+         :summary => 
+         "A link to  ctioga command.")
+
+
+  register_tag 'command'
+
+  param 'switch', false, "The command"
+  set_mandatory 'switch', true
+
+
+  def process_tag( tag, chain )
+    a = super(tag, chain)
+    if a
+      return a.gsub('--', '')
+    end
+  end
+
+end
+
+class CTiogaFight < CTiogaCmdfileTag
 
   infos( :name => 'Tag/CTiogaFight',
          :summary => 
@@ -225,6 +246,8 @@ class CTiogaFight < Tags::DefaultTag
   set_mandatory 'file', true
 
 
+
+
   def process_tag( tag, chain )
     if base = param('file')
       str = "<table>"
@@ -235,10 +258,11 @@ class CTiogaFight < Tags::DefaultTag
       thumb_ct2 = base + '-ct2.thumb.png'
       id_base = base
       file_base = File.join( chain.first.parent.node_info[:src], base ) 
-      str += "<tr><td><pre class='examples-gnuplot'>\n" +
+      str += "<tr><td>Gnuplot file: <a href='#{file_base}-gnuplot.gplt'>download</a><br/>" +
+        "<pre class='examples-gnuplot'>\n" +
         IO.readlines("#{file_base}-gnuplot.gplt").join + 
-        "</pre></td><td><pre class='examples-cmdfile'>\n" +
-        IO.readlines("#{file_base}-ct2.ct2").join + 
+        "</pre></td><td><code>ctioga2</code> file: <a href='#{file_base}-ct2.ct2'>download</a><br/><pre class='examples-cmdfile'>\n" +
+        link_commands(IO.readlines("#{file_base}-ct2.ct2").join, chain) + 
         "</pre></td></tr>" +
         "<tr><td class='example-image'><a href=\"#{image_gplt}\">" +
         "<img src=\"#{thumb_gplt}\" class='thumbnail' alt=\"\"/></a></td>" +

@@ -59,17 +59,3 @@ h2. Authors
 It is under continuous work.
 
 
-h2. Support, bugs and feature requests
-
-We cannot offer you any support at the moment, as @ctioga2@ is developed
-during our free time. However, if you find a bug, we'll be glad to
-tackle it. And if you're interested in a feature that also sounds
-interesting to us, just let us know... or even better, implement it
-and send us a patch !
-
-All this can be done on the Rubyforge "project
-page":http://rubyforge.org/projects/ctioga2/. Alternatively, you can
-send an email to the mailing list @ctioga2-users@ at @rubyforge.org@.
-
-You may also be interested in the 
-"Freshmeat project page":http://freecode.com/projects/ctioga.

@@ -1,7 +1,25 @@
 ---
-title: How to help ?
+title: Support
 inMenu: true
 ---
+h2. Support, bugs and feature requests
+
+Questions about @ctioga2@ should either be directed to the
+"forums":http://rubyforge.org/forum/forum.php?forum_id=31837 
+or to the mailing list @ctioga2-users@ at @rubyforge.org@. You can
+subscribe "here":http://rubyforge.org/mailman/listinfo/ctioga2-users
+and peruse the archive
+"there":http://rubyforge.org/pipermail/ctioga2-users/. 
+
+Alternatively, if you have a bug to report or feature to request, or,
+better yet, a patch to submit, you can use the "bug
+tracker":http://rubyforge.org/tracker/?group_id=8218.
+
+To keep up with @ctioga2@ development, subscribe to the "Freecode
+project":http://freecode.com/projects/ctioga. You can also look at the
+developer's articles on
+"@ctioga2@":http://vince-debian.blogspot.fr/search/label/ctioga.
+
 h2. How to help @ctioga2@ development ?
 
 @ctioga2@ is developed by volunteers during their free time. So help

@@ -19,3 +19,13 @@ legend.
 
 {fight: plots/simple.2}
 
+
+{fight: plots/simple.3}
+
+Here, the command {command: xrange} is necessary as in @ctioga2@, the
+X range of the mathematical function is not related to the X range of
+the display: by default, the display fits the contents, and as there
+are no points outside the [-1:1] segment, @ctioga2@ automatically
+zooms into that segment.
+
+

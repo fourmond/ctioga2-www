@@ -1,0 +1,6 @@
+legend-inside tl /frame-color=Black
+auto-legend true
+math /xrange -3:5 /samples 200
+xrange -3:5
+plot asin(x)
+plot acos(x)

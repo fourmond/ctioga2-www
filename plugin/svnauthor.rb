@@ -1,3 +1,5 @@
+require 'time'
+
 class SVNAuthor < Tags::DefaultTag
 
   infos( :name => 'Tag/SVNAuthor',
@@ -11,7 +13,13 @@ class SVNAuthor < Tags::DefaultTag
   param 'defaultName', "??", "What to display if no one was found"
 
   def process_tag( tag, chain )
-    info = `svn info #{chain.last.node_info[:src]} 2>/dev/null`
+    if File.exists? '.svn'
+      svn = "svn"
+    else
+      svn = "git svn"
+    end
+
+    info = `#{svn} info #{chain.last.node_info[:src]} 2>/dev/null`
     if info =~/Last Changed Author:\s*(\w*)/
       name = $1
     else
@@ -21,6 +29,37 @@ class SVNAuthor < Tags::DefaultTag
       name = param('authorNames')[name]
     end
     return name
+  end
+
+end
+
+class SVNDateTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/SVNDate',
+         :summary => 
+         "Prints out the date of last modification of the current file")
+
+  register_tag 'mDate'
+
+  param 'format', '%d/%m/%Y %H:%M', 'The format of the date (same options as Time#strftime).'
+
+  def process_tag( tag, chain )
+
+    svn = if File.exists? '.svn'
+            "svn"
+          else
+            "git svn"
+          end
+
+    file = chain.last.node_info[:src]
+    info = `#{svn} info #{file} 2>/dev/null`
+    time = if info =~/Last\s*Changed\s*Date:\s*(.*)/
+             Time.parse($1)
+           else
+             File.mtime(file)
+           end
+
+    return time.strftime(param('format'))
   end
 
 end

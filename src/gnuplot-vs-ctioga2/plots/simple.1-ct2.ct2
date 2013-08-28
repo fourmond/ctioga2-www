@@ -1,0 +1,6 @@
+legend-inside tl /frame-color Black
+auto-legend true
+math /samples 50 /xrange -10:10
+plot sin(x)
+plot atan(x)
+plot cos(atan(x))

@@ -1,0 +1,31 @@
+---
+title: gnuplot mockup gallery
+inMenu: true
+directoryName: ctioga2 vs gnuplot
+orderInfo: -1
+---
+
+h2. Comparing @ctioga2@ and @gnuplot@
+
+When it comes to command-line plotting utilities, there is little
+doubt that "gnuplot":http://gnuplot.info is the most used plotting
+program. 
+
+I believe, however, that @ctioga2@ does a much better job in most of
+the cases. In this page, you will find a "mirror" of gnuplot's 
+"demo gallery":http://gnuplot.sourceforge.net/demo_4.6/.
+
+This demo gallery serves several purposes:
+ * I hope this will convince you to switch to @ctioga2@
+ * this also serves as a pendant to the 
+   "tutorial":../tutorial/index.html
+ * it also serves as a kind of todo-list
+
+This page follows more-or-less the layout of the original demo pages.
+
+h3. Basic 2D plot styles
+
+ * "simple functions":simple.html
+
+ 
+

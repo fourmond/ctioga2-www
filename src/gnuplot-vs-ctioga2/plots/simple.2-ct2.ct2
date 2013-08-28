@@ -1,0 +1,5 @@
+legend-inside tr 
+auto-legend true
+math /samples 100 /xrange -1.57079:3.141593
+plot cos(x)
+plot '-(sin(x) > sin(x+1) ? sin(x) : sin(x+1))'

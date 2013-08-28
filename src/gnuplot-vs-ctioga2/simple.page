@@ -1,0 +1,21 @@
+---
+title: simple functions
+inMenu: true
+---
+
+h2. Simple functions
+
+The original gallery can be found
+"there":http://gnuplot.sourceforge.net/demo_4.6/simple.html.
+
+{fight: plots/simple.1}
+
+In @ctioga2@, you have to select the {command: math} backend before
+you can plot mathematical functions.
+
+In the absence of the {command: auto-legend}, @ctioga2@ simply does
+not give legends to datasets that don't already have an explicit
+legend.
+
+{fight: plots/simple.2}
+

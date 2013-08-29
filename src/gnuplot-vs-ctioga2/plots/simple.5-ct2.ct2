@@ -1,0 +1,3 @@
+gnuplot
+legend-inside tl /frame-color=Black
+plot 'simple.5-gnuplot.gplt' /legend '$\sin(x)^{J_0(x)}$'

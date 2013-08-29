@@ -1,0 +1,4 @@
+legend-inside tl /frame-color=Black
+auto-legend true
+math /samples=800 /xrange=-30:20
+plot 'sin(x*20)*atan(x)' /line-width=0.6

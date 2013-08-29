@@ -1,0 +1,2 @@
+set key left box
+plot [-30:20] besj0(x)*0.12e1 with impulses, (x**besj0(x))-2.5 with points

@@ -1,0 +1,3 @@
+set key left box
+set samples 800
+plot [-30:20] sin(x*20)*atan(x)

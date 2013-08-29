@@ -1,0 +1,3 @@
+set key left box
+set samples 400
+plot [-10:10] real(sin(x)**besj0(x))

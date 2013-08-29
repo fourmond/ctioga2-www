@@ -28,4 +28,22 @@ the display: by default, the display fits the contents, and as there
 are no points outside the [-1:1] segment, @ctioga2@ automatically
 zooms into that segment.
 
+{fight: plots/simple.4}
+
+Missing: no such things as impulses for now...
+
+{fight: plots/simple.5}
+
+Here, you might consider that @ctioga2@ is cheating. The truth is that
+@ctioga2@ acknowledges that manipulating mathematical functions is
+easier with gnuplot, that has many special functions and very good
+handling of complexes. Using the {command: gnuplot} backend, you can
+"directly use data from plots of a gnuplot command file":../tutorial/02-datafiles.html#bidule, 
+which is what we had to do here to access bessel functions.
+
+{fight: plots/simple.6}
+
+
+{fight: plots/simple.7}
+
 

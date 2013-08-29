@@ -43,7 +43,10 @@ which is what we had to do here to access bessel functions.
 
 {fight: plots/simple.6}
 
-
 {fight: plots/simple.7}
 
+{fight: plots/simple.8}
 
+The above makes use of three data files, "@1.dat@":plots/1.dat,
+"@2.dat@":plots/2.dat and "@3.dat@":plots/3.dat, that are just
+multiples of the arctangent function on integers from -20 to 19.

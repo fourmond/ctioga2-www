@@ -272,14 +272,15 @@ class CTiogaFight < CTiogaCmdfileTag
              end
       str <<  "</pre>"
       str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{file_ct2}'>(download)</a></h4>\n" 
-      str << "<pre class='examples-cmdfile'>\n"
       str << begin 
-               link_commands(IO.readlines(file_ct2).join, chain)
+               "<pre class='examples-cmdfile'>\n" + 
+                 link_commands(IO.readlines(file_ct2).join, chain) +
+                 "</pre>"
              rescue
-               "<strong>could not read file #{file_ct2}</strong>"
+               "<strong>code missing, probably due to missing features in <code>ctioga2</code></strong>"
              end
       str <<
-        "</pre><table class='fight' >"
+        "<table class='fight' >"
       str << "<tr><td class='example-image'>Gnuplot</td><td class='example-image'><code>ctioga2</code></td></tr>"
       str << "<tr><td class='example-image'><a href=\"#{image_gplt}\">" +
         "<img src=\"#{thumb_gplt}\" class='thumbnail' alt=\"\"/></a></td>" +

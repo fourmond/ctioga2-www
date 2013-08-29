@@ -30,16 +30,22 @@ zooms into that segment.
 
 {fight: plots/simple.4}
 
-Missing: no such things as impulses for now...
-
-{fight: plots/simple.5}
-
 Here, you might consider that @ctioga2@ is cheating. The truth is that
 @ctioga2@ acknowledges that manipulating mathematical functions is
 easier with gnuplot, that has many special functions and very good
 handling of complexes. Using the {command: gnuplot} backend, you can
 "directly use data from plots of a gnuplot command file":../tutorial/02-datafiles.html#bidule, 
 which is what we had to do here to access bessel functions.
+
+Note that for @ctioga2@, a curve can be drawn with both markers and
+lines (it is not exclusive), hence the necessity to cancel line
+drawing using @/line-style=no@ and indicate a marker to be used with
+@/marker=Cross@.
+
+{fight: plots/simple.5}
+
+As for the previous example, we use the {command: gnuplot} backend to
+access to the bessel function.
 
 {fight: plots/simple.6}
 

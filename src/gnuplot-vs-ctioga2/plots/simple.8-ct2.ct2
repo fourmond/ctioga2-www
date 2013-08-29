@@ -1,0 +1,5 @@
+legend-inside tl /frame-color=Black
+auto-legend true
+plot 1.dat /path-style impulses 
+plot 2.dat /marker Cross /line-style no
+plot 3.dat

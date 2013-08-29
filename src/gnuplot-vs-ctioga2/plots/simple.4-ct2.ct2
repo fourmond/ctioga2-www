@@ -1,0 +1,4 @@
+gnuplot
+legend-inside tl /frame-color=Black
+plot 'simple.4-gnuplot.gplt' /path-style impulses /legend=besj0(x)*0.12e1
+plot 'simple.4-gnuplot.gplt@2' /marker Cross /line-style no /legend=(x**besj0(x))-2.5

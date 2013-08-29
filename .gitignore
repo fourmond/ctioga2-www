@@ -1,0 +1,4 @@
+# yes, a .gitignore file in a SVN repository ! 
+*.pdf
+*~
+output

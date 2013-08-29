@@ -1,6 +1,6 @@
 # examples.rb: a Webgen plugin to display examples
 # 
-# This file is copyright 2011 by Vincent Fourmond, and can be used and
+# This file is copyright 2011, 2013 by Vincent Fourmond, and can be used and
 # redistributed under the same terms as webgen version 0.4 itself.
 
 # @todo There are a lot of things to refactor here
@@ -250,7 +250,7 @@ class CTiogaFight < CTiogaCmdfileTag
 
   def process_tag( tag, chain )
     if base = param('file')
-      str = "<table>"
+      str = "<h3  class='fight'>Example: <code>#{File::basename(base)}</code></h3>"
       image_gplt = base + "-gnuplot.png"
       thumb_gplt = base + '-gnuplot.thumb.png'
       
@@ -258,13 +258,30 @@ class CTiogaFight < CTiogaCmdfileTag
       thumb_ct2 = base + '-ct2.thumb.png'
       id_base = base
       file_base = File.join( chain.first.parent.node_info[:src], base ) 
-      str += "<tr><td>Gnuplot file: <a href='#{file_base}-gnuplot.gplt'>download</a><br/>" +
-        "<pre class='examples-gnuplot'>\n" +
-        IO.readlines("#{file_base}-gnuplot.gplt").join + 
-        "</pre></td><td><code>ctioga2</code> file: <a href='#{file_base}-ct2.ct2'>download</a><br/><pre class='examples-cmdfile'>\n" +
-        link_commands(IO.readlines("#{file_base}-ct2.ct2").join, chain) + 
-        "</pre></td></tr>" +
-        "<tr><td class='example-image'><a href=\"#{image_gplt}\">" +
+
+      file_gplt = "#{file_base}-gnuplot.gplt"
+      file_ct2 = "#{file_base}-ct2.ct2"
+
+      # Gnuplot code first:
+      str << "<h4 class='fight'>Gnuplot code <a href='#{file_gplt}'>(download)</a></h4>\n" 
+      str << "<pre class='examples-gnuplot'>\n"
+      str << begin 
+               IO.readlines(file_gplt).join
+             rescue
+               "<strong>could not read file #{file_gplt}</strong>"
+             end
+      str <<  "</pre>"
+      str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{file_ct2}'>(download)</a></h4>\n" 
+      str << "<pre class='examples-cmdfile'>\n"
+      str << begin 
+               link_commands(IO.readlines(file_ct2).join, chain)
+             rescue
+               "<strong>could not read file #{file_ct2}</strong>"
+             end
+      str <<
+        "</pre><table class='fight' >"
+      str << "<tr><td class='example-image'>Gnuplot</td><td class='example-image'><code>ctioga2</code></td></tr>"
+      str << "<tr><td class='example-image'><a href=\"#{image_gplt}\">" +
         "<img src=\"#{thumb_gplt}\" class='thumbnail' alt=\"\"/></a></td>" +
         "<td class='example-image'><a href=\"#{image_ct2}\">" +
         "<img src=\"#{thumb_ct2}\" class='thumbnail' alt=\"\"/></a></td>" +

@@ -57,11 +57,15 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       
       if !File.exist?(path) || File.mtime(source) > File.mtime(path)
         puts "Regenerating #{path} from #{source}" if param("verbose")
-        gnuplot = IO.popen("gnuplot", 
-                           "w")
-        gnuplot.puts "set term pdf size 9cm,6cm"
-        gnuplot.puts "set output '#{path}'"
-        gnuplot.puts IO.readlines(source).join('')
+
+        file = File::basename(source)
+        Dir::chdir(File::dirname(source)) do
+          gnuplot = IO.popen("gnuplot", 
+                             "w")
+          gnuplot.puts "set term pdf size 9cm,6cm"
+          gnuplot.puts "set output '#{path}'"
+          gnuplot.puts IO.readlines(file).join('')
+        end
       end
     else
       name = File.basename(path, ".pdf") # Remove a .pdf if it is present.

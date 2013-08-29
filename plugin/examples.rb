@@ -240,7 +240,6 @@ class CTiogaFight < CTiogaCmdfileTag
          "ctioga vs gnuplot")
 
   register_tag 'fight'
-  param 'cls', 'examples-cmdfile', "The class used for the <pre> elements"
   param 'file', false, "The file containing the command-line"
 
   set_mandatory 'file', true
@@ -250,7 +249,17 @@ class CTiogaFight < CTiogaCmdfileTag
 
   def process_tag( tag, chain )
     if base = param('file')
-      str = "<h3  class='fight'>Example: <code>#{File::basename(base)}</code></h3>"
+
+      # We maintain a YAML database of the completion status of the
+      # conversion from gnuplot to ctioga2 of the examples.
+      #
+      # We have a hash containing the base name of the files (ie the
+      # name of the page) => hash for the argument => (true = ok,
+      # string (missing something), false = not implemented at all)
+
+
+      radix = File::basename(base)
+      str = "<h3  class='fight'>Example: <code>#{radix}</code></h3>"
       image_gplt = base + "-gnuplot.png"
       thumb_gplt = base + '-gnuplot.thumb.png'
       
@@ -261,6 +270,41 @@ class CTiogaFight < CTiogaCmdfileTag
 
       file_gplt = "#{file_base}-gnuplot.gplt"
       file_ct2 = "#{file_base}-ct2.ct2"
+
+      ct2_lines = begin 
+                    IO.readlines(file_ct2)
+                  rescue
+                    nil
+                  end
+
+      begin
+        db = {}
+        if File.exists? 'fight.yaml'
+          db = YAML.load(IO.readlines('fight.yaml').join())
+        end
+        
+        # Update the database:
+        db_base = File::basename(chain.last.node_info[:src], ".page")
+        db[db_base] ||= {}
+        local_db = db[db_base]
+        if ct2_lines == nil
+          local_db[radix] = false
+        else
+          ms = true
+          for l in ct2_lines
+            if l =~ /^#\s*missing\s*:\s*(.*)/
+              ms = $1
+              break
+            end
+          end
+          local_db[radix] = ms
+        end
+
+        File.open("fight.yaml", "w") do |f|
+          f.write(db.to_yaml)
+        end
+      end
+      
 
       # Gnuplot code first:
       str << "<h4 class='fight'>Gnuplot code <a href='#{file_gplt}'>(download)</a></h4>\n" 
@@ -294,3 +338,50 @@ class CTiogaFight < CTiogaCmdfileTag
   end
 
 end
+
+class FightStats < Tags::DefaultTag
+
+  infos( :name => 'Tag/FightStats',
+         :summary => 
+         "A link to a fight page, with statistics")
+
+  register_tag 'fightstats'
+
+  param 'target', false, "The target page"
+  set_mandatory 'target', true
+
+
+  def process_tag( tag, chain )
+    if target = param('target')
+      db = {}
+      if File.exists? 'fight.yaml'
+        db = YAML.load(IO.readlines('fight.yaml').join())
+      end
+
+      stats = ""
+      if db[target]
+        tot = 0
+        compl = 0
+        partial = 0
+        miss = 0
+        for k, v in db[target]
+          tot += 1
+          if v == false
+            miss += 1
+          elsif String === v
+            partial += 1
+          else
+            compl += 1
+          end
+        end
+
+        stats = "(#{tot} examples, #{compl} complete, #{partial} partial and #{miss} missing)"
+      end
+
+      return stats
+    end
+    ""
+  end
+
+end
+

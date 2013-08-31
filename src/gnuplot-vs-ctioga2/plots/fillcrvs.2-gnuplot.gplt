@@ -1,0 +1,3 @@
+set key outside
+set title "Intersection of two parabolas"
+plot x*x with filledcurves, 50-x*x with filledcurves, x*x with line lt 1

@@ -18,3 +18,11 @@ right plots.
 Note as well that, as the @(x>3.5 ? x/3-3 : 1/0)@ plot contains
 spaces, we had to quote it as @ctioga2@ splits a line into
 arguments/options at spaces, a bit like the shell.
+
+{fight: plots/fillcrvs.2}
+
+Of course, this does not look good, even with @ctioga2@. It would have
+been better to take advantage of fill transparency to avoid redrawing
+the first parabola:
+
+{ctCmdfile: plots/fillcrvs.2-better.ct2}

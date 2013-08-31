@@ -1,0 +1,6 @@
+# missing: set key bmargin
+auto-legend true
+math /xrange -15.7075:15.7075
+yrange -5:5
+plot tan(x)/atan(x)
+plot 1/x

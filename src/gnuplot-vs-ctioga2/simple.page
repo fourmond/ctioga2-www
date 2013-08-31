@@ -49,6 +49,9 @@ access to the bessel function.
 
 {fight: plots/simple.6}
 
+As of now, @ctioga2@ does not support setting legends below the
+graph. 
+
 {fight: plots/simple.7}
 
 {fight: plots/simple.8}

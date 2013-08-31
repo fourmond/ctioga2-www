@@ -45,6 +45,25 @@ class CTiogaCmdlineTag < Tags::DefaultTag
     return ""
   end
 
+  # Registers the file onto a global registry
+  def register_file(thumb, pid, chain)
+    db = {}
+    if File.exists? 'index.yaml'
+      db = YAML.load(IO.readlines('index.yaml').join())
+    end
+
+    page = File::basename(chain.last.node_info[:src], ".page") + ".html"
+    root_node = chain.first.resolve_node("/index.html")
+    base = File::dirname(root_node.route_to(chain.last))
+
+    thmb = "#{base}/#{thumb}"
+    db[thmb] = "#{base}/#{page}##{pid}"
+
+    File.open("index.yaml", "w") do |f|
+      f.write(db.to_yaml)
+    end
+  end
+
   def process_tag( tag, chain )
     if cmdline = param('file')
       base = cmdline.gsub(/\.ct2(-sh)?$/, '')
@@ -53,6 +72,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       thumb = base + '.thumb.png'
       id_base = "#{File::basename(image,'.png')}"
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
+      register_file(thumb, "pre-#{id_base}", chain)
       return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
         begin
           link_commands(IO.readlines(filename).join, chain)
@@ -305,7 +325,10 @@ class CTiogaFight < CTiogaCmdfileTag
           f.write(db.to_yaml)
         end
       end
-      
+
+      if ct2_lines
+        register_file(thumb_ct2, "pre-#{radix}-ct2", chain)
+      end
 
       # Gnuplot code first:
       str << "<h4 class='fight'>Gnuplot code <a href='#{file_gplt}'>(download)</a></h4>\n" 
@@ -318,7 +341,7 @@ class CTiogaFight < CTiogaCmdfileTag
       str <<  "</pre>"
       str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{file_ct2}'>(download)</a></h4>\n" 
       str << begin 
-               "<pre class='examples-cmdfile'>\n" + 
+               "<pre class='examples-cmdfile' id='pre-#{radix}-ct2'>\n" + 
                  link_commands(IO.readlines(file_ct2).join, chain) +
                  "</pre>"
              rescue
@@ -386,3 +409,29 @@ class FightStats < Tags::DefaultTag
 
 end
 
+class GraphIndex < Tags::DefaultTag
+
+  infos( :name => 'Tag/Index',
+         :summary => 
+         "Index of all graphs")
+
+  register_tag 'gindex'
+
+  param 'target', false, "The target page"
+  set_mandatory 'target', true
+
+
+  def process_tag( tag, chain )
+    db = {}
+    if File.exists? 'index.yaml'
+      db = YAML.load(IO.readlines('index.yaml').join())
+    end
+    
+    str = ""
+    for tmb in db.keys.sort
+      tg = db[tmb]
+      str << "<a href='#{tg}'><img src=\"#{tmb}\" class='thumbnail' /></a>\n"
+    end
+    return str
+  end
+end

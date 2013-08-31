@@ -22,7 +22,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
   param 'verbose', true, "Display information about files as they "+
     "are regenerated"
   param 'trim', false, "Whether to remove the borders of the pictures"
-  param 'ctstyle', "-r 9cmx6cm", "Additional styling command for ctioga2"
+  param 'ctstyle', "-r 9cmx6cm /count-legend=true", "Additional styling command for ctioga2"
   
   def initialize( plugin_manager )
     super

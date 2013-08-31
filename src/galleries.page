@@ -6,11 +6,16 @@ gPriority: 0.7
 
 h2. Galleries
 
-There are two galleries: one serving as a demonstration of some of the
-features linking to specific bits of the documentation, and the other
-coming from real publications.
+There are three galleries:
+ * a "demo":#demo gallery, that demonstrates some of the most
+ interesting features of @ctioga2@ and links to the documentation;
+ * a "real life":#real-life gallery that has pictures coming from 
+ scientific publications
+ * an "index":#index, that links to all @ctioga2@-generated graphs within
+ this website, for you to find quickly that specific graph you saw
+ ages ago and can't find anymore.
 
-h3. Demo gallery
+h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
@@ -77,7 +82,7 @@ Parametric plots
 </tr>
 </table>
 
-h3. Real life examples
+h3(#real-life). Real life examples
 
 These images come from publications. Taken out of their scientific
 context but linking to them can probably be considered
@@ -133,3 +138,7 @@ Another demonstration of {cmd: region}
 </tr>
 </table>
 
+
+h3(#index). Graphical index
+
+{gindex: bidul}

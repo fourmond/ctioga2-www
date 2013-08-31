@@ -149,15 +149,16 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
     if base
       cmdlocation = resolve_path(base, chain)
       escape_HTML!(string)
-      return string.gsub(/([^ ()\n\t]+)(\(|\s+)/) do 
-        command = $1
-        sep = $2
+      return string.gsub(/^(\s*)([^ ()\n\t]+)(\(|\s+)/) do 
+        pre = $1
+        command = $2
+        sep = $3
         cmd = CTiogaCommands[command]
         if cmd
           desc = purify_description(cmd['short_description'])
-          a = "<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{desc}\">#{command}</a>#{sep}"
+          a = "#{pre}<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{desc}\">#{command}</a>#{sep}"
         else
-          "#{command}#{sep}"
+          "#{pre}#{command}#{sep}"
         end
       end
     else

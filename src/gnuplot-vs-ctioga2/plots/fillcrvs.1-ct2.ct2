@@ -1,0 +1,13 @@
+title "plot with filled curves"
+color-set gnuplot
+fill-color-set gnuplot
+auto-legend true
+math /xrange=-10:10
+yrange -5:3
+plot 1.5+sin(x)/x /fill=top
+plot sin(x)/x /fill=close
+plot 1+sin(x)/x
+plot -1+sin(x)/x /fill y=-2
+plot -2.5+sin(x)/x /fill xy=-5,-4.
+plot -4.3+sin(x)/x /fill bottom
+plot "(x>3.5 ? x/3-3 : 1/0)" /fill right

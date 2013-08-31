@@ -1,0 +1,20 @@
+---
+title: Filled curves
+inMenu: true
+---
+
+h2. Filled curves
+
+The original gallery can be found
+"there":http://gnuplot.sourceforge.net/demo_4.6/fillcrvs.html.
+
+{fight: plots/fillcrvs.1}
+
+Here, we set the {command: color-set} and the {command:
+fill-color-set} to @gnuplot@ to have @ctioga2@ colors match those of
+gnuplot, in order to facilitate the comparison between the left and
+right plots.
+
+Note as well that, as the @(x>3.5 ? x/3-3 : 1/0)@ plot contains
+spaces, we had to quote it as @ctioga2@ splits a line into
+arguments/options at spaces, a bit like the shell.

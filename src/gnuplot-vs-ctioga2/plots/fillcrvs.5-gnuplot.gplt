@@ -1,5 +1,5 @@
 set key outside
-set title "Some sqrt stripes on filled graph background"
+set title "Sqrt stripes on filled background"
 plot [0:10] [-8:6] \
 	-8 with filledcurve x2 lt 15, \
 	sqrt(x) with filledcurves y1=-0.5, \

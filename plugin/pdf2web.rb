@@ -22,7 +22,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
   param 'verbose', true, "Display information about files as they "+
     "are regenerated"
   param 'trim', false, "Whether to remove the borders of the pictures"
-  param 'ctstyle', "-r 9cmx6cm /count-legend=true", "Additional styling command for ctioga2"
+  param 'ctstyle', "-r 9cmx6cm", "Additional styling command for ctioga2"
   
   def initialize( plugin_manager )
     super
@@ -35,9 +35,11 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       source = path.dup
       path.gsub!(/\.ct2$/, '.pdf')
       if !File.exist?(path) || File.mtime(source) > File.mtime(path)
-        puts "Regenerating #{path} from #{source}" if param("verbose")
+        cst = param('ctstyle').dup
+        cst << " /count-legend=true" if path =~ /gnuplot/
+        puts "Regenerating #{path} from #{source} (#{cst})" if param("verbose")
         system "cd #{File.dirname(source)}; " +
-          "CTIOGA2_PRE='#{param('ctstyle')}' DISPLAY='' ctioga2 -f #{name}.ct2"
+          "CTIOGA2_PRE='#{cst}' DISPLAY='' ctioga2 -f #{name}.ct2"
         system "touch -r #{source} #{path}"
       end
     elsif path =~ /\.ct2-sh$/   # Shell script

@@ -1,4 +1,4 @@
-title "Some sqrt stripes on filled graph background"
+title "Sqrt stripes on filled background"
 math /xrange=0:10
 yrange -8:6
 auto-legend true

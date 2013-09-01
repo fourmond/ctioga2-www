@@ -26,3 +26,23 @@ been better to take advantage of fill transparency to avoid redrawing
 the first parabola:
 
 {ctCmdfile: plots/fillcrvs.2-better.ct2}
+
+{fight: plots/fillcrvs.3}
+
+Here, implementation is only partial since @ctioga2@ cannot draw axes
+lines on top of the graph for the time being.
+
+{fight: plots/fillcrvs.4}
+
+With @ctioga2@, one has to use @x.abs@ rather than @abs(x)@ because
+the @abs@ function is not part of the 
+"Math module":http://www.ruby-doc.org/core-1.9.3/Math.html
+(although this could be arranged later...).
+
+{fight: plots/fillcrvs.5}
+
+Here, it is much smarted to fill the background of the plot rather
+than to use a constant value. In addition, this @ctioga2@ plot
+demonstrates the @xcolor@-like possibilities to tweak colors:
+@Blue!40@ means 40% of @Blue@ mixed with 60% of something else (white
+by default).

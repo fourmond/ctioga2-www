@@ -1,0 +1,7 @@
+title "Some sqrt stripes on filled graph background"
+math /xrange=0:10
+yrange -8:6
+auto-legend true
+background Blue!40
+plot sqrt(x) /fill -0.5
+plot sqrt(10-x)-4.5 /fill -5.5

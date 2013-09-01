@@ -1,0 +1,4 @@
+set key outside
+set grid front
+set title "Filled sinus and cosinus curves"
+plot 2+sin(x)**2 with filledcurve x1, cos(x)**2 with filledcurve x1

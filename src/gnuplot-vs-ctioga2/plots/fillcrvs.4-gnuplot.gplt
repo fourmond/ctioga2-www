@@ -1,0 +1,3 @@
+set key outside
+set title "The red bat: abs(x) with filledcurve xy=2,5"
+plot abs(x) with filledcurve xy=2,5

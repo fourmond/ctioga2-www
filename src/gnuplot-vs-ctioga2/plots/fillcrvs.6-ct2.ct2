@@ -4,11 +4,11 @@ clear-axes
 math /trange=-3.141592:3.141592
 xrange -1:1
 yrange -1:1.6
-plot sin(t):cos(t) /fill xy:0,0 
-plot sin(t)/8-0.5:cos(t)/8+0.4 /fill close 
-plot sin(t)/8+0.5:cos(t)/8+0.4 /fill close
-plot t/5:(t/5).abs-0.8 /fill xy=0.1,-0.5
-plot t/3:1.52-(t/3.1415).abs /fill xy=0,1.8
-draw-arrow -0.1,0.26  0.18,-0.17
+plot sin(t):cos(t) /fill xy:0,0 /color Yellow 
+plot sin(t)/8-0.5:cos(t)/8+0.4 /fill close /color Blue
+plot sin(t)/8+0.5:cos(t)/8+0.4 /fill close /color Blue
+plot t/5:(t/5).abs-0.8 /fill xy=0.1,-0.5 /color Red
+plot t/3:1.52-(t/3.1415).abs /fill xy=0,1.6 /color Black
+draw-arrow -0.1,0.26  0.18,-0.17 /tail-marker None /color '#0F0'
 draw-text 0,1.2 "ctioga2" 
 draw-text 0.02,-0.6 "ctioga2" 

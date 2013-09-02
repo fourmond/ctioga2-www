@@ -10,10 +10,9 @@ The original gallery can be found
 
 {fight: plots/fillcrvs.1}
 
-Here, we set the {command: color-set} and the {command:
-fill-color-set} to @gnuplot@ to have @ctioga2@ colors match those of
-gnuplot, in order to facilitate the comparison between the left and
-right plots.
+Here, we set the {command: color-set} to @gnuplot@ to have @ctioga2@
+colors match those of gnuplot, in order to facilitate the comparison
+between the left and right plots.
 
 Note as well that, as the @(x>3.5 ? x/3-3 : 1/0)@ plot contains
 spaces, we had to quote it as @ctioga2@ splits a line into
@@ -48,3 +47,11 @@ demonstrates the @xcolor@-like possibilities to tweak colors:
 by default).
 
 {fight: plots/fillcrvs.6}
+
+Note that one has to change the @xy=0,1.8@ fill specification to
+@xy=0,1.6@ since gnuplot will silently force any point you specify
+this way to lie within the plot boundaries, which doesn't make much
+sense in my eyes (because it makes it very difficult to draw lines
+that go in a precise direction).
+
+There is no way for now to specify an aspect ratio using @ctioga2@.

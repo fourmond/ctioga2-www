@@ -1,6 +1,5 @@
 title "plot with filled curves"
 color-set gnuplot
-fill-color-set gnuplot
 auto-legend true
 math /xrange=-10:10
 yrange -5:3

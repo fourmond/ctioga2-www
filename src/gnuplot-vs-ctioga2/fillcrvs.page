@@ -46,3 +46,5 @@ than to use a constant value. In addition, this @ctioga2@ plot
 demonstrates the @xcolor@-like possibilities to tweak colors:
 @Blue!40@ means 40% of @Blue@ mixed with 60% of something else (white
 by default).
+
+{fight: plots/fillcrvs.6}

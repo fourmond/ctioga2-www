@@ -1,0 +1,8 @@
+math /xrange -2:2
+margin 0.02
+plot sin(3.141592*x)
+top line
+ticks bottom /minor -1.75,-1.25,-0.75,-0.25,0.25,0.75,1.25,1.75\
+      /major -2,-1.5,-1,-0.5,0,0.5,1,1.5,2 \
+      /labels='$-2\pi$,$-\frac{3\pi}{2}$,$-\pi$,$-\frac{\pi}{2}$,\
+0,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$'

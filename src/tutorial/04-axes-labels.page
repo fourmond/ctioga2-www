@@ -47,3 +47,38 @@ labels respectively.
 
 {ctCmdline: plots/axes-labels-5.ct2-sh }
 
+h3. Controlling tick position and labels
+
+Starting from @ctioga2@ version @0.6@, it is possible to control the
+appearance and position of major ticks and tick labels, through the
+use of the {command: ticks} command or through various options to the
+{command: axis-style} command: 
+
+{ctCmdfile: plots/axes-labels-6.ct2 }
+
+The @/format@ argument to the {command: ticks} command is interpreted
+as a
+"@sprintf@":http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-sprintf 
+format specification.
+
+It is possible to specify the ticks position using the @/major@ and
+@/minor@ options to the {command: ticks} command:
+
+{ctCmdfile: plots/axes-labels-7.ct2 }
+
+See how the background lines follow the position
+of the major ticks.
+
+Here, we disabled the ticks on the top axis using {command: top} as
+they would still follow the usual convention, which would have a
+disconcerting effect. A simple way to take care of that is to use
+variables:
+
+{ctCmdfile: plots/axes-labels-7-bis.ct2 }
+
+Using the @/labels@ option, you can even specify the exact label for
+all the ticks. The price to pay for that level of control is that you
+*must* provide manually the location for all the major ticks (and the
+minor ones if you want them to show up too).
+
+{ctCmdfile: plots/axes-labels-8.ct2 }

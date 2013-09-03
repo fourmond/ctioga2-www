@@ -1,0 +1,7 @@
+math /xrange 1e3:7e5
+margin 0.07
+plot log(x)
+top line
+ticks bottom /minor 1e5,1.5e5,2e5,3.5e5,5e5,6e5 /major 0.5e5,2.5e5,4e5,5.5e5 \
+      /format="%.1e"
+background-lines bottom Gray /style Dots

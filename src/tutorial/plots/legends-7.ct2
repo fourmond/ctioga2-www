@@ -1,5 +1,5 @@
 math /xrange=-1:1
-legend-inside tc  /dy 1.1
+legend-inside br  /dy 1.1
 legend-line 'First powers of $x$'
 legend-multicol /columns=2 /dx=4mm
 plot 'x' /legend '$x$'

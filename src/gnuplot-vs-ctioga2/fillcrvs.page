@@ -33,11 +33,6 @@ lines on top of the graph for the time being.
 
 {fight: plots/fillcrvs.4}
 
-With @ctioga2@, one has to use @x.abs@ rather than @abs(x)@ because
-the @abs@ function is not part of the 
-"Math module":http://www.ruby-doc.org/core-1.9.3/Math.html
-(although this could be arranged later...).
-
 {fight: plots/fillcrvs.5}
 
 Here, it is much smarted to fill the background of the plot rather

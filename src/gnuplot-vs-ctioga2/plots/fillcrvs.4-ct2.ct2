@@ -1,4 +1,4 @@
 math
 auto-legend true
-title "The red bat: abs(x) with filledcurve xy=2,5"
-plot x.abs /fill xy=2,5
+title 'The red bat: abs(x) filled to $(2,5)$'
+plot abs(x) /fill xy=2,5

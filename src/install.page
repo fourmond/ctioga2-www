@@ -3,6 +3,93 @@ title: Installation
 inMenu: true
 ---
 
+h2. @ctioga2@ installation instructions
+
+* "Windows":#win
+* "MacOS":#mac
+* "Linux":#linux
+* "From source":#source, for those feeling adventurous
+* "From the git repository":#git, for those that need the bleeding
+  edge version and feel like giving a little help.
+* "upgrading instructions":#upgrade
+
+
+
+h2(#win). Installing on windows
+
+Before installing @ctioga2@ proper, you need to install
+
+ * "Ruby":http://ruby-lang.org, using the "one-click
+   installer":http://rubyinstaller.org/downloads/. The 1.9.3 version
+   works just fine. Don't forget to click the box to add the
+   executables to the PATH at the end of the installation.
+ * The Ruby DevKit, at the same
+   "location":http://rubyinstaller.org/downloads/. Make sure you take
+   the one matching the Ruby version you installed (there's an
+   explicative text on the side). You need to unpack it in the
+   directory where Ruby got installed.
+ * A LaTeX distribution, such as
+   "proTeXt":http://www.tug.org/protext/, or directly
+   "MiKTeX":http://miktex.org/download. They both are heavy downloads,
+   MiKTeX is a barebone LaTeX install while with proTeXt you get a lot
+   of additional
+
+After installing that, you probably need to reboot, then open a
+windows terminal (Start -> Run then @cmd.exe@) and type in:
+
+<pre class='examples-cmdline'>
+gem install ctioga2
+</pre>
+
+Then, to make your life easier, it is recommanded to install the
+following "registry file":ctioga2.reg that sets up the correct file
+associations. In particular, if you now right-click on a @.ct2@ file,
+you'll have a "Compile to PDF" action available (as the default).
+
+
+h2(#mac). Installing on MacOS
+
+In principle, MacOS comes with a version of Ruby bundled in that
+should be enough for running @ctioga2@. Make sure you have a LaTeX
+distribution installed, if not, install
+"MacTeX":http://tug.org/mactex/. Then, open up a terminal, and run
+
+<pre class='examples-cmdline'>
+gem install ctioga2
+</pre>
+
+You may not have the necessary right to do that, in which case you'll
+have to run
+
+<pre class='examples-cmdline'>
+sudo gem install ctioga2
+</pre>
+
+And that's it. Running @ctioga2@ from the terminal should be
+painless. (there are no file associations at the moment).
+
+h2(#linux). Installing on Linux
+
+h3. With your package manager
+
+For Debian-based distros, just run
+
+<pre class='examples-cmdline'>
+apt-get install ctioga2
+</pre>
+
+h3. Using rubygems
+
+Make sure you have a TeXlive distribution and Ruby installed on your
+computer, then run
+
+<pre class='examples-cmdline'>
+gem install ctioga2
+</pre>
+
+
+h2(#source). From source
+
 <div class='top-left-outer'>
 h2. Download
 
@@ -12,94 +99,46 @@ Download @ctioga2@ from Rubyforge's
 
 Latest version:
 
-<a href="http://rubyforge.org/frs/download.php/77090/ctioga2-0.5.tar.bz2">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.5.tar.bz2</code></a>
+<a href="http://rubyforge.org/frs/download.php/77114/ctioga2-0.6.tar.bz2">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.6.tar.bz2</code></a>
 
 Current "Changelog":Changelog
 </div>
 </div>
 
-h2. @ctioga2@ prerequisites
-
-To have a working copy of @ctioga2@, you need :
-
-* "Ruby":http://www.ruby-lang.org/en/;
-* a LaTeX distribution, such as "TeXLive":http://www.tug.org/texlive/;
-* a recent version of "Tioga":http://tioga.rubyforge.org.
-
-h2. Installation
-
-h3. Gems
-
-The easiest way of installing @ctioga2@ is to use
-"rubygems":http://rubygems.org. Installing them is just a matter of
-opening a command-line terminal and running:
-
-<pre class='examples-cmdline'>
-gem install ctioga2
-</pre>
-
-This will pull in automatically @tioga@, but you will still need a
-working LaTeX installation.
-
-h3. Your distribution's package manager
-
-For "Debian":http://www.debian.org and "Ubuntu":http://ubuntu.com
-users, install @ctioga2@ using your favorite package manager:
-
-<pre class='examples-cmdline'>
-apt-get install ctioga2
-</pre>
-
-And this will even take care of the LaTeX dependencies.
-
-h3. Tarballs
-
 Download the latest tarball of @ctioga2@ at the 
-"download page":http://rubyforge.org/frs/?group_id=8218. Let us assume
-the file is named @ctioga2-0.4.tar.bz2@. 
-
-First, extract the tarball this way:
+"download page":http://rubyforge.org/frs/?group_id=8218, and extract
+it this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.4.tar.bz2
+tar xvjf ctioga2-0.6.tar.bz2
 </pre>
 
-Then @cd@ to the directory created. Here, it is @ctioga2-0.4@:
-
-<pre class='examples-cmdline'>
-cd ctioga2-0.4
-</pre>
-
-@ctioga2@ is using
+Then @cd@ to the directory created. @ctioga2@ uses
 "@setup.rb@":http://i.loveruby.net/en/projects/setup/doc/usage.html
-for handling its installation. In short, run this command as root.
+for handling its installation. To install for all users, run  as root:
 
 <pre class='examples-cmdline'>
 ruby setup.rb
 </pre>
 
 
-h3. SVN repository
+h2(#git). From the git repository
 
-The code of @ctioga2@ is developed in a 
-"SVN repository":http://rubyforge.org/scm/?group_id=8218. To make use of
-it, get a "SVN client":http://subversion.tigris.org/ and get a working
-copy of the repository using this command:
-
-<pre class='examples-cmdline'>
-svn checkout http://ctioga2.rubyforge.org/svn/trunk/ctioga2
-</pre>
-
-Then use the instructions as above for the installation using the tarball.
-
-h3. git mirror
-
-The SVN repository is mirrored to
-"github":http://github.com/fourmond/ctioga2, so, if you're more fluent
-in git, you can also hack the code using
+Just get the repository at 
+"github":http://github.com/fourmond/ctioga2:
 
 <pre class='examples-cmdline'>
 git clone git://github.com/fourmond/ctioga2.git
 </pre>
 
+And then, install as above.
+
+h2(#upgrading). Upgrading instructions
+
+For those who installed using @gem@ (Windows, MacOS), the easiest way
+to upgrade to the lastest @ctioga2@ release is to run:
+
+<pre class='examples-cmdline'>
+gem update ctioga2
+</pre>

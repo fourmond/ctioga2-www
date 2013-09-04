@@ -1,4 +1,14 @@
 --- 
+- :date: 2013-09-05 02:32:00 +02:00
+  :author: Vincent Fourmond
+  :id: 41614
+  :title: ctioga2 version 0.6 is out
+  :contents: |-
+    A new version of ctioga2 is ready that brings in a whole bunch of new features including the possibility to run easily on windows, and many features inspired from gnuplot.
+    
+    The website now has a side-by-side comparison of gnuplot and ctioga2 graphs at <a href="http://ctioga2.rubyforge.org/gnuplot-vs-ctioga2/index.html" target="_new">http://ctioga2.rubyforge.org/gnuplot-vs-ctioga2/index.html</a>, and a graphical index in the gallery at <a href="http://ctioga2.rubyforge.org/galleries.html" target="_new">http://ctioga2.rubyforge.org/galleries.html</a>.
+    
+    Detailed installation instructions can be found at <a href="http://ctioga2.rubyforge.org/install.html" target="_new">http://ctioga2.rubyforge.org/install.html</a>
 - :date: 2013-08-27 02:33:00 +02:00
   :author: Vincent Fourmond
   :id: 41601

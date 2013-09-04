@@ -12,7 +12,7 @@ Windows Registry Editor Version 5.00
 @="Compile to PDF"
 
 [HKEY_CLASSES_ROOT\ctioga2.ct2\shell\Compile\command]
-@="cmd.exe /c ctioga2 -f \"%1\""
+@="cmd.exe /c ctioga2 -f \"%1\" /log=true"
 
 [HKEY_CLASSES_ROOT\ctioga2.ct2\shell\Edit]
 @="Edit"

@@ -1,0 +1,9 @@
+set title "world.dat plotted with filledcurves"
+set format x ""
+set format y ""
+set grid layerdefault linewidth 0.5 
+set object  1 rect from graph 0, 0 to graph 1, 1 behind fc  rgb "#afffff" fillstyle solid 1.00 border -1
+set xrange [ -180.000 : 180.000 ]
+set yrange [ -70.0000 : 80.0000 ]
+set lmargin  1
+plot 'world.dat' with filledcurve notitle fs solid 1.0 lc rgb 'dark-goldenrod'

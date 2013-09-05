@@ -1,0 +1,10 @@
+title "world.dat plotted with filledcurves"
+xlabel ' '
+ylabel ' '
+background-lines top Black /style Dots
+background-lines left Black /style Dots
+background "#afffff"
+xrange -180:180 
+yrange -70:80
+text /split=true
+plot 'world.dat#1##153' /color DarkGoldenrod /fill close

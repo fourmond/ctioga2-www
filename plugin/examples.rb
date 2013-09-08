@@ -290,7 +290,9 @@ class CTiogaFight < CTiogaCmdfileTag
       file_base = File.join( chain.first.parent.node_info[:src], base ) 
 
       file_gplt = "#{file_base}-gnuplot.gplt"
+      link_gplt = "#{param('file')}-gnuplot.gplt"
       file_ct2 = "#{file_base}-ct2.ct2"
+      link_ct2 = "#{param('file')}-ct2.ct2"
 
       ct2_lines = begin 
                     IO.readlines(file_ct2)
@@ -331,7 +333,7 @@ class CTiogaFight < CTiogaCmdfileTag
       end
 
       # Gnuplot code first:
-      str << "<h4 class='fight'>Gnuplot code <a href='#{file_gplt}'>(download)</a></h4>\n" 
+      str << "<h4 class='fight'>Gnuplot code <a href='#{link_gplt}'>(download)</a></h4>\n" 
       str << "<pre class='examples-gnuplot'>\n"
       str << begin 
                IO.readlines(file_gplt).join
@@ -339,7 +341,7 @@ class CTiogaFight < CTiogaCmdfileTag
                "<strong>could not read file #{file_gplt}</strong>"
              end
       str <<  "</pre>"
-      str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{file_ct2}'>(download)</a></h4>\n" 
+      str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{link_ct2}'>(download)</a></h4>\n" 
       str << begin 
                "<pre class='examples-cmdfile' id='pre-#{radix}-ct2'>\n" + 
                  link_commands(IO.readlines(file_ct2).join, chain) +

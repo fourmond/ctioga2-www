@@ -11,7 +11,7 @@ h2. @ctioga2@ installation instructions
 * "From source":#source, for those feeling adventurous
 * "From the git repository":#git, for those that need the bleeding
   edge version and feel like giving a little help.
-* "upgrading instructions":#upgrade
+* "upgrading instructions":#upgrading
 
 
 
@@ -40,6 +40,24 @@ windows terminal (Start -> Run then @cmd.exe@) and type in:
 <pre class='examples-cmdline'>
 gem install ctioga2
 </pre>
+
+If @gem@ complains that you didn't install the developer kit while you
+are positive that you've unpacked the developer kit where you should,
+you can work around that problem by doing:
+
+<pre class='examples-cmdline'>
+cd C:\Ruby193
+devkitvars
+gem install ctioga2
+</pre>
+
+Where we assumed that ruby was installed into the @C:\Ruby193@
+directory. You will also have to do that for "upgrading":upgrading.
+
+Alternatively, you can look at the proper installation instructions
+for the developer kit 
+"there":https://github.com/oneclick/rubyinstaller/wiki/Development-Kit.
+
 
 Then, to make your life easier, it is recommanded to install the
 following "registry file":ctioga2.reg that sets up the correct file
@@ -99,8 +117,8 @@ Download @ctioga2@ from Rubyforge's
 
 Latest version:
 
-<a href="http://rubyforge.org/frs/download.php/77114/ctioga2-0.6.tar.bz2">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.6.tar.bz2</code></a>
+<a href="http://rubyforge.org/frs/download.php/77123/ctioga2-0.6.1.tar.bz2">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.6.1.tar.bz2</code></a>
 
 Current "Changelog":Changelog
 </div>
@@ -111,7 +129,7 @@ Download the latest tarball of @ctioga2@ at the
 it this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.6.tar.bz2
+tar xvjf ctioga2-0.6.1.tar.bz2
 </pre>
 
 Then @cd@ to the directory created. @ctioga2@ uses

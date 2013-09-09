@@ -1,4 +1,9 @@
 --- 
+- :date: 2013-09-10 01:37:00 +02:00
+  :author: Vincent Fourmond
+  :id: 41621
+  :title: ctioga2 version 0.6.1 is out
+  :contents: This release fixes a few annoying bugs, especially one hitting windows users with accents and other non-ASCII characters in the file names.
 - :date: 2013-09-05 02:32:00 +02:00
   :author: Vincent Fourmond
   :id: 41614

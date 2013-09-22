@@ -5,7 +5,7 @@
 
 WEBGEN = webgen0.4
 
-website:
+website: archive
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 
@@ -26,3 +26,7 @@ DOX = ../ctioga2/dox
 rsync:
 	rsync $(RSYNC_OPTS) --exclude 'dox' output/ $(TARGET)
 	test -d  $(DOX) && rsync $(RSYNC_OPTS) $(DOX) $(TARGET)/doc
+
+archive:
+	cd src/tutorial; zip -r tutorial.zip plots -x '*.pdf' -x '*.ct2-sh' -x '*~'
+	mv src/tutorial/tutorial.zip output/tutorial

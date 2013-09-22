@@ -41,8 +41,15 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   end
 
   # Hook at the end of the pre stuff...
-  def pre_end(tag, chain)
-    return ""
+  def pre_end(contents, tag, chain)
+    c = contents.gsub("\\\n", '')
+    c.gsub!("\t", " ")
+    c.gsub!("\"", "\\\"")
+    c.gsub!(/'/) do 
+      "\\%27"
+    end
+    c = "window.prompt(\"Command to copy to clipboard then paste in a terminal: Ctrl+C\", decodeURIComponent(\"#{c}\"));return false;"
+    return "<p class='download-link'><a onclick='#{c}' href='#'>Copy to terminal</a></p>"
   end
 
   # Registers the file onto a global registry
@@ -73,12 +80,15 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       id_base = "#{File::basename(image,'.png')}"
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
       register_file(thumb, "pre-#{id_base}", chain)
+      contents = ""
       return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
         begin
-          link_commands(IO.readlines(filename).join, chain)
+          contents = IO.readlines(filename).join
+          nc = contents.dup
+          link_commands(nc, chain)
         rescue Exception => e
           "<b>IO problem reading file #{cmdline}: #{e.inspect}</b>"
-        end  + "</pre>#{pre_end(tag, chain)}" +
+        end  + "</pre>#{pre_end(contents, tag, chain)}" +
         "<p class='example-image'>\n" +
         "<a href=\"#{image}\" id=\"img-#{id_base}\">" +
         "<img src=\"#{thumb}\" class='thumbnail' alt=\"#{alt}\"/></a>"
@@ -158,7 +168,7 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
 
 
   # Hook at the end of the pre stuff...
-  def pre_end(tag, chain)
+  def pre_end(contents, tag, chain)
     return "<p class='download-link'><a href='#{param('file')}'>Download command file</a></p>"
   end
 

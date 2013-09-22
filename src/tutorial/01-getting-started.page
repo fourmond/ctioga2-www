@@ -10,6 +10,9 @@ quickly data files. For this page, you need the
 "@data.dat@":plots/data.dat file which contains four columns: 
 x, sin(x), cos(x) and x^2^.
 
+Alternatively, you may download all the files used in this tutorial as
+a "ZIP archive":tutorial.zip.
+
 h3. First steps on the command-line
 
 First, let's plot the second and third columns as a function of the
@@ -57,9 +60,13 @@ h3. Command files
 
 One of the uniques features of @ctioga2@ is that it is possible to use
 it both on the command-line and from a command-file. Commands from the
-command-file most often have the same name as when they are used from
-the command-line (the double-dash form). They take the same
-options. The following file is the exact translation of the
+command-file have the same name as when they are used from the
+command-line (without the double-dashes). They take the same options.
+
+Edit command files with a plain text file editor (emacs, notepad,
+etc...). Do *not* save as "rich text" or "formatted text" !
+
+The following file is the exact translation of the
 command-line above:
 
 {ctCmdfile: plots/getting-started-4.ct2 }
@@ -70,11 +77,16 @@ You run @ctioga2@ on the command-file this way:
 ctioga2 -f getting-started-4.ct2
 </pre>
 
-@ctioga2@ does not care about the extension of the files. @.ct2@ is
-neat though.
+Alternatively, on windows, if you installed the 
+"registry file":../ctioga2.reg, you just have to double click on the
+file to compile it to PDF. In that case, the errors and warnings that
+@ctioga2@ gives are stored in a log file with the same name as the
+@ct2@ file.
 
 We have tried to mix between these two approaches in the tutorial. You
-can spot which is which from the background color.
+can spot which is which from the background color, and the nature of
+the "download" link (i.e. download for command-file, or
+copy-to-clipboard for command-line).
 
 h3. Intermixing command files and command line
 

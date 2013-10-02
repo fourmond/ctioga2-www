@@ -19,6 +19,15 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.7
+
+{example: /tutorial/05-3D.html#3D-6-a}
+
+It is now possible to control the size of markers in addition to their
+colors using {command: xy-parametric} plots.
+
+h4. From previous versions 
+
 <table class='gallery'>
 <tr>
 <td>

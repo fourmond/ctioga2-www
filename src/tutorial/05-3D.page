@@ -116,6 +116,24 @@ parameters. Its easy to display all the curves in one go:
 
 {ctCmdline: plots/3D-6.ct2-sh }
 
+h3. Control more aspects of the plots with parametric data
+
+Starting from @ctioga2@ version 0.7, it is possible to use more than
+one Z value and to select which aspect of the graphs they control (for
+now, symbol color and size), using the @/z1@ and @/z2@ options to
+{command: xy-parametric}:
+
+{ctCmdfile: plots/3D-6-a.ct2}
+
+Here, we take advantage of the parametric plots using the 
+{command: math} backend. We use two different Z values to control both
+the size of the symbols and their color: we plot a parabola @t@:@t**2@
+whose symbol size @/z1@ is dictated by a sine function @0.1+sin(t)**2@
+and its color a cosine function @cos(t)@.
+
+See how the {command: math} backend switches to parametric plots as
+soon as you have more than one @:@-separated column.
+
 h3(#contour-real). Only contours, second take
 
 Starting from @ctioga2@ version 0.5, it is possible to plot automatic

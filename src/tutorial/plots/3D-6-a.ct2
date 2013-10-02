@@ -1,0 +1,5 @@
+xy-parametric /z1=marker_scale /z2=marker_color
+math /trange 0:20 /samples=50
+line-style no
+marker auto
+plot t:t**2:0.1+sin(t)**2:cos(t) /marker-scale 1.3

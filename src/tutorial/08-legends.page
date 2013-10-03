@@ -62,7 +62,10 @@ Using the @/frame_@ options to {cmd: legend-inside} or to
 legend. Using a fill transparency, it is even possible to dim what is
 underneath (text never gets dimmed this way, though):
 
-{ctCmdline: plots/legends-6.ct2-sh }
+{ctCmdfile: plots/legends-6.ct2 }
+
+Here, we also demonstrate a frame with rounded corners using the
+option @/frame-shape=round@.
 
 Try using a white background too !
 

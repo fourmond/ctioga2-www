@@ -1,0 +1,9 @@
+math
+setup-grid 2x1 /top=1mm
+inset grid:0,0
+plot 'sin(x)' 
+next-inset grid:1,0
+ylabel "" 
+plot 'x**2'
+draw-line /width=5 0,10 -30,10 /color=Red
+draw-line /width=5 0,50 -30,50 /color=Blue /clipped=false /depth=5

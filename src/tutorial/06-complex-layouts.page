@@ -48,3 +48,18 @@ options to control which space should be left on the sides of the
 whole plot (@left@, @top@, @bottom@ and @right@) and how much space
 should be inserted between the individual "insets" (@dx@, @dy@).
 
+h3. Unclipped elements and control of depth
+
+By default, elements drawn within a plot are clipped at the plot
+boundaries (ie nothing goes out of the plot). However, it is sometimes
+desirable to have things sticking out of the plot, for instance to
+draw lines spanning from one plot to another. For that, one can use
+the @/clipped=false@ options to drawing commands (or plot commands):
+
+{ctCmdfile: plots/complex-layouts-4.ct2}
+
+See how the first line, while having the same @x@ extension as the
+second one, is clipped at plot boundaries. The @/depth=5@ is here to
+make sure that the line is drawn in front of the axes (that are drawn
+between depth 10 and depth 11). If you want something behind the
+background lines, use a depth over 90.

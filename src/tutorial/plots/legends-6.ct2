@@ -1,0 +1,7 @@
+math
+legend-inside lc /scale 1.2 /dy 1.1 /frame-shape round /frame-padding 3mm \
+        /frame-color=Blue /frame-fill-color='Blue!20' \
+        /frame-fill-transparency=0.3 /frame-style=Dots
+plot 'x' /legend '$x$'
+plot 'x**2' /legend '$x^2$'
+plot 'x**3' /legend '$x^3$'

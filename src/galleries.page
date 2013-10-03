@@ -29,6 +29,11 @@ h4. New in version 0.7
 It is now possible to control the size of markers in addition to their
 colors using {command: xy-parametric} plots.
 </td>
+<td>
+{example: /tutorial/08-legends.html#legends-6}
+<br/>
+Legend frames with rounded corners (and normal boxes too)
+</td>
 </tr>
 </table>
 

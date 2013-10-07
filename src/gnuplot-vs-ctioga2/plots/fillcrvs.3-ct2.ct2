@@ -1,8 +1,7 @@
-# missing: set grid front
 title "Filled sinus and cosinus curves"
 background-lines left Black /style=Dots
 background-lines bottom Black /style=Dots
 math
 auto-legend true
-plot 2+sin(x)**2 /fill=bottom
-plot cos(x)**2 /fill=bottom
+plot 2+sin(x)**2 /fill=bottom /depth=95
+plot cos(x)**2 /fill=bottom /depth=95

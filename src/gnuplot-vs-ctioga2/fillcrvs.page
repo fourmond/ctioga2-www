@@ -28,8 +28,8 @@ the first parabola:
 
 {fight: plots/fillcrvs.3}
 
-Here, implementation is only partial since @ctioga2@ cannot draw axes
-lines on top of the graph for the time being.
+We used the option @/depth=95@ to draw the curves *behind* the
+background lines (they are drawn between depth 90 and 91).
 
 {fight: plots/fillcrvs.4}
 
@@ -53,12 +53,12 @@ There is no way for now to specify an aspect ratio using @ctioga2@.
 
 {fight: plots/fillcrvs.7}
 
-Here, we use two esoteric features of <code>ctioga2</code>'s text backend. First,
-if you turn on the @/split@ option to {command: text} (which is also
-possible using directly the command {command: text-split}), @ctioga2@
-will divide the data files into "subsets" separated by blank
-lines. You select the third subset by adding @#3@ after the name of
-the file.
+Here, we use two esoteric features of <code>ctioga2</code>'s text
+backend. First, if you turn on the @/split@ option of the 
+{command:text} backend (which is also possible using directly the command
+{command: text-split}), @ctioga2@ will divide the data files into
+"subsets" separated by blank lines. You select the third subset by
+adding @#3@ after the name of the file.
 
 The second esoteric feature is the set expansion. While processing the
 {command: plot} command above, @ctioga2@ will replace the @1##153@ bit
@@ -66,6 +66,9 @@ by all the numbers from 1 to 153 in succession. The effect is the same
 as if we had run the {command: plot} command on 
 @world.dat#1@ then on @world.dat#2@, etc, but it is of course much
 more compact.
+
+We also took advantage of the @/also-axes@ option to {command: axis-style}
+to use only major ticks for all the axes in one go.
 
 There happen to be exactly 153 bits in the file, but we could have
 used @1##2000@, as @ctioga2@ just complains when datasets are missing,

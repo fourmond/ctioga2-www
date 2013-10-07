@@ -1,4 +1,9 @@
 --- 
+- :date: 2013-10-08 00:37:00 +02:00
+  :author: Vincent Fourmond
+  :id: 41653
+  :title: ctioga2 version 0.7 is out
+  :contents: This release brings in new possibilities for parametric curves, and a full control of the depth of the curves (draw them in front of the axes or behind the background lines), along with rounded corners of legends and quite a few useability improvements/bug fixes.
 - :date: 2013-09-10 01:37:00 +02:00
   :author: Vincent Fourmond
   :id: 41621

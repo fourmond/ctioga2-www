@@ -1,6 +1,6 @@
 title "world.dat plotted with filledcurves"
-xlabel ' '
-ylabel ' '
+no-xlabel
+no-ylabel
 axis-style left /decoration=major /also-axes=right,top,bottom
 background-lines top Black /style Dots
 background-lines left Black /style Dots

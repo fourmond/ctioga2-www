@@ -73,3 +73,9 @@ to use only major ticks for all the axes in one go.
 There happen to be exactly 153 bits in the file, but we could have
 used @1##2000@, as @ctioga2@ just complains when datasets are missing,
 but doesn't stop to build the plot.
+
+We use {command: no-xlabel} and {command: no-ylabel} to disable the
+display of the @X@ and @Y@ labels. This is different than setting an
+empty label using @{command xlabel} ' '@, as the plot does not reserve
+space for plotting the label, and hence the whole target space is used
+for the plot.

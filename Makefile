@@ -18,7 +18,8 @@ regenerate-full:
 	rm -Rf output
 	$(WEBGEN)
 
-TARGET="rubyforge.org:/var/www/gforge-projects/ctioga2"
+# TARGET="rubyforge.org:/var/www/gforge-projects/ctioga2"
+TARGET="web.sf.net:/home/project-web/ctioga2/htdocs"
 RSYNC_OPTS= -avvz --progress --delete
 
 DOX = ../ctioga2/dox

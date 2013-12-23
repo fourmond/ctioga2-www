@@ -50,7 +50,7 @@ class SVNDateTag < Tags::DefaultTag
           else
             "git svn"
           end
-
+    
     file = chain.last.node_info[:src]
     info = `#{svn} info #{file} 2>/dev/null`
     time = if info =~/Last\s*Changed\s*Date:\s*(.*)/
@@ -60,6 +60,21 @@ class SVNDateTag < Tags::DefaultTag
            end
 
     return time.strftime(param('format'))
+  end
+
+end
+
+class OutputNameTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/ON',
+         :summary => 
+         "Prints out the date of last modification of the current file")
+
+  register_tag 'on'
+
+  def process_tag( tag, chain )
+    dest_node = chain.first.resolve_node( "/" )
+    return dest_node.route_to(chain.last)
   end
 
 end

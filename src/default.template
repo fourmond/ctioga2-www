@@ -11,6 +11,7 @@
 		   scientific data" />
     <meta name="author" content="Vincent Fourmond" />
     <meta name="generator" content="webgen - http://webgen.rubyforge.com/" />
+    <meta http-equiv="refresh" content="5;URL='http://ctioga2.sourceforge.net/{on:}'" />    
     <!-- Google webmaster tools verification -->
     <meta name="verify-v1" 
 	  content="mBUMbbHfIu3ElH8ZTo9JIfMhnCOtX9YmeA2dZfLPp6k=" />
@@ -28,6 +29,11 @@
 
   <body>
     <div class="container">
+      <div class="rounded bar">
+        <h2>ctioga2 has moved to sourceforge. You should be redirected
+        <a href="http://ctioga2.sourceforge.net/{on:}">there</a>
+        shortly</h2>
+      </div>
       <div id="titlebar" class="rounded bar">
 	<h1><a href="{relocatable:/}">ctioga2</a></h1>
 	<p>the polymorphic plotting program</p>

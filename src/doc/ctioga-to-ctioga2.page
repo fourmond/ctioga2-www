@@ -38,10 +38,5 @@ ctioga2 --math -L 'sin(x)' -P
 
 h3. Unimplemented features
 
-As of now, many of <code>ctioga</code>'s features have not been ported
-yet to @ctioga2@. They are listed in the "status page":../status.html.
-The reason is simply that I have not had the time or
-seen the utility of those features. If you need them,
-please ping me at
-"@ctioga2-users@":http://rubyforge.org/mailman/listinfo/ctioga2-users
-or on the "forum":http://rubyforge.org/forum/forum.php?forum_id=31837.
+As of version 0.8, none of the old @ctioga@'s features are missing in
+@ctioga2@. You really have no excuse for not switching !

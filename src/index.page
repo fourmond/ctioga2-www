@@ -8,7 +8,7 @@ orderInfo: -1
 h2. Latest news
 
 <div class='top-left-inner'>{news: {number: 1}}
-"News archive":http://rubyforge.org/news/?group_id=8218
+"News archive at freecode":http://freecode.com/projects/ctioga
 </div>
 </div>
 

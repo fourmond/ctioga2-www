@@ -112,24 +112,24 @@ h2(#source). From source
 h2. Download
 
 <div class='top-left-inner'>
-Download @ctioga2@ from Rubyforge's 
-"Download page":http://rubyforge.org/frs/?group_id=8218&release_id=37068:
+Download @ctioga2@ from Sourceforge's 
+"Download page":https://sourceforge.net/projects/ctioga2/files/
 
 Latest version:
 
-<a href="http://rubyforge.org/frs/download.php/77123/ctioga2-0.6.1.tar.bz2">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.6.1.tar.bz2</code></a>
+<a href="http://sourceforge.net/projects/ctioga2/files/ctioga2-0.7.tar.bz2/download">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.7.tar.bz2</code></a>
 
 Current "Changelog":Changelog
 </div>
 </div>
 
 Download the latest tarball of @ctioga2@ at the 
-"download page":http://rubyforge.org/frs/?group_id=8218, and extract
+"download page":http://sourceforge.net/projects/ctioga2/files/, and extract
 it this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.6.1.tar.bz2
+tar xvjf ctioga2-0.7.tar.bz2
 </pre>
 
 Then @cd@ to the directory created. @ctioga2@ uses
@@ -144,13 +144,22 @@ ruby setup.rb
 h2(#git). From the git repository
 
 Just get the repository at 
-"github":http://github.com/fourmond/ctioga2:
+"sourceforge":http://sourceforge.net/p/ctioga2/code/:
+
+<pre class='examples-cmdline'>
+git clone git://git.code.sf.net/p/ctioga2/code ctioga2
+</pre>
+
+And then, install as above for the download from sources.
+
+Alternatively, you can use the
+"github":http://github.com/fourmond/ctioga2 mirror:
 
 <pre class='examples-cmdline'>
 git clone git://github.com/fourmond/ctioga2.git
 </pre>
 
-And then, install as above.
+
 
 h2(#upgrading). Upgrading instructions
 
@@ -160,3 +169,6 @@ to upgrade to the lastest @ctioga2@ release is to run:
 <pre class='examples-cmdline'>
 gem update ctioga2
 </pre>
+
+For the rest, you just install the newer version as if no previous
+version was installed.

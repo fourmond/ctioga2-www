@@ -1,0 +1,7 @@
+math /samples=15 /xrange=-1.5:1.5
+histogram 
+margin 0.03
+fill 0
+fill-color-set default!10
+plot 'cos(x)' 
+plot 'x**2/2.25'

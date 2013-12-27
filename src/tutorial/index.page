@@ -2,7 +2,7 @@
 title: Tutorial
 inMenu: true
 directoryName: Tutorial
-orderInfo: -1
+orderInfo: 0
 ---
 h2. How to get going with @ctioga2@
 
@@ -10,18 +10,19 @@ This tutorial covers quite a few aspects of the making of plots with
 @ctioga2@, including:
 
 
-* a quick way to "get started":01-getting-started.html
-* "data files and mathematical functions":02-datafiles.html (including a
+* a quick way to "get started":getting-started.html
+* "data files and mathematical functions":datafiles.html (including a
   small trick to extract data from "gnuplot":http://gnuplot.info files
-* how to tweak the look of "plain curves":03-curve-style.html
-* "axes and labels":04-axes-labels.html
-* "3D data":05-3D.html
-* "complex plot layouts":06-complex-layouts.html
-* "legends":08-legends.html
-* "other cool stuff":07-cool-stuff.html, such as coloring a region
+* how to tweak the look of "plain curves":curve-style.html
+* "axes and labels":axes-labels.html
+* "3D data":3D.html
+* "complex plot layouts":complex-layouts.html
+* "legends":legends.html
+* "other cool stuff":cool-stuff.html, such as coloring a region
   between curves
-* how to take advantage of "styles":09-styles.html
-* how to make a "video":10-movies.html
+* "histograms":histograms.html
+* how to take advantage of "styles":styles.html
+* how to make a "video":movies.html
 
 In addition, there is an "index gallery":../galleries.html#index to
 allow you to find easily a plot whose look you remember.

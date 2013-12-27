@@ -1,0 +1,48 @@
+---
+title: Histograms
+inMenu: true
+orderInfo: 12
+---
+h2. Histograms
+
+Starting from version @0.8@, @ctioga2@ is able to make histograms
+whose size adjust automatically.
+
+h3. Simple histograms.
+
+Histograms are a plot type in their own right, just like standard 
+{cmd: xy-plot} or parametric plots ({cmd: xy-parametric}), switched on
+using {cmd: histogram}:
+
+{ctCmdfile: plots/histograms-1.ct2 }
+
+This example file also demonstrates the possibility to mix colorsets
+using the @xcolor@-style syntax that is also available for simple
+colors.
+
+The histograms are better filled for them to look good.
+
+h3. Tuning spacing
+
+Spacing around the histograms can be tuned using the options to 
+{cmd: histogram}. @/gap@ controls the spacing between histogram
+groups, whie @/intra_sep@ controls the spacing within a group of
+histograms:
+
+{ctCmdfile: plots/histograms-2.ct2 }
+
+As is visible above, it is easy to mix histograms and normal curves
+(so long as you remember to disable filling).
+
+h3. Stacked histograms
+
+@ctioga2@ can stack histograms when using the @/cumulative@ option to
+{cmd: histogram}. Use @histogram /cumulative=next@ to start a new
+group of cumulative histograms. @ctioga2@ automatically add up the
+values of the data points.
+
+{ctCmdfile: plots/histograms-3.ct2 }
+
+Of course, nothing stops you from displaying stacked histograms
+side-by-side with unstacked ones. Use @/cumulative=no@ to disable
+the effect.

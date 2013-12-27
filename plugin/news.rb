@@ -56,7 +56,7 @@ class NewsTag < Tags::DefaultTag
       result << "\n<p class=\"news-footer\">"
       result << "Posted on <span class=\"news-date\">#{date}</span>"
       result << " by <span class=\"news-author\">#{post[:author]}</span> "
-      result << "<a href=\"http://rubyforge.org/forum/forum.php?forum_id=#{post[:id]}\">Comments</a></p>"
+      # result << "<a href=\"http://rubyforge.org/forum/forum.php?forum_id=#{post[:id]}\">Comments</a></p>"
       nb += 1
     end
     return result

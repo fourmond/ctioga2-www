@@ -19,18 +19,36 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.8
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/histograms.html#histograms-2}
+<br/>
+@ctioga2@ now features nice histograms using
+{command: histogram}.
+</td>
+<td>
+{example: /tutorial/histograms.html#histograms-3}
+<br/>
+Histograms can be stacked too.
+</td>
+</tr>
+</table>
+
 h4. New in version 0.7
 
 <table class='gallery'>
 <tr>
 <td>
-{example: /tutorial/05-3D.html#3D-6-a}
+{example: /tutorial/3D.html#3D-6-a}
 <br/>
 It is now possible to control the size of markers in addition to their
 colors using {command: xy-parametric} plots.
 </td>
 <td>
-{example: /tutorial/08-legends.html#legends-6}
+{example: /tutorial/legends.html#legends-6}
 <br/>
 Legend frames with rounded corners (and normal boxes too)
 </td>
@@ -43,60 +61,60 @@ h4. From previous versions
 <table class='gallery'>
 <tr>
 <td>
-{example: /tutorial/03-curve-style.html#curve-style-1}
+{example: /tutorial/curve-style.html#curve-style-1}
 <br/>
 Simple and powerful styling mechanism
 </td>
 <td>
-{example: /tutorial/03-curve-style.html#curve-style-6}
+{example: /tutorial/curve-style.html#curve-style-6}
 <br/>
 Filled curves and transparency
 </td>
 </tr>
 <tr>
 <td>
-{example: /tutorial/03-curve-style.html#curve-style-7}
+{example: /tutorial/curve-style.html#curve-style-7}
 <br/>
 Color gradients
 </td>
 <td>
-{example: /tutorial/05-3D.html#3D-4}
+{example: /tutorial/3D.html#3D-4}
 <br/>
 XYZ color maps and contour plots
 </td>
 </tr>
 <tr>
 <td>
-{example: /tutorial/06-complex-layouts.html#complex-layouts-2}
+{example: /tutorial/complex-layouts.html#complex-layouts-2}
 <br/>
 Easy setup of insets... 
 </td>
 <td>
-{example: /tutorial/06-complex-layouts.html#complex-layouts-3}
+{example: /tutorial/complex-layouts.html#complex-layouts-3}
 <br/>
 ... and complex grid-like plots
 </td>
 </tr>
 <tr>
 <td>
-{example: /tutorial/07-cool-stuff.html#cool-stuff-2}
+{example: /tutorial/cool-stuff.html#cool-stuff-2}
 <br/>
 Easy way to color a region delimited by curves
 </td>
 <td>
-{example: /tutorial/08-legends.html#legends-7}
+{example: /tutorial/legends.html#legends-7}
 <br/>
 Multicolumn legends
 </td>
 </tr>
 <tr>
 <td>
-{example: /tutorial/05-3D.html#3D-7}
+{example: /tutorial/3D.html#3D-7}
 <br/>
 Automatic contour plots
 </td>
 <td>
-{example: /tutorial/05-3D.html#3D-6}
+{example: /tutorial/3D.html#3D-6}
 <br/>
 Parametric plots
 </td>

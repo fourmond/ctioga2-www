@@ -1,0 +1,22 @@
+---
+title: Fill between curves
+inMenu: true
+---
+
+h2. Fill between curves
+
+The original gallery can be found
+"there":http://gnuplot.sourceforge.net/demo_4.6/fillbetween.html.
+
+{fight: plots/fillbetween.1}
+
+You can see that the approach between gnuplot and @ctioga2@ is very
+different. While gnuplot has a predefined plotting style that lets you
+color something that is between two values, @ctioga2@ is more flexible
+and lets you draw a region that is defined by an arbitrary number of
+*curves*. See more about that "there":../tutorial/cool-stuff.html.
+
+{fight: plots/fillbetween.2}
+
+As of now, @ctioga2@ does not support patterned fills, hence only the
+partial support here. Transparency was used instead.

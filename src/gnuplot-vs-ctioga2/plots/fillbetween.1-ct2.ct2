@@ -1,0 +1,7 @@
+title "Fill area between two curves"
+xrange 10:
+yrange 0:175
+region /color=Red
+plot 'silver.dat' /color Black
+plot 'silver.dat'@1:3 /color Black
+

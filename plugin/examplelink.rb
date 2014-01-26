@@ -59,8 +59,12 @@ class DOILinkTag < Tags::DefaultTag
   private
 
   def resolve_path(uri, chain )
-    dest_node = chain.first.resolve_node( uri )
-    chain.last.route_to(dest_node)
+    begin
+      dest_node = chain.first.resolve_node( uri )
+      return chain.last.route_to(dest_node)
+    rescue
+      return ""
+    end
   end
 
 

@@ -108,20 +108,20 @@ http://andreasviklund.com */
     color: <%= Colors.slogan %>;
 }
 
-.webgen-menu-horiz ul {
-    padding: 0;
-    margin: 2px;
-}
+/* .webgen-menu-horiz ul { */
+/*     padding: 0; */
+/*     margin: 2px; */
+/* } */
 
-.webgen-menu-horiz li {
-    padding: 0.5em;
-    font-size: 120%;
-    font-weight: bold;
-}
+/* .webgen-menu-horiz li { */
+/*     padding: 0.5em; */
+/*     font-size: 120%; */
+/*     font-weight: bold; */
+/* } */
 
-.webgen-menu-submenu {
-    font-size: 90%;
-}
+/* .webgen-menu-submenu { */
+/*     font-size: 90%; */
+/* } */
 
 #footer {
     font-size: 90%;
@@ -179,10 +179,6 @@ span.news-author { font-weight: bold; }
 span.news-date { font-style: italic; }
 
 span.bold { font-weight: bold; }
-
-code {
-    color: <%= Colors.code %>;
-}
 
 a > code {
     color: inherit;

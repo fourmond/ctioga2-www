@@ -15,10 +15,6 @@
 
 require 'ostruct'
 
-# We want Tioga, for, mmm, color conversion ?
-require 'Tioga/FigureMaker'
-
-
 # TODO: ??
 #
 # * Write a real structure that could represent a whole "box", with:
@@ -48,7 +44,9 @@ class HTMLColor
   # Takes hue, lightness, saturation. Hue is in degrees on the color
   # wheel.
   def self.hls(h,l,s)
-   cols = Tioga::FigureMaker.hls_to_rgb([h, l, s]).map do |x|
+
+   # cols = Tioga::FigureMaker.hls_to_rgb([h, l, s]).map
+    cols = [0.3,0.4,0.5].map do |x|
       255 * x
     end
     return HTMLColor.new(*cols )
@@ -101,14 +99,16 @@ Colors.sidebar = HTMLColor.black
 # The colors for generated documentation
 Colors.doc_title = HTMLColor.new("#1f7172")
 
+Colors.bg = HTMLColor.new("#1c435c")
+
 Colors.cmdline_border = HTMLColor.new("#037c9a")
-Colors.cmdline_bg = Colors.cmdline_border.mix_with(HTMLColor.white, 0.2)
+Colors.cmdline_bg = Colors.cmdline_border.mix_with(Colors.bg, 0.2)
 
 Colors.cmdfile_border = HTMLColor.new("#4a039a")
-Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.white, 0.2)
+Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(Colors.bg, 0.2)
 
 Colors.examples_border = $bg_sides_color
-Colors.examples_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.2)
+Colors.examples_bg = Colors.examples_border.mix_with(Colors.bg, 0.2)
 
 
 Colors.gnuplot_border = HTMLColor.new("#222222")

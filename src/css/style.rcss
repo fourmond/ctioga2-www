@@ -26,11 +26,6 @@ http://andreasviklund.com */
     width:850px;margin:0 auto;
 }
 
-/* We want a border around the images when hovering */
-.thumbnail:hover {
-    border: 1px dotted black;
-}
-
 /* Rounded things */
 .rounded { 
     border-radius: 8px; 

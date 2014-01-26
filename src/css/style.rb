@@ -102,17 +102,18 @@ Colors.doc_title = HTMLColor.new("#1f7172")
 Colors.bg = HTMLColor.new("#1c435c")
 
 Colors.cmdline_border = HTMLColor.new("#037c9a")
-Colors.cmdline_bg = Colors.cmdline_border.mix_with(Colors.bg, 0.2)
+# Colors.cmdline_bg = Colors.cmdline_border.mix_with(Colors.bg, 0.2)
+Colors.cmdline_bg = Colors.cmdline_border.mix_with(HTMLColor.black, 0.5)
 
 Colors.cmdfile_border = HTMLColor.new("#4a039a")
-Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(Colors.bg, 0.2)
+Colors.cmdfile_bg = Colors.cmdfile_border.mix_with(HTMLColor.black, 0.5)
 
 Colors.examples_border = $bg_sides_color
 Colors.examples_bg = Colors.examples_border.mix_with(Colors.bg, 0.2)
 
 
 Colors.gnuplot_border = HTMLColor.new("#222222")
-Colors.gnuplot_bg = Colors.gnuplot_border.mix_with(HTMLColor.white, 0.2)
+Colors.gnuplot_bg = Colors.gnuplot_border.mix_with(HTMLColor.black, 0.5)
 
 # Colors.bars_bg = Colors.examples_border.mix_with(HTMLColor.white, 0.3)
 Colors.bar_bg = HTMLColor.hls(164,0.3,0.5) 

@@ -27,7 +27,8 @@
 	  href="{relocatable:css/base.css}" media="screen,projection" />
     <title>ctioga2: {title: }</title>
   </head>
-
+  <script type="text/javascript" src="{relocatable:js/random.js}"></script>
+  <script type="text/javascript" src="{relocatable:js/rnd.js}"></script>
   <body>
     <div id="templatemo_wrapper">
       <div id="templatemo_header">
@@ -47,7 +48,17 @@
           {block: }
         </div>
         <div id="templatemo_sidebar">
-          Stuff !
+          <div id="sidebar_featured_project">
+            <script type="text/javascript">
+              write_random("{relocatable:/}")
+            </script>
+            <div class="cleaner"></div>
+          </div>
+          <div id="news_section">
+            <h3>Latest news</h3>
+            {news: {number: 1}}<br/>
+            <a href="http://freecode.com/projects/ctioga">All news at freecode</a>
+          </div>
         </div>
         <div class="cleaner"></div>
       </div> <!-- end of templatemo_content_wrapper -->

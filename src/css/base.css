@@ -190,6 +190,11 @@ cite span { color: #fff; }
     display: inline;
 }
 
+.webgen-menu ul li span, .webgen-menu ul li a:hover {
+    color: black;
+    font-weight: bold;
+}
+
 #templatemo_menu ul li a, #templatemo_menu ul li span {
 	position: relative;
 	float: left;
@@ -206,7 +211,7 @@ cite span { color: #fff; }
 	background: url(../images/menu_divider.png) repeat-y;
 }
 
-#templatemo_menu ul li a {
+#templatemo_menu ul li a, .webgen-menu ul li a {
 	color: #68a01c;	
 }
 
@@ -463,7 +468,7 @@ cite span { color: #fff; }
 	width: 170px;
 }
 
-#sidebar_featured_project h6 {
+#sidebar_featured_project h6, #news_section h6 {
 	color: #b4cc31;
 }
 

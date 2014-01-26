@@ -29,5 +29,6 @@ rsync:
 	test -d  $(DOX) && rsync $(RSYNC_OPTS) $(DOX) $(TARGET)/doc
 
 archive:
+	mkdir -p output/tutorial
 	cd src/tutorial; zip -r tutorial.zip plots -x '*.pdf' -x '*.ct2-sh' -x '*~'
 	mv src/tutorial/tutorial.zip output/tutorial

@@ -45,15 +45,9 @@ class SVNDateTag < Tags::DefaultTag
 
   def process_tag( tag, chain )
 
-    svn = if File.exists? '.svn'
-            "svn"
-          else
-            "git svn"
-          end
-
     file = chain.last.node_info[:src]
-    info = `#{svn} info #{file} 2>/dev/null`
-    time = if info =~/Last\s*Changed\s*Date:\s*(.*)/
+    info = `git log -n 1 #{file} 2>/dev/null`
+    time = if info =~/Date:\s*(.*)/
              Time.parse($1)
            else
              File.mtime(file)

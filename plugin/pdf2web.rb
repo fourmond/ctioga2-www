@@ -16,13 +16,13 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
                   '**/*.ct2-sh'], 'The path patterns which match the '
   'PDF files that should get converted by this handler.'
   
-  param 'thumbsize', '400x200', "The size of the thumbnail"
+  param 'thumbsize', '260x220', "The size of the thumbnail"
   param 'pngsize', '1200x600', "The size of the PNG image produced"
   param 'density', 250, "The -density parameter of convert"
   param 'verbose', true, "Display information about files as they "+
     "are regenerated"
   param 'trim', false, "Whether to remove the borders of the pictures"
-  param 'ctstyle', "-r 9cmx6cm", "Additional styling command for ctioga2"
+  param 'ctstyle', "-r 9cmx7cm", "Additional styling command for ctioga2"
   
   def initialize( plugin_manager )
     super

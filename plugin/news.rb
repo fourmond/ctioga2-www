@@ -44,7 +44,7 @@ class NewsTag < Tags::DefaultTag
     number = param('number')
     for post in posts
       break if (number && nb > number)
-      result << "\n<h3 class=\"news\">#{post[:title]}</h3>\n"
+      result << "\n<h6 class=\"news\">#{post[:title]}</h6>\n"
       date = if post[:date].respond_to? :strftime
                post[:date].strftime("%Y/%m/%d %H:%M")
              else

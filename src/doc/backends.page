@@ -15,7 +15,7 @@ This page documents all the backends for @ctioga2@; it is generated
 automatically from the inline documentation of @ctioga2@.
 
 <notextile>
-{execute: {command: ctioga2 --write-html-backends, processOutput:
+{execute: {command: ctioga2 --write-html-backends  /page-menu=page, processOutput:
 false, escapeHTML: false }}
 </notextile>
 

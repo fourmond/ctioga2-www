@@ -6,6 +6,7 @@
 WEBGEN = webgen0.4
 
 website: archive
+	rm -f output/css/style.css
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 

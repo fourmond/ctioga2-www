@@ -41,19 +41,19 @@ http://andreasviklund.com */
 }
 
 
-/* Class for quick-jump blocks */
-.quick-jump {
-    padding: 4px 4px 4px 10px;
-    margin: 5px;
-    margin-right: 0px;
-    font-size: 90%;
-    float: right;
-    background: white;
-    border: 1px solid black;
+/* /\* Class for quick-jump blocks *\/ */
+/* .quick-jump { */
+/*     padding: 4px 4px 4px 10px; */
+/*     margin: 5px; */
+/*     margin-right: 0px; */
+/*     font-size: 90%; */
+/*     float: right; */
+/*     background: white; */
+/*     border: 1px solid black; */
 
-    -moz-border-radius: 8px; 
-    border-radius: 8px; 
-}
+/*     -moz-border-radius: 8px;  */
+/*     border-radius: 8px;  */
+/* } */
 
 /* Blocks at the top-right of the page */
 .top-left-outer {
@@ -183,16 +183,16 @@ h4 > code {
     color: inherit;
 }
 
-/* Automatically generated documentation */
-h4 { 
-    color: <%= Colors.doc_title %>;
-    border-bottom: 1px solid <%= Colors.doc_title %>;
-    margin-right: 30px;
-}
+/* /\* Automatically generated documentation *\/ */
+/* h4 {  */
+/*     color: <%= Colors.doc_title %>; */
+/*     border-bottom: 1px solid <%= Colors.doc_title %>; */
+/*     margin-right: 30px; */
+/* } */
 
-h3.group, h3.backend {
-    border-bottom: 2px solid black;
-}
+/* h3.group, h3.backend { */
+/*     border-bottom: 2px solid black; */
+/* } */
 
 /* Tables: */
 
@@ -200,7 +200,7 @@ h3.group, h3.backend {
   Zebras in command-line switches
  */
 .cmdline-table tbody tr:nth-child(even) td {
-	background: #e5ecf9;
+	background: <%= Colors.bg_darker %>;
 }
 
 /* Summary table of command-lines switches */

@@ -10,7 +10,7 @@ Many of the arguments to <code>ctioga2</code>'s
 syntax and signification are documented here.
 
 <notextile>
-{execute: {command: ctioga2 --write-html-types, processOutput:
+{execute: {command: ctioga2 --write-html-types /page-menu=page, processOutput:
 false, escapeHTML: false }}
 </notextile>
 

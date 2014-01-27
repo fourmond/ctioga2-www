@@ -101,6 +101,8 @@ Colors.doc_title = HTMLColor.new("#1f7172")
 
 Colors.bg = HTMLColor.new("#1c435c")
 
+Colors.bg_darker = Colors.bg.mix_with(HTMLColor.black, 0.6)
+
 Colors.cmdline_border = HTMLColor.new("#037c9a")
 # Colors.cmdline_bg = Colors.cmdline_border.mix_with(Colors.bg, 0.2)
 Colors.cmdline_bg = Colors.cmdline_border.mix_with(HTMLColor.black, 0.5)

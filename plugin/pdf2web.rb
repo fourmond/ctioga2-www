@@ -64,7 +64,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
         Dir::chdir(File::dirname(source)) do
           gnuplot = IO.popen("gnuplot", 
                              "w")
-          gnuplot.puts "set term pdf size 9cm,6cm"
+          gnuplot.puts "set term pdf size 9cm,7cm"
           gnuplot.puts "set output '#{path}'"
           gnuplot.puts IO.readlines(file).join('')
         end

@@ -57,3 +57,28 @@ class SVNDateTag < Tags::DefaultTag
   end
 
 end
+
+class AutoMenuTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/AutoMenu',
+         :summary => 
+         "Automatic page menus on certain pages")
+
+  register_tag 'autoMenu'
+
+  def process_tag( tag, chain )
+
+    file = File::basename(chain.last.node_info[:src])
+    case file
+    when 'backends.page'
+      return `ctioga2 --write-html-backends /page-menu=menu`
+    when 'commands.page'
+      return `ctioga2 --write-html-commands /page-menu=menu`
+    when 'types.page'
+      return `ctioga2 --write-html-types /page-menu=menu`
+    else
+      return ""
+    end
+  end
+
+end

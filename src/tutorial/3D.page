@@ -13,13 +13,7 @@ containing @r@ and its sinus cardinal as a function of @x@ and @y@,
 together with  @x^2 - y^2@ generated using the following Ruby code:
 
 <pre class='examples'>
--15.upto(15) do |i|
-  -15.upto(15) do |j|
-    r = (i**2 + j**2)**0.5
-    x2_y2 = i**2 - j**2
-    puts "#{i}\t#{j}\t#{r}\t#{(r > 0 ? Math::sin(r)/r : 1)}\t#{x2_y2}"
-  end
-end
+{includeFile: {filename: plots/3D-gen-data.rb, processOutput: false}}
 </pre>
 
 h3. Simple display

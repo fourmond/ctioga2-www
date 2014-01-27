@@ -6,7 +6,7 @@ orderInfo: -1
 
 h2. What is ctioga2 ?
 
-@ctioga2@ is a powerful command-line based "polymorphic":polymorphic.html
+@ctioga2@ is a powerful command-line based "polymorphic":doc/polymorphic.html
 plotting program, based on the 
 "Tioga plotting library":http://tioga.rubyforge.org.
 
@@ -20,7 +20,7 @@ graphs from @ctioga@ can be used directly with @ctioga2@.
 
 It benefits from several years of experience writing @ctioga@, and in
 particular which mistakes to avoid. It features an original
-"polymorphic":polymorphic.html interface, which can be driven either
+"polymorphic":doc/polymorphic.html interface, which can be driven either
 using directly the command-line or through command-files.
 
 h2. Why yet another plotting program ?

@@ -40,7 +40,6 @@ class RandomImages < FileHandlers::DefaultHandler
   def create_node( path, parent, meta_info )
     name = File.basename(path, ".yaml")
 
-    # Thumbnail
     n = Node.new( parent, "#{name}.js" )
     n['title'] = "#{name}.js"
     n.node_info[:src] = path
@@ -57,9 +56,10 @@ class RandomImages < FileHandlers::DefaultHandler
       p [item[:link], url, example]
       plot = File::dirname(url) + "/plots/#{example}.thumb.png"
       return <<"EOD"
-<h3>#{CGI::escapeHTML(item[:title])}</h3>
-<a href='$$#{url}#pre-#{example}'><img class='thumbnail' width='230' src='$$#{plot}' alt='' /></a>
-#{item[:description]}
+<h3>#{CGI::escapeHTML(item[:title])}</h3><p class="center">
+<a href='$$#{url}#pre-#{example}'><img class='thumbnail' width='210' src='$$#{plot}' alt='' /></a></p>
+<p>#{item[:description]}
+<a href='$$#{url}#pre-#{example}'>(see code)</a></p>
 EOD
     end
   end
@@ -73,10 +73,11 @@ EOD
     begin
       items = YAML.load(File::open(n[:src]))
     rescue Exception => e
+      p e
       return
     end
     
-    p items
+    # p items
     
     out = File::open(node.full_path, "w")
     

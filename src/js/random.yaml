@@ -1,8 +1,26 @@
 --- 
 - :title: Histograms
   :link: "/tutorial/histograms.html#histograms-2"
-  :description: "New stuff !"
-- :title: Histograms2
+  :description: |-
+    <code>ctioga2</code> version 0.8 introduced nice-looking histograms
+- :title: Stacked histograms
   :link: "/tutorial/histograms.html#histograms-3"
-  :description: "Some more new stuff !"
-    
+  :description: |-
+    Histograms can be automatically stacked, and freely-mixed with 
+    non-stacked ones.
+- :title: Marker size/color from Z values
+  :link: "/tutorial/3D.html#3D-6-a"
+  :description: |-
+    <a href='$$/doc/commands.html#command-xy-parametric'>Parametric plots</a>
+    make it easy to choose the size and color of symbols according to some 
+    Z values.
+- :title: Contour plots
+  :link: "/tutorial/3D.html#3D-7"
+  :description: |-
+    <a href='$$/doc/commands.html#command-contour'>Contour plots</a>
+    are very easy to do: just provide the XYZ data, and <code>ctioga2</code> 
+    does the rest. 
+- :title: 3D color maps
+  :link: "/tutorial/3D.html#3D-3"
+  :description: |-
+    Transform your XYZ data into nice-looking color maps. 

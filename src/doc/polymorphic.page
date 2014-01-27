@@ -29,7 +29,7 @@ features of the shell, but the text format is simpler to read.
 We have used both ways in the documentation, you can easily
 distinguish between both by their background colors.
 
-You can read more about the text format "here":doc/formats.html.
+You can read more about the text format "here":formats.html.
 
 
 Both ways can be mixed freely, which means you can override various

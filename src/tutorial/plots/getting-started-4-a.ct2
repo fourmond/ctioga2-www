@@ -1,0 +1,7 @@
+xpdf
+draw-line -15,0 15,0 /style=Dashes /color=Gray
+plot data.dat
+plot data.dat@1:3
+title 'Sine waves' 
+xlabel 'My $x$ label'
+ylabel 'My $y$ label'

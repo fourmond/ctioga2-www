@@ -88,6 +88,17 @@ can spot which is which from the background color, and the nature of
 the "download" link (i.e. download for command-file, or
 copy-to-clipboard for command-line).
 
+h3. Let's finish this plot !
+
+The above plot isn't bad, but it lacks a few things, such as relevant
+X and Y labels, and maybe a horizontal line for the 0 axis. This is
+fixed in this version:
+
+{ctCmdfile: plots/getting-started-4-a.ct2 }
+
+Note the use of the @$@ dollar signs to switch to mathematical mode in
+LaTeX, as in any normal LaTeX document. 
+
 h3. Intermixing command files and command line
 
 Command files can be mixed freely with command-line. Observe the

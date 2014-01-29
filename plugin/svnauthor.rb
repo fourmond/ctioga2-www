@@ -76,6 +76,8 @@ class AutoMenuTag < Tags::DefaultTag
       return `ctioga2 --write-html-commands /page-menu=menu`
     when 'types.page'
       return `ctioga2 --write-html-types /page-menu=menu`
+    when 'functions.page'
+      return `ctioga2 --write-html-functions /page-menu=menu`
     else
       return ""
     end

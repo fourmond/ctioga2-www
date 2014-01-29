@@ -1,0 +1,25 @@
+---
+title: Functions
+inMenu: true
+gPriority: 0.1
+---
+h2. ctioga2's functions
+
+@ctioga2@ provides functions that can be used from command-files (but
+not from command-line, unless you choose to run command-file code from
+command-line using the {cmd: eval} command). They can be used to
+evaluate Ruby code, to modify strings or compute values, or to gain
+access to information from datasets.
+
+
+This page describes all the functions known to @ctioga2@. It is
+generated automatically from the inline documentation of
+@ctioga2@. 
+
+<notextile>
+{execute: {command: ctioga2 --write-html-functions /page-menu=page, processOutput:
+false, escapeHTML: false }}
+</notextile>
+
+Generated for @ctioga2@ version: 
+<notextile><span class='bold'>{execute: ctioga2 --version-raw}</span></notextile>

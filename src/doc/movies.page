@@ -1,0 +1,12 @@
+---
+title: Movies generation
+inMenu: true
+gPriority: 0.1
+---
+h2. Generate movies using @ct2-make-movie@
+
+Starting from version 0.9, @ctioga2@ comes with a script that greatly
+facilitates the construction of animated graphs (movies). The script
+is called @ct2-make-movie@, and here is its manual page.
+
+{manpage: ../ctioga2/man/ct2-make-movie.1}

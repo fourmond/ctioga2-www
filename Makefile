@@ -6,7 +6,7 @@
 WEBGEN = webgen0.4
 
 website: archive
-	rm -f output/css/
+	rm -rf output/css/
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 
@@ -37,4 +37,4 @@ archive:
 movies: src/tutorial/plots/movie-1.avi
 
 src/tutorial/plots/movie-1.avi: src/tutorial/plots/movie-1.ct2
-	cd src/tutorial/plots/; ct2-make-movie movie-1.ct2 --codec libx264 -p 1..50:200
+	cd src/tutorial/plots/; ct2-make-movie movie-1.ct2 --codec libx264 -p 1..50:200; rm -rf tmp

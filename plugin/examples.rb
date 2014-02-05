@@ -54,10 +54,11 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   # Registers the file onto a global registry
   def register_file(thumb, pid, chain)
-    db = {}
     if File.exists? 'index.yaml'
       db = YAML.load(IO.readlines('index.yaml').join())
     end
+
+    db ||= {}
 
     page = File::basename(chain.last.node_info[:src], ".page") + ".html"
     root_node = chain.first.resolve_node("/index.html")

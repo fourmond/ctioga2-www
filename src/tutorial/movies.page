@@ -29,7 +29,7 @@ from 1 to 50 in 200 steps:
 ct2-make-movie --codec libx264 -p movie-1.ct2 1..50:200
 </pre>
 
-This gives "this movie":movie-1.avi. The @--codec libx264@ argument
+This gives "this movie":plots/movie-1.avi. The @--codec libx264@ argument
 instructs "ffmpeg":http://www.ffmpeg.org/ to use a H264 encoder for
 the movie generation. The @-p@ option triggers the use of @pdftoppm@
 for rasterization of PDF files, which is significantly faster than

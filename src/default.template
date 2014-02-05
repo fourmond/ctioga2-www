@@ -37,6 +37,11 @@
           <span>
           the polymorphic plotting program</span></a></h1>
         </div>
+        <div class="links">
+          Get help:
+          <a href='http://sourceforge.net/p/ctioga2/discussion/'>Forum</a><br/>
+          <a href='http://sourceforge.net/p/ctioga2/tickets/'>Bug tracker</a>
+        </div>
       </div> <!-- end of templatemo_header -->
       <div id="templatemo_menu">
 	{menu: {menuStyle: horizontal, options: {startLevel: 1, maxLevels: 1}}}

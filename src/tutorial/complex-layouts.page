@@ -62,4 +62,6 @@ See how the first line, while having the same @x@ extension as the
 second one, is clipped at plot boundaries. The @/depth=5@ is here to
 make sure that the line is drawn in front of the axes (that are drawn
 between depth 10 and depth 11). If you want something behind the
-background lines, use a depth over 90.
+background lines, use a depth over 90. Keep in mind, though, that by
+construction, TeX text always comes on top whatever depth you use.
+

@@ -5,53 +5,36 @@ orderInfo: 50
 ---
 h2. Videos
 
-Being a command-line tool, @ctioga2@ lends itself well to the
-generation of movies, provided you have the right tools to encode
-them. Here, we use
-"@convert@":http://www.imagemagick.org/script/convert.php, from the 
-"ImageMagick":http://www.imagemagick.org/ suite to convert the
-generated PDF to the appropriate YUV format, and 
-"@ffmpeg@":http://ffmpeg.org/ to encode the actual video.
+Starting from  @ctioga2@ version 0.9, you can use the companion script
+"@ct2-make-movie@":../doc/movies.html to automatically generate movies
+from a @ctioga2@ command file. This new method is much simpler and
+more powerful than the old one, which is still described
+"there":movies-old.html.
 
-We'll generate the graphs and encode them on the fly in a shell
-script.
+@ct2-make-movie@ runs @ctioga2@ on a command file repetitively, each
+time with a different value to the @arg@ variable. Let's try that with
+the diffusion of a gaussian heat (or concentration)
+distribution. We'll assume that the variable @arg@ holds a certain
+value between 1 and 50. Let's first plot a gaussian distribution:
 
-h3. Diffusion
+{ctCmdfile: plots/movie-1.ct2 }
 
-We'll use the diffusion equation as an exemple. Imagine that the shell
-variable @$i@ contains an increasing integer, figuring the time. We
-can generate the ith image using the following code:
-
-<pre class='examples-cmdline'>
-ctioga2 -r 6cmx6cm --math /xrange -5:5 \
-  --yrange 0:1.1 \
-  "1/(0.1*${i}+1)**0.5 * exp(-x**2/(0.1*${i}+1))"
-  --name Diffusion
-</pre>
-
-One converts the PDF file into a raw YUV stream using @convert@:
+In this file, we use the @arg ?= 1.5@ syntax that defines the variable
+@arg@ unless it is already defined, as will be the case when called by
+@ct2-make-movie@. Then, we just run @ct2-make-movie@ on this file,
+using the syntax @1..50:200@ to mean that the @arg@ variable will go
+from 1 to 50 in 200 steps:
 
 <pre class='examples-cmdline'>
-convert -density 150 Diffusion.pdf -alpha Remove \
-  -resize 400x400 -depth 8 YUV:- 
+ct2-make-movie --codec libx264 -p movie-1.ct2 1..50:200
 </pre>
 
-This YUV stream is then fed to the following @ffmpeg@ pipe:
+This gives "this movie":movie-1.avi. The @--codec libx264@ argument
+instructs "ffmpeg":http://www.ffmpeg.org/ to use a H264 encoder for
+the movie generation. The @-p@ option triggers the use of @pdftoppm@
+for rasterization of PDF files, which is significantly faster than
+that from "ImageMagick":http://www.imagemagick.org.
 
-<pre class='examples-cmdline'>
-ffmpeg -f rawvideo -r 25 -s 400x400 -i - Diffusion.avi
-</pre>
 
-h3. Script
 
-One wraps all with a few ameliorations into this script:
-
-<pre class='examples-cmdline'>
-{includeFile: {filename: plots/movie.sh, processOutput: false}}
-</pre>
-
-This generates the following "video":plots/Diffusion.avi. It generates
-numbered PDF files, but you could do without and reuse the same PDF
-over and over again, although that may make it difficult to debug if
-something goes wrong.
 

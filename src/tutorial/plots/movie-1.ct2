@@ -1,0 +1,4 @@
+arg ?= 1.5
+math /xrange -5:5
+yrange 0:1.1
+plot "1/($(arg))**0.5 * exp(-x**2/$(arg))"

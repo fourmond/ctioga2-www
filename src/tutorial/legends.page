@@ -26,7 +26,7 @@ legend. When that is not desired, it is possible to use the
 
 {ctCmdline: plots/legends-3.ct2-sh }
 
-This produces a plot of exactly @9cmx6cm@, counting the legend in,
+This produces a plot of exactly @9cmx7cm@, counting the legend in,
 while without this option the *graph* has a fixed size, but the space
 allocated for the legend expands as necessary.
 

@@ -1,4 +1,4 @@
-ctioga2 -r 9cmx6cm /count-legend=true \
+ctioga2 -r 9cmx7cm /count-legend=true \
 	-X --math --legend-line 'Trigonometric' /color Blue \
 	--legend '$\sin x$' 'sin(x)' \
 	'cos(x)' /legend '$\cos x$' \

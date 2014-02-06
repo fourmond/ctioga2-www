@@ -1,0 +1,7 @@
+math 
+margin 0.03
+plot "(1 + 1e-3 * x**6)**0.5"
+top line
+right line
+ticks bottom /minor-number 3 /major-number 7
+ticks left /minor-delta 2 /major-delta 5

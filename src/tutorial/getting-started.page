@@ -99,6 +99,19 @@ fixed in this version:
 Note the use of the @$@ dollar signs to switch to mathematical mode in
 LaTeX, as in any normal LaTeX document. 
 
+Starting from @ctioga2@ version @0.9@, it is easy to specify multiline
+titles (or axes labels), by making use of the @/text-width@ option: 
+
+{ctCmdfile: plots/getting-started-4-b.ct2 }
+
+As the {command: title} command is too long to fit on one line, it has
+been broken in two lines using a @\@. The @\centering@ bit is a LaTeX
+command making sure the title is centered (else it would be justified
+within the @6cm@ box). The @/shift=1.3@ option means that the center
+of the title box will be @1.3@ lines away from the top of the graph
+(else, by default, it would be a little too close).
+
+
 h3. Intermixing command files and command line
 
 Command files can be mixed freely with command-line. Observe the

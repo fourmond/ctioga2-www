@@ -61,8 +61,24 @@ as a
 "@sprintf@":http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-sprintf 
 format specification.
 
-It is possible to specify the ticks position using the @/major@ and
-@/minor@ options to the {command: ticks} command:
+You have basically three options to control the position of the axes
+ticks. You may specify an approximate number of major ticks for the
+whole graph, specify the difference between two successive ticks, and
+finally specify by hand the position of all ticks, all this using the
+{command: ticks} command. First, difference and number:
+
+{ctCmdfile: plots/axes-labels-6-1.ct2 }
+
+For the bottom axis, this says that there should be at least 7 major
+ticks and exactly 3 minor ticks between each major one. For the left
+axis, minor ticks are placed every multiple of two while the major
+ticks are placed every multiple of 5. Note that there is no need for
+the minor ticks to be evenly spaced between the major ticks.
+
+While these possibilities will be enough for most cases where
+@ctioga2@'s default values don't suit you, you can have even more
+control by specifying directly the position of the ticks using the
+@/major@ and @/minor@ options to the {command: ticks} command:
 
 {ctCmdfile: plots/axes-labels-7.ct2 }
 
@@ -82,3 +98,4 @@ all the ticks. The price to pay for that level of control is that you
 minor ones if you want them to show up too).
 
 {ctCmdfile: plots/axes-labels-8.ct2 }
+

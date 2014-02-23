@@ -73,23 +73,37 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       name = File.basename(path, ".pdf") # Remove a .pdf if it is present.
     end
 
-    # Thumbnail
-    t = Node.new( parent, "#{name}.thumb.png" )
-    t['title'] = "#{name}.thumb.png"
-    t.node_info[:src] = path
-    t.node_info[:processor] = self
-    t.node_info[:size] = param('thumbsize')
-    t.node_info[:density] = param('density')
-    t.node_info[:trim] = param('trim')
+    # If the path matches doc/list-, then we use special rules:
+    # * trimming on
+    # * no thumbnail
+    # * large sizes
 
-    p = Node.new( parent, "#{name}.png" )
-    p['title'] = "#{name}.png"
-    p.node_info[:src] = path
-    p.node_info[:processor] = self
-    p.node_info[:size] = param('pngsize')
-    p.node_info[:density] = param('density')
-    p.node_info[:trim] = param('trim')
-
+    if path =~ /doc\/plots\/list/
+      p = Node.new( parent, "#{name}.png" )
+      p['title'] = "#{name}.png"
+      p.node_info[:src] = path
+      p.node_info[:processor] = self
+      p.node_info[:size] = '540x2000'
+      p.node_info[:density] = param('density')
+      p.node_info[:trim] = true
+    else
+      # Thumbnail
+      t = Node.new( parent, "#{name}.thumb.png" )
+      t['title'] = "#{name}.thumb.png"
+      t.node_info[:src] = path
+      t.node_info[:processor] = self
+      t.node_info[:size] = param('thumbsize')
+      t.node_info[:density] = param('density')
+      t.node_info[:trim] = param('trim')
+      
+      p = Node.new( parent, "#{name}.png" )
+      p['title'] = "#{name}.png"
+      p.node_info[:src] = path
+      p.node_info[:processor] = self
+      p.node_info[:size] = param('pngsize')
+      p.node_info[:density] = param('density')
+      p.node_info[:trim] = param('trim')
+    end
     # I return only the last node created, but it looks like both nodes are
     # copied.
     return p

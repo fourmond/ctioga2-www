@@ -7,6 +7,8 @@ WEBGEN = webgen0.4
 
 website: archive
 	rm -rf output/css/
+	rm -f output/doc/plots/list*
+	rm -f src/doc/plots/list*pdf
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 

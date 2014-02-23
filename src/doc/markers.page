@@ -1,0 +1,23 @@
+---
+title: Markers/symbols
+inMenu: true
+gPriority: 0.1
+---
+h2. List of marker names
+
+@ctioga2@ uses markers (or symbols) in many places, and in particular
+to draw the points of the curves. Here is the complete list of named
+markers. You can in fact reach any of the characters present in the
+
+
+<p class='example-image'><img src="plots/list-markers.png" class='thumbnail' alt="Comprehensive list of ctioga2 markers"/></p>
+
+h2. List of marker sets
+
+When using {cmd: marker} @auto@, curves have markers, and the markers
+for curves are taken from "marker sets", whose list is given below. 
+Keep in mind that you can define easily marker sets by using
+a @|@ sign, like in {cmd: marker-set} @Circle|Square|Diamond@.
+
+<p class='example-image'><img src="plots/list-marker-sets.png"
+class='thumbnail' alt="Comprehensive list of ctioga2 marker sets"/></p>

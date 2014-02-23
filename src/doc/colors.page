@@ -1,0 +1,26 @@
+---
+title: Colors
+inMenu: true
+gPriority: 0.1
+---
+h2. List of color names
+
+Here is the complete list of color names known to @ctioga2@. Of
+course, if the color you want is missing, you can specify its RGB
+value using HTML notation, like @#FF0000@ for red, or using
+comma-separated numbers: @1,0,0@ is also red (@1@ is the maximum
+intensity).
+
+<p class='example-image'><img src="plots/list-colors.png" class='thumbnail' alt="Comprehensive list of ctioga2 colors"/></p>
+
+h2. List of color sets
+
+@ctioga2@'s curves line colors and marker colors are varied
+automatically from one curve to the next by choosing successive colors
+in "color sets". All the available named color sets are represented
+below, but keep in mind that you can define easily colorsets by using
+a @|@ sign, like in {cmd: color-set} @Red|Pink|Purple@.
+
+<p class='example-image'><img src="plots/list-color-sets.png"
+class='thumbnail' alt="Comprehensive list of ctioga2 color sets"/></p>
+

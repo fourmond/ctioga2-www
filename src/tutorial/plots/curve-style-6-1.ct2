@@ -1,0 +1,8 @@
+math 
+color-set pastel1
+fill axis 
+fill-transparency 0.6
+title 'Filled trigonometry'
+background Ivory
+plot 'sin(x)'
+plot 'cos(x)'

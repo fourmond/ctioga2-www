@@ -3,6 +3,10 @@
   :link: "/tutorial/histograms.html#histograms-2"
   :description: |-
     <code>ctioga2</code> version 0.8 introduced nice-looking histograms
+- :title: Filled curves and transparency
+  :link: "/tutorial/curve-style.html#curve-style-6-1"
+  :description: |-
+    With <code>ctioga2</code>, it is easy to draw transparent filled curves
 - :title: Stacked histograms
   :link: "/tutorial/histograms.html#histograms-3"
   :description: |-

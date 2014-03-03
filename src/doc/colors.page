@@ -13,9 +13,9 @@ intensity).
 
 <p class='example-image'><img src="plots/list-colors.png" class='thumbnail' alt="Comprehensive list of ctioga2 colors"/></p>
 
-h2. List of color sets
+h2(#colorsets). List of color sets
 
-@ctioga2@'s curves line colors and marker colors are varied
+<code>ctioga2</code>'s curves line colors and marker colors are varied
 automatically from one curve to the next by choosing successive colors
 in "color sets". All the available named color sets are represented
 below, but keep in mind that you can define easily colorsets by using

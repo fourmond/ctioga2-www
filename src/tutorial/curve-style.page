@@ -81,6 +81,12 @@ and it can be made transparent, which allows for neat effects such as:
 
 {ctCmdline: plots/curve-style-6.ct2-sh }
 
+You can improve the style a bit with a difference choice of colors
+using one of the "predefined color sets":../doc/colors.html#colorsets,
+and use a filled {command: background}:
+
+{ctCmdfile: plots/curve-style-6-1.ct2 }
+
 @ctioga2@ can also fill the region between two curves, but that is
 another story told 
 "somewhere else":cool-stuff.html#pre-cool-stuff-1 !

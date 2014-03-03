@@ -448,3 +448,85 @@ class GraphIndex < Tags::DefaultTag
     return str
   end
 end
+
+
+class CTiogaMovieTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/CTiogaMovie',
+         :summary => 
+         "A ctioga command line and the corresponding image.")
+
+  register_tag 'ctMovie'
+  param 'cls', 'examples', "The class used for the <pre> elements"
+  param 'alt', '', "The alt text"
+
+  param 'file', false, "The file containing the command-line"
+  
+  set_mandatory 'file', true
+
+  # Hook at the end of the pre stuff...
+  def pre_end(contents, tag, chain)
+    c = contents.gsub("\\\n", '')
+    c.gsub!("\t", " ")
+    c.gsub!("\"", "\\\"")
+    c.gsub!(/'/) do 
+      "\\%27"
+    end
+    c = "window.prompt(\"Command to copy to clipboard then paste in a terminal: Ctrl+C\", decodeURIComponent(\"#{c}\"));return false;"
+    return "<p class='download-link'><a onclick='#{c}' href='#'>Copy to terminal</a></p>"
+  end
+
+  def process_tag( tag, chain )
+    if file = param('file')
+      base = file.gsub(/\.sh$/, '')
+      alt = param('alt') || ""
+      id_base = "#{File::basename(base)}-movie"
+      filename = File.join( chain.first.parent.node_info[:src], file ) 
+      contents = ""
+      a = "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
+        begin
+          IO.readlines(filename).join
+        rescue Exception => e
+          "<b>IO problem reading file #{file}: #{e.inspect}</b>"
+        end  + "</pre>#{pre_end(contents, tag, chain)}"
+      a += <<EOD
+<p class="center">
+<video width="540" height="420" controls>
+EOD
+      dls = []
+      for t in %w(mov mp4 ogg)
+        a << "<source src=\"#{base}.#{t}\" type=\"video/#{t}\" />"
+        dls << "<a href='#{base}.#{t}'>#{t.upcase}</a>"
+      end
+      a << <<EOD
+Your browser does not support displaying movies directly, but that
+should not stop you  from downloading the files below.
+</video><br/>Download files: 
+EOD
+      a << dls.join(" ")
+      
+      return a
+    else
+      return "Ourgh"
+    end
+  end
+
+  def escape_HTML!(str)
+    str.gsub!(">", "&gt;")
+    str.gsub!("<", "&lt;")
+  end
+
+  def purify_description(desc)
+    desc.gsub(/\{\w+:([^}]+)\}/) do 
+      $1
+    end
+  end
+
+
+  def resolve_path(uri, chain )
+    dest_node = chain.first.resolve_node( uri )
+    chain.last.route_to(dest_node)
+  end
+
+  
+end

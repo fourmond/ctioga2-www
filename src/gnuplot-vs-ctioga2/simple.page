@@ -34,7 +34,7 @@ Here, you might consider that @ctioga2@ is cheating. The truth is that
 @ctioga2@ acknowledges that manipulating mathematical functions is
 easier with gnuplot, that has many special functions and very good
 handling of complexes. Using the {command: gnuplot} backend, you can
-"directly use data from plots of a gnuplot command file":../tutorial/02-datafiles.html#bidule, 
+"directly use data from plots of a gnuplot command file":../tutorial/datafiles.html#bidule, 
 which is what we had to do here to access bessel functions.
 
 Note that for @ctioga2@, a curve can be drawn with both markers and

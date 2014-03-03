@@ -52,7 +52,7 @@ gem install ctioga2
 </pre>
 
 Where we assumed that ruby was installed into the @C:\Ruby193@
-directory. You will also have to do that for "upgrading":upgrading.
+directory. You will also have to do that for "upgrading":#upgrading.
 
 Alternatively, you can look at the proper installation instructions
 for the developer kit 

@@ -9,7 +9,7 @@ Starting from  @ctioga2@ version 0.9, you can use the companion script
 "@ct2-make-movie@":../doc/movies.html to automatically generate movies
 from a @ctioga2@ command file. This new method is much simpler and
 more powerful than the old one, which is still described
-"there":movies-old.html. It relies on "ffmpeg"::http://www.ffmpeg.org/
+"there":movies-old.html. It relies on "ffmpeg":http://www.ffmpeg.org/
 for encoding.
 
 

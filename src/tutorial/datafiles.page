@@ -29,7 +29,7 @@ This demonstrates that the first curve drawn got 31 samples, while the
 second one only got 5. This example also demonstrates another feature
 of @ctioga2@: the possibility to plot individual data points using a
 small symbol called a @marker@ in "Tioga"http://tioga.rubyforge.org
-terminology (we'll come back to that "later":TODO).
+terminology.
 
 The mathematical backend can also generate parametric plots when
 giving @:@-separated functions of @t@:

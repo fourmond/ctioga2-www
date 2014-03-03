@@ -12,7 +12,7 @@ h3. Colored regions
 
 It is possible to use the @--region@ command to build colored regions
 delimited by plotted curves (which is different than 
-"filled curves":03-curve-style.html#pre-curve-style-6):
+"filled curves":curve-style.html#pre-curve-style-6):
 
 {ctCmdline: plots/cool-stuff-1.ct2-sh }
 

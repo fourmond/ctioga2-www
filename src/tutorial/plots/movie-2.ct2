@@ -1,0 +1,9 @@
+arg ?= 38.18090452261306
+math /xrange -5:5
+yrange -0.1:1.1
+ylabel "Concentration"
+xlabel "Position"
+time = $(eval "sprintf '%.1f', $(arg)")
+draw-text -4.5,0.8 '$t = '$(time)'$' /justification=left
+draw-line -5,0 5,0 /color=Gray /style=Dashes
+plot "1/($(arg))**0.5 * exp(-x**2/$(arg))"

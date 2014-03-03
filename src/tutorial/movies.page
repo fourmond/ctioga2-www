@@ -9,13 +9,19 @@ Starting from  @ctioga2@ version 0.9, you can use the companion script
 "@ct2-make-movie@":../doc/movies.html to automatically generate movies
 from a @ctioga2@ command file. This new method is much simpler and
 more powerful than the old one, which is still described
-"there":movies-old.html.
+"there":movies-old.html. It relies on "ffmpeg"::http://www.ffmpeg.org/
+for encoding.
+
+
+h3. First example: diffusion of a gaussian concentration profile
+
+Let's first try to make a movie of the diffusion of a gaussian
+concentration profile over time. 
 
 @ct2-make-movie@ runs @ctioga2@ on a command file repetitively, each
-time with a different value to the @arg@ variable. Let's try that with
-the diffusion of a gaussian heat (or concentration)
-distribution. We'll assume that the variable @arg@ holds a certain
-value between 1 and 50. Let's first plot a gaussian distribution:
+time with a different value to the @arg@ variable.  We'll assume that
+the variable @arg@ holds a certain value between 1 and 50 (it will be
+our time). Let's first plot the concentration at the time @arg@:
 
 {ctCmdfile: plots/movie-1.ct2 }
 
@@ -25,16 +31,33 @@ In this file, we use the @arg ?= 1.5@ syntax that defines the variable
 using the syntax @1..50:200@ to mean that the @arg@ variable will go
 from 1 to 50 in 200 steps:
 
-<pre class='examples-cmdline'>
-ct2-make-movie --codec libx264 -p movie-1.ct2 1..50:200
-</pre>
+{ctMovie: plots/movie-1.sh}
 
-This gives "this movie":plots/movie-1.avi. The @--codec libx264@ argument
-instructs "ffmpeg":http://www.ffmpeg.org/ to use a H264 encoder for
-the movie generation. The @-p@ option triggers the use of @pdftoppm@
-for rasterization of PDF files, which is significantly faster than
-that from "ImageMagick":http://www.imagemagick.org.
+The @-p@ option triggers the use of @pdftoppm@ for rasterization of
+PDF files, which is significantly faster than that from
+"ImageMagick":http://www.imagemagick.org. The @-r 9cmx7cm@ option has
+the same meaning as for @ctioga2@: it selects the target page size,
+just like {command: page-size}, and changes the target resolution and
+aspect ratio.  The @-t movie-1.mp4@ bit is here to give the output
+file name (and the container format, too). It is possible to write
+several @-t@ options in case one wants to encode to several different
+files at once. We take advantage of this option to provide different
+file formats.
 
+h3. Second part: doing a bit better
 
+While the previous video does the job, let's take advantage of some
+features of @ctioga2@ to make it a little nicer. First of all, it
+would be nice to display the time on each frame. While at first,
+just displaying @$(arg)@ would seem like a good idea, you'll get
+something like @38.18090452261306@ which will be both too long and
+much too annoying. The solution is to use @eval@ and Ruby's 
+"sprintf":http://ruby-doc.org/core-1.9.3/Kernel.html#method-i-sprintf. 
+We have furthermore decorated the graph below with axis labels and a
+gray line at the @x = 0@ level.
 
+{ctCmdfile: plots/movie-2.ct2 }
 
+Running @ct2-make-movie@ this way gives the following movies.
+
+{ctMovie: plots/movie-2.sh}

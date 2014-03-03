@@ -12,7 +12,7 @@ Tag/SVNAuthor:
 File/CopyHandler:
   paths: [ "**/*.dat", "**/*.csv", "**/*.css", "**/gnuplot.gnu", 
   "**/*.jpeg", "**/.htaccess", "**/*.avi", "**/*.ct2", "**/*.gplt", 
-  "**/*.reg", "images/*.png", "**/*.js"]
+  "**/*.reg", "images/*.png", "**/*.js", "**/*.mp4", "**/*.ogg" ]
 Core/FileHandler:
   useHiddenFiles: true
   ignorePaths: ["**/.svn{/**/**,/}"]

@@ -42,7 +42,7 @@ plotting. But I wanted something:
   LaTeX -- you can't get any better !
 * *scriptable*: being a command-line utility, it integrates naturally
   into the power of command-line scripting. It is very easy to animate
-  graphs into a "movie":tutorial/10-movies.html !
+  graphs into a "movie":tutorial/movies.html !
 
 h2. Who
 

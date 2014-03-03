@@ -1,4 +1,7 @@
-# yes, a .gitignore file in a SVN repository ! 
+# -*- mode: conf-unix; -*-
 *.pdf
 *~
 output
+*.ogg
+*.mov
+*.mp4

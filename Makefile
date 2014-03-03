@@ -9,6 +9,7 @@ website: archive
 	rm -rf output/css/
 	rm -f output/doc/plots/list*
 	rm -f src/doc/plots/list*pdf
+	rm -rf src/tutorial/plots/tmp
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 

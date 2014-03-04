@@ -83,7 +83,7 @@ class PDF2WebHandler < FileHandlers::DefaultHandler
       p['title'] = "#{name}.png"
       p.node_info[:src] = path
       p.node_info[:processor] = self
-      p.node_info[:size] = '540x2000'
+      p.node_info[:size] = '540x10000'
       p.node_info[:density] = param('density')
       p.node_info[:trim] = true
     else

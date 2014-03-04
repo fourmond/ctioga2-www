@@ -19,8 +19,20 @@ h2(#colorsets). List of color sets
 automatically from one curve to the next by choosing successive colors
 in "color sets". All the available named color sets are represented
 below, but keep in mind that you can define easily colorsets by using
-a @|@ sign, like in {cmd: color-set} @Red|Pink|Purple@.
+a @|@ sign, like in {cmd: color-set} @Red|Pink|Purple@. Keep in mind
+as well that all color sets can be used directly as {type: colormap}.
 
 <p class='example-image'><img src="plots/list-color-sets.png"
-class='thumbnail' alt="Comprehensive list of ctioga2 color sets"/></p>
+class='thumbnail' alt="List of ctioga2 color sets (excluding
+colorbrewer ones)"/></p>
 
+@ctioga2@ has been augmented with most of the color sets that were
+developed by Cynthia Brewer
+("http://colorbrewer.org/":http://colorbrewer.org/). You are invited
+to look there to find out about them. Alternatively, the "gnuplot
+port":https://github.com/aschn/gnuplot-colorbrewer also contains
+useful information on how to make us of them. The full list is given
+below:
+
+<p class='example-image'><img src="plots/list-color-sets-cb.png"
+class='thumbnail' alt="List of all colorbrewer color sets"/></p>

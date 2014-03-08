@@ -62,16 +62,29 @@ The color of the heat maps is governed by something called a
 {type: color-map}, that defines a mapping between Z values and
 colors. It is a list of color names separated by @-@@-@, optionally
 followed by a Z value at which the given color should be 
-applied exactly. If the latter is missing, colors are evenly spaced:
+applied exactly. If the latter is missing, colors are evenly spaced
+inbetween colors of known Z values:
 
-{ctCmdline: plots/3D-3+cm1.ct2 }
+{ctCmdfile: plots/3D-3+cm1.ct2 }
 
 Alternatively, it is possible to use a "color set":../doc/colors.html
 as colormap, which works exactly as if you had specified the whole
 list of colors separated by @-@@-@. It combines very neatly with the
 color sets coming from "colorbrewer":http://colorbrewer2.org:
 
-{ctCmdline: plots/3D-3+cm2.ct2 }
+{ctCmdfile: plots/3D-3+cm2.ct2 }
+
+In that case, however, the results are somewhat not satisfying, since
+the very strong purple color for the first minimum of the function may
+seem to imply that the minimum is as pronounced as the maximum at
+@0,0@, which is not the case. To avoid that, it may be better to make
+the color map symmetric around a certain Z value, here @0@ would be
+the best:
+
+{ctCmdfile: plots/3D-3+cm3.ct2 }
+
+See how now the minimum seems much less marked, and how the intensity
+of the color is more representative of the amplitude of the function ?
 
 By default, the colors for the Z values inbetween the specified colors
 are interpolated linearly in the RGB color space. You can also choose
@@ -79,7 +92,7 @@ to interpolate on the color wheel, by prefixing with @hls:@ (hue light
 saturation). See how that changes the look of the above red white blue
 wheel:
 
-{ctCmdline: plots/3D-3+cm3.ct2 }
+{ctCmdfile: plots/3D-3+cm4.ct2 }
 
 This works also when using color sets.
 

@@ -1,4 +1,4 @@
 xyz-map
 new-zaxis zvalues /location right
 plot 3D-data.dat@1:2:4 /zaxis zvalues \
-     /color-map cb-prgn-11
+     /color-map "hls:#f22--#fff(0)--#22f"

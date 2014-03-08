@@ -16,10 +16,10 @@ together with  @x^2 - y^2@ generated using the following Ruby code:
 {includeFile: {filename: plots/3D-gen-data.rb, processOutput: false}}
 </pre>
 
-h3. Simple display
+h3. Heat map display
 
-The most basic thing is to plot this data as a color map. For
-@ctioga2@ to understand you want a XY color map, you need the 
+The most basic thing is to plot this data as a heat map. For
+@ctioga2@ to understand you want a XY heat map, you need the 
 @--xyz-map@ command:
 
 {ctCmdline: plots/3D-1.ct2-sh }
@@ -55,6 +55,33 @@ The @#f22--#fff(0)--#22f@ snippet is used to define precisely the
 color gradients. It goes from red (@#f22@) to white (@#fff) at @z = 0@
 to blue (@#22f@). Any number of points can be specified thus, allowing
 for rather complex effects.
+
+h3. More about colors
+
+The color of the heat maps is governed by something called a 
+{type: color-map}, that defines a mapping between Z values and
+colors. It is a list of color names separated by @-@@-@, optionally
+followed by a Z value at which the given color should be 
+applied exactly. If the latter is missing, colors are evenly spaced:
+
+{ctCmdline: plots/3D-3+cm1.ct2 }
+
+Alternatively, it is possible to use a "color set":../doc/colors.html
+as colormap, which works exactly as if you had specified the whole
+list of colors separated by @-@@-@. It combines very neatly with the
+color sets coming from "colorbrewer":http://colorbrewer2.org:
+
+{ctCmdline: plots/3D-3+cm2.ct2 }
+
+By default, the colors for the Z values inbetween the specified colors
+are interpolated linearly in the RGB color space. You can also choose
+to interpolate on the color wheel, by prefixing with @hls:@ (hue light
+saturation). See how that changes the look of the above red white blue
+wheel:
+
+{ctCmdline: plots/3D-3+cm3.ct2 }
+
+This works also when using color sets.
 
 h3. Contour plots
 

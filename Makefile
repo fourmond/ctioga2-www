@@ -13,6 +13,11 @@ website: archive
 	$(WEBGEN)
 	cp -a $(HOME)/Prog/ctioga2/Changelog output/
 
+remove-images:
+	find src -name '*.pdf' | grep -v images/ | xargs rm -f
+	find src -name '*.png' | grep -v images/ | xargs rm -f
+	find output -name '*.png' | xargs rm -f
+
 regenerate-styles:
 	rm -f output/style.css
 	rm -Rf output/style-images

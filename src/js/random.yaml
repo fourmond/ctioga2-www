@@ -28,3 +28,7 @@
   :link: "/tutorial/3D.html#3D-3"
   :description: |-
     Transform your XYZ data into nice-looking color maps. 
+- :title: Tangents
+  :link: "/tutorial/drawings.html#drawings-2"
+  :description: |-
+    Easy drawing of tangents, you only need to speciy where on the curve !

@@ -1,0 +1,6 @@
+math /xrange=-3:3
+margin 0.03
+plot exp(-x**2)
+l = $(eval 'sqrt(log(2.0))')
+draw-line -$(l),0.5 $(l),0.5 /line-style Dashes
+draw-text 0,0.3 'Half height width: $w = \sqrt{\ln 2}$' /text-width=3cm 

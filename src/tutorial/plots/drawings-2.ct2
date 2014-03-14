@@ -1,0 +1,6 @@
+math /xrange=-3:3
+margin 0.03
+plot x**2
+draw-tangent 0.3
+draw-tangent 0.7 /xto 2 /color black
+draw-tangent 0.1 /yextent 2 /color blue

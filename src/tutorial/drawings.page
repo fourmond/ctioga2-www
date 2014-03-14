@@ -1,0 +1,36 @@
+---
+title: Drawings
+inMenu: true
+orderInfo: 5
+---
+h2. Drawings
+
+@ctioga2@ has a series of functions to draw elements which are not
+data points in themselves, but to help understand and read data.
+
+h3. Basic drawings
+
+Let's first annotate a gaussian curve with a line and some text:
+
+{ctCmdfile: plots/drawings-1.ct2}
+
+Note how we used the @eval@ "function":../doc/functions.html to
+compute the value of the half-height width.
+
+h3. Tangents
+
+@ctioga2@ features a very simple way to draw tangents on a curve,
+using the {command: draw-tangent} command:
+
+{ctCmdfile: plots/drawings-2.ct2}
+
+In the first form, without options, {command: draw-tangent} only draws
+an arrow head (in real, a "marker":../markers.html) along the curve at
+the position asked (here, @0.3@, which means "at 30 %"). In the second
+form, we ask a full line that will extend until @x = 2@. Of course,
+you can use also @/xfrom@, @/yto@ and so on. In the last form, one
+says how long the arrow is in @y@ units. Beware of the sign, though:
+in this case, as the slope is negative, asking for a positive
+@/yextent@ makes it go backwards.
+
+h3. Images

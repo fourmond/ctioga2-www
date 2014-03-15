@@ -19,6 +19,23 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.10
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/3D.html#3D-3+cm3 }
+<br/>
+Color sets from "colorbrewer2.org":http://www.colorbrewer2.org
+</td>
+<td>
+{example: /tutorial/drawings.html#drawings-3 }
+<br/>
+Inclusion of JPEG/PNG images
+</td>
+</tr>
+</table>
+
 h4. New in version 0.9
 
 <table class='gallery'>

@@ -34,3 +34,20 @@ in this case, as the slope is negative, asking for a positive
 @/yextent@ makes it go backwards.
 
 h3. Images
+
+Starting from @ctioga2@ version 0.10, it is possible to include JPEG
+or PNG images (there are some restrictions on the type of PNG/JPEG
+images that can be handled), using the {command: draw-image}
+command. We'll use imagemagick's
+"rose":http://www.imagemagick.org/image/rose.jpg for the
+demonstration: 
+
+{ctCmdfile: plots/drawings-3.ct2}
+
+To include a file, just specify the image file, the top-left corner
+and the bottom right corners of the image. By default, @ctioga2@ just
+follows your instructions for the corners, which will probably result
+in the image's aspect ratio not being respected. If you care, use
+either @/aspect-ratio=contract@ or @/aspect-ratio=expand@ to preserve
+the aspect ratio by respectively not exceeding the original rectangle
+in the first case and not being smaller than it in the second one.

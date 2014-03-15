@@ -32,3 +32,12 @@
   :link: "/tutorial/drawings.html#drawings-2"
   :description: |-
     Easy drawing of tangents, you only need to speciy where on the curve !
+- :title: Colorbrewer color maps
+  :link: "/tutorial/3D.html#3D-3+cm3"
+  :description: |-
+    <code>ctioga2</code> now includes the colorsets from 
+    <a href='http://www.colorbrewer2.org'><code>colorbrewer2.org</code></a>
+- :title: Inclusion of images
+  :link: "/tutorial/drawings.html#drawings-3"
+  :description: |-
+    It is possible to include JPEG and PNG files (here, imagemagick's rose)

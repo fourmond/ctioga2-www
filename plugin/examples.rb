@@ -265,6 +265,37 @@ class CTiogaCommandTag < CTiogaSwitchTag
 
 end
 
+class CTiogaSwitchTag < Tags::DefaultTag
+
+  infos( :name => 'Tag/CTiogaType',
+         :summary => 
+         "A link to ctioga type.")
+
+  register_tag 'type'
+
+  param 'type', false, "The type"
+  param 'cmdbase', "/doc/types.html", 'The base URL for types links. False to deactivate'
+  
+  set_mandatory 'type', true
+
+  def process_tag( tag, chain )
+    # @todo maybe the plugin should detect if it is a short or long
+    # switch or a command.
+    if switch = param('type')
+      base = param('cmdbase')
+      cmdlocation = resolve_path(base, chain)
+      return "<code><a href=\"#{cmdlocation}#type-#{switch}\"\">#{switch}</a></code>"
+    else
+        return "<code>#{switch}</code>"
+    end
+  end
+
+  def resolve_path(uri, chain )
+    dest_node = chain.first.resolve_node( uri )
+    chain.last.route_to(dest_node)
+  end
+end
+
 class CTiogaFight < CTiogaCmdfileTag
 
   infos( :name => 'Tag/CTiogaFight',

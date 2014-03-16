@@ -41,3 +41,7 @@
   :link: "/tutorial/drawings.html#drawings-3"
   :description: |-
     It is possible to include JPEG and PNG files (here, imagemagick's rose)
+- :title: Inline Ruby code
+  :link: "/doc/formats.html#ruby"
+  :description: |-
+    Command files can include Ruby code to define functions

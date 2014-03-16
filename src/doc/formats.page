@@ -40,6 +40,19 @@ You can also use environment variables like @$(HOME)@; this makes it
 easier to share plots across several computers where your user name is
 different, for instance. 
 
+h3(#ruby-code). Inline Ruby code
+
+It is also possible to write inline Ruby code inside command files,
+which makes it easier to define functions to use for the 
+{command: math} backend or for processing columns in the 
+{command: text} backend. The inline ruby code starts with a line
+containing only @ruby@ and finishes with a line containing only 
+@end ruby@:
+
+{ctCmdfile: plots/ruby.ct2 }
+
+It is also possible to load directly a file containing Ruby code
+through the {command: ruby-run} command.
 
 h3(#quotes). Quotes
 

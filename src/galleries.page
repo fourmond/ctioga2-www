@@ -34,6 +34,18 @@ Color sets from "colorbrewer2.org":http://www.colorbrewer2.org
 Inclusion of JPEG/PNG images
 </td>
 </tr>
+<tr>
+<td>
+{example: /doc/formats.html#ruby }
+<br/>
+Inline Ruby code
+</td>
+<td>
+{example: /tutorial/drawings.html#drawings-2 }
+<br/>
+Automatic tangents to curves
+</td>
+</tr>
 </table>
 
 h4. New in version 0.9

@@ -1,4 +1,19 @@
 --- 
+- :date: 2014-03-16 19:00:15 +01:00
+  :author: Vincent Fourmond
+  :id: 41655
+  :title: ctioga2 version 0.10 is out
+  :contents: |-
+    Release 0.10 of ctioga2 has seen progress in many domains. You can
+    now possible draw PNG or JPEG images in graphs. Text labels (title
+    and axes) can now be auto sized (ie the will be as large as to
+    fill the side of the graph). You can now include inline Ruby code
+    in command files to make it easy to define functions (for math or
+    data processing). Color map specification has been extended,
+    which, combined with the inclusion of color sets from
+    colorbrewer2.org, makes it easy to draw meaningful heat maps in a
+    simple way. Of course, this release brings in its load of bug
+    fixes and minor updates.
 - :date: 2014-02-06 22:14:15 +01:00
   :author: Vincent Fourmond
   :id: 41654

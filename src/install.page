@@ -117,8 +117,8 @@ Download @ctioga2@ from Sourceforge's
 
 Latest version:
 
-<a href="http://sourceforge.net/projects/ctioga2/files/ctioga2-0.8.tar.bz2/download">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.8.tar.bz2</code></a>
+<a href="http://sourceforge.net/projects/ctioga2/files/ctioga2-0.10.tar.bz2/download">
+<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.10.tar.bz2</code></a>
 
 Current "Changelog":Changelog
 </div>
@@ -129,7 +129,7 @@ Download the latest tarball of @ctioga2@ at the
 it this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.8.tar.bz2
+tar xvjf ctioga2-0.10.tar.bz2
 </pre>
 
 Then @cd@ to the directory created. @ctioga2@ uses

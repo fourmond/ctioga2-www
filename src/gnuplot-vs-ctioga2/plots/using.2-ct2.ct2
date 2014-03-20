@@ -1,0 +1,10 @@
+# missing: set key below box
+xrange 1:8
+legend-inside cl
+no-xlabel
+no-ylabel
+title "Convex     November 1-7 1989"
+draw-text 5,25 "(Weekend)" 
+plot 'using.dat'@3:4 /legend "Logged in" /path-style impulses
+plot 'using.dat'@3:5 /legend "Load average" /line-style no /marker Times
+plot 'using.dat'@3:6 /legend "\\%CPU used"

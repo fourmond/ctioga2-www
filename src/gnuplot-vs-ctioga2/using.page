@@ -1,0 +1,24 @@
+---
+title: Data columns
+inMenu: true
+---
+
+h2. Data columns
+
+The original gallery can be found
+"there":http://gnuplot.sourceforge.net/demo_4.6/using.html.
+
+{fight: plots/using.1}
+
+@ctioga2@ treats independently lines and markers/symbols, which is not the
+case for gnuplot, so instead of simply using @with points@, we have
+to disable the drawing of lines with @/line-style no@ and enable the
+drawing of markers using @/marker Times@.
+
+{fight: plots/using.2}
+
+Again, for the time being, @ctioga2@ does not support setting the
+legend below the graph. Something very important you *must* keep in
+mind when using @ctioga2@ is that legends (like the rest) are pure
+@LaTeX@  texts, and hence must not contain unescaped @%@ signs (they
+are comments and will greatly confuse @TeX@ (and crash @ctioga2@).

@@ -25,7 +25,7 @@ using the {command: draw-tangent} command:
 {ctCmdfile: plots/drawings-2.ct2}
 
 In the first form, without options, {command: draw-tangent} only draws
-an arrow head (in real, a "marker":../markers.html) along the curve at
+an arrow head (in real, a "marker":../doc/markers.html) along the curve at
 the position asked (here, @0.3@, which means "at 30 %"). In the second
 form, we ask a full line that will extend until @x = 2@. Of course,
 you can use also @/xfrom@, @/yto@ and so on. In the last form, one

@@ -32,6 +32,7 @@ h3. Basic 2D plot styles
  * "simple functions":simple.html {fightstats: simple}
  * "filled curves":fillcrvs.html {fightstats: fillcrvs}
  * "filling between curves":fillbetween.html {fightstats: fillbetween}
+ * "data columns":using.html {fightstats: using}
 
  
 

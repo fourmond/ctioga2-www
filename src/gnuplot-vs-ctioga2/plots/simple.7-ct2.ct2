@@ -1,3 +1,5 @@
+no-xlabel
+no-ylabel
 legend-inside tl /frame-color=Black
 auto-legend true
 math /samples=800 /xrange=-30:20

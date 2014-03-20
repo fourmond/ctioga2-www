@@ -1,0 +1,7 @@
+legend-inside tl /frame-color=Black
+title "Convex     November 1-7 1989    Circadian" 
+xrange -1.00000:24.0000
+no-xlabel
+no-ylabel
+plot 'using.dat'@2:4 /legend="Logged in" /path-style impulses
+plot 'using.dat'@2:4 /legend="Logged in" /line-style no /marker Times

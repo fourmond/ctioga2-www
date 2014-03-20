@@ -1,0 +1,5 @@
+set key left top box
+set title "Convex     November 1-7 1989    Circadian" 
+set xrange [ -1.00000 : 24.0000 ] 
+plot 'using.dat' using 2:4 title "Logged in" with impulses, \
+     'using.dat' using 2:4 title "Logged in" with points

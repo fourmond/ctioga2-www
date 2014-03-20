@@ -1,4 +1,6 @@
 legend-inside tl /frame-color Black
+no-xlabel
+no-ylabel
 auto-legend true
 math /samples 50 /xrange -10:10
 plot sin(x)

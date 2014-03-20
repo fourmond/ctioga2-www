@@ -17,6 +17,10 @@ In the absence of the {command: auto-legend}, @ctioga2@ simply does
 not give legends to datasets that don't already have an explicit
 legend.
 
+Note that, by default, @ctioga2@ gives labels to the @x@ and @y@
+axes. As @gnuplot@ doesn't by default, we had to disable all the ones
+from @ctioga2@ using {command: no-xlabel} and {command: no-ylabel}.
+
 {fight: plots/simple.2}
 
 

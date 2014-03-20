@@ -1,4 +1,6 @@
 legend-inside tr 
+no-xlabel
+no-ylabel
 auto-legend true
 math /samples 100 /xrange -1.57079:3.141593
 plot cos(x)

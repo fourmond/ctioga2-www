@@ -1,4 +1,6 @@
 # missing: set key bmargin
+no-xlabel
+no-ylabel
 auto-legend true
 math /xrange -15.7075:15.7075
 yrange -5:5

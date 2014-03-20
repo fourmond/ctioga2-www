@@ -1,3 +1,5 @@
+no-xlabel
+no-ylabel
 gnuplot
 legend-inside tl /frame-color=Black
 plot 'simple.4-gnuplot.gplt' /path-style impulses /legend=besj0(x)*0.12e1

@@ -1,3 +1,5 @@
+no-xlabel
+no-ylabel
 legend-inside tl /frame-color=Black
 auto-legend true
 plot 1.dat /path-style impulses 

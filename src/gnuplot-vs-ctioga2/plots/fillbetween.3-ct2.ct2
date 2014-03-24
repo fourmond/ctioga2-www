@@ -1,0 +1,10 @@
+title "Fill area between two curves (above/below)"
+xrange 250:500
+yrange 5:30
+no-xlabel
+no-ylabel
+region /color=Red /reversed-color=Green
+legend-inside tr
+plot 'silver.dat' /legend=Curve1 /color=Black
+plot 'silver.dat'@'$1:$3+$1/50' /legend=Curve2 /color=Blue
+

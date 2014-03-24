@@ -1,6 +1,8 @@
 title "Fill area between two curves"
 xrange 10:
 yrange 0:175
+no-xlabel
+no-ylabel
 # missing: fill pattern
 region /color=Red /transparency=0.5
 plot 'silver.dat' /color Black

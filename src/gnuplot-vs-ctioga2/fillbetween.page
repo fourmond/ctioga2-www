@@ -20,3 +20,8 @@ and lets you draw a region that is defined by an arbitrary number of
 
 As of now, @ctioga2@ does not support patterned fills, hence only the
 partial support here. Transparency was used instead.
+
+{fight: plots/fillbetween.3}
+
+Here, the difference between @ctioga2@ and gnuplot is even more marked
+than for the previous examples: no need to plot the curves twice !

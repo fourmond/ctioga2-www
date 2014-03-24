@@ -1,4 +1,6 @@
 title "Fill area between two curves"
+no-xlabel
+no-ylabel
 xrange 10:
 yrange 0:175
 region /color=Red

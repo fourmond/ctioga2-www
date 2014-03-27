@@ -9,4 +9,4 @@ margin 0.03
 plot f(x,0) 
 plot f(x,1)
 plot f(x,2)
-plot f(x,x)
+plot f(x,x) /color=Purple

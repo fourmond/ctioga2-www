@@ -265,7 +265,7 @@ class CTiogaCommandTag < CTiogaSwitchTag
 
 end
 
-class CTiogaSwitchTag < Tags::DefaultTag
+class CTiogaTypeTag < Tags::DefaultTag
 
   infos( :name => 'Tag/CTiogaType',
          :summary => 

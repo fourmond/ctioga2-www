@@ -38,7 +38,7 @@ rsync:
 
 archive:
 	mkdir -p output/tutorial
-	cd src/tutorial; zip -r tutorial.zip plots -x '*.pdf' -x '*.ct2-sh' -x '*~'
+	cd src/tutorial; zip -r tutorial.zip plots -x '*.pdf' -x '*.ct2-sh' -x '*~' -x '*.mov' -x '*.ogg' -x '*.mp4'
 	mv src/tutorial/tutorial.zip output/tutorial
 
 movies: src/tutorial/plots/movie-1.avi

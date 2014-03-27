@@ -108,28 +108,12 @@ gem install ctioga2
 
 h2(#source). From source
 
-<div class='top-left-outer'>
-h2. Download
-
-<div class='top-left-inner'>
-Download @ctioga2@ from Sourceforge's 
-"Download page":https://sourceforge.net/projects/ctioga2/files/
-
-Latest version:
-
-<a href="http://sourceforge.net/projects/ctioga2/files/ctioga2-0.10.tar.bz2/download">
-<img src="{resource: webgen-icons-download}" alt="Download"/><code>ctioga2-0.10.tar.bz2</code></a>
-
-Current "Changelog":Changelog
-</div>
-</div>
-
 Download the latest tarball of @ctioga2@ at the 
 "download page":http://sourceforge.net/projects/ctioga2/files/, and extract
 it this way:
 
 <pre class='examples-cmdline'>
-tar xvjf ctioga2-0.10.tar.bz2
+tar xvjf ctioga2-0.10.1.tar.bz2
 </pre>
 
 Then @cd@ to the directory created. @ctioga2@ uses

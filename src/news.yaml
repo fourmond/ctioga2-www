@@ -1,4 +1,11 @@
 --- 
+- :date: 2014-03-26 19:00:15 +01:00
+  :author: Vincent Fourmond
+  :id: 41657
+  :title: ctioga2 version 0.10.1 is out
+  :contents: |-
+    This is a minor bugfix release that fixes problems with Ruby 1.8
+    and regions that were not clipped while using xrange/yrange.
 - :date: 2014-03-16 19:00:15 +01:00
   :author: Vincent Fourmond
   :id: 41655

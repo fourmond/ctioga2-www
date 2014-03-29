@@ -38,9 +38,16 @@
           the polymorphic plotting program</span></a></h1>
         </div>
         <div class="links">
+          <form method="GET" action="http://www.google.com/custom">
+            <input type="hidden" name="sitesearch"
+                   value="http://ctioga2.sourceforge.net" />
+            <input type="text" value="" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+            <input type="submit" name="Search" value="Find" id="searchbutton" title="Search" />
+          </form>
           Get help:
-          <a href='http://sourceforge.net/p/ctioga2/discussion/'>Forum</a><br/>
-          <a href='http://sourceforge.net/p/ctioga2/tickets/'>Bug tracker</a>
+          <a href='http://sourceforge.net/p/ctioga2/discussion/'>Forum</a>
+          <a href='http://sourceforge.net/p/ctioga2/tickets/'>Bug
+          tracker</a>
         </div>
       </div> <!-- end of templatemo_header -->
       <div id="templatemo_menu">

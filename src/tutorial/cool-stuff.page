@@ -22,6 +22,6 @@ curve individually -- including ignoring the curve:
 
 {ctCmdline: plots/cool-stuff-2.ct2-sh }
 
-This example also demonstrates that it is possible to fill the
-"reverse" of the region with a different color using the
-@/reversed_color@ option.
+This example demonstrates that it is possible to fill the "reverse" of
+the region with a different color using the @/reversed_color@ option,
+and also that you can use patterned fills.

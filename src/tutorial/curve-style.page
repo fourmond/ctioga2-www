@@ -87,6 +87,11 @@ and use a filled {command: background}:
 
 {ctCmdfile: plots/curve-style-6-1.ct2 }
 
+It is possible to show patterned fills using the @/fill-pattern@
+option: 
+
+{ctCmdfile: plots/curve-style-6-2.ct2 }
+
 @ctioga2@ can also fill the region between two curves, but that is
 another story told 
 "somewhere else":cool-stuff.html#pre-cool-stuff-1 !

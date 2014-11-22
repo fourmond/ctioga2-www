@@ -46,8 +46,11 @@
   :description: |-
     Command files can include Ruby code to define functions
 - :title: Filled regions
-  :link: "/tutorial/cool-stuff.html#pre-cool-stuff-2"
+  :link: "/tutorial/cool-stuff.html#cool-stuff-2"
   :description: |-
     It's as easy to fill a region between two (or more) curves as
     saying which one is above and which one below !
-  
+- :title: Patterned fills
+  :link: "/tutorial/curve-style.html#curve-style-6-2"
+  :description: |-
+    Complex patterned fills

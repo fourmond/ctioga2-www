@@ -19,6 +19,23 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.11
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/curve-style.html#curve-style-6-2 }
+<br/>
+Patterned fills
+</td>
+<td>
+{example: /tutorial/drawings.html#drawings-3 }
+<br/>
+Fully-fledged CSS-like styling
+</td>
+</tr>
+</table>
+
 h4. New in version 0.10
 
 <table class='gallery'>

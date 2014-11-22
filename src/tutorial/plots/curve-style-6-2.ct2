@@ -1,5 +1,5 @@
 math 
 fill axis
 plot 'sin(x)' /fill-pattern vlines
-plot 'cos(x)' /fill-pattern hlines:2
+plot 'cos(x)' /fill-pattern hlines:3
 plot '-sin(x)' /fill-pattern xlines

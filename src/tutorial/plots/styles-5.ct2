@@ -1,0 +1,7 @@
+load-style styles.ctss
+math
+plot 'cos(x)' /color Black
+gradient Red Blue
+plot 1+sin'(x+0##5)'
+end
+plot 'cos(x**3)'

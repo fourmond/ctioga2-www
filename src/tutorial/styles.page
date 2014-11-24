@@ -5,39 +5,42 @@ orderInfo: 30
 ---
 h2. Styles
 
-Starting from version 0.4, @ctioga2@ provides a simple but powerful
-mechanism for styling. Imagine you have a complex graph where you draw
-several times the same arrow:
+@ctioga2@ provides a simple but powerful mechanism for
+styling. Imagine you have a complex graph where you draw several times
+the same arrow:
 
 {ctCmdline: plots/styles-1.ct2-sh }
 
 This is very cumbersome, as copy/paste is never desirable, especially
-if you have to change the style later on. While defining variables
-(either shell variables or @ctioga2@ command file variables) may help,
-defining and using styles makes it much easier:
+if you have to change the style later on. It is possible to work
+around that using variables (either shell variables or @ctioga2@
+command file variables), and you may leave it at that.
+
+@ctioga2@ features a fully-fledged CSS-like styling system, based like
+CSS on assigning to objects a unique ID and a list of classes. The
+command before can be simplified by defining a class, here @bl@ and
+using it: 
 
 {ctCmdline: plots/styles-2.ct2-sh }
 
-The first command defines the @arrow@ style @1@ (you can pick any name
-you want save @base@ who has a special meaning) to draw a
-blue dotted line with a purple head, and the @/base-style=1@ bits
-further on instruct @ctioga2@ to use the @1@ style. As is seen on
-the last arrow, it is still possible to override bits of the style
-later on. 
+The first command defines the style for arrows of class @ar@ (note the
+@.@ in front of the class name, like in CSS), and the @/class=ar@ bits
+further on instruct @ctioga2@ that the arrows should be styled
+according to style. As is seen on the last arrow, it is still possible
+to override bits of the style later on.
 
-You could also have redefined the @base@ style that
-automatically applies to all arrows:
+You could also have redefined base style that automatically applies to
+all arrows, @*@:
 
 {ctCmdline: plots/styles-3.ct2-sh }
+
+Note that you have to escape the @*@ for the shell.
 
 This is powerful as it allows to change completely the look of a graph
 by simply prepending a few style definitions, but it may be
 inappropriate should there be different kinds of arrows, for
 instance. In that case, definining two arrow styles would probably be
 a better choice.
-
-This styling possibility applies to all the graphic primitives
-available.
 
 h3. Styling axes and plots
 
@@ -58,4 +61,18 @@ style definition is not taken into account at all or only after the
 definition or for all elements, even those before the style
 definition. Always use style commands at the beginning !
 
+h3. More into CSS stuff...
 
+The real power comes with the possibility to use a real style sheet
+with XPATH-like style selection. Imagine you have a @style.ctss@ file
+that looks like this:
+
+{includeFile: {filename: plots/styles.ctss, processOutput: false}}
+
+This says that the all the curves that are contained within a gradient
+will be dotted. See the effect on that file:
+
+{ctCmdfile: plots/styles-5.ct2 }
+
+The @gradient curve@ stanza affects all the curves that are within a
+gradient region (so not the last one).

@@ -54,3 +54,7 @@
   :link: "/tutorial/curve-style.html#curve-style-6-2"
   :description: |-
     Complex patterned fills
+- :title: Non-linear axes
+  :link: "/tutorial/axes-labels.html#axes-labels-9"
+  :description: |-
+    Non linear axes: just specify the formula !

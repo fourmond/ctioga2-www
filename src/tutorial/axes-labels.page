@@ -99,3 +99,17 @@ minor ones if you want them to show up too).
 
 {ctCmdfile: plots/axes-labels-8.ct2 }
 
+
+h3. Non-linear axes
+
+With @ctioga2@, making non-linear additional axes is just a matter of
+specifying the transformation between the linear axis and the
+non-linear one, using the @/transform@ option to the axis style
+command (here {cmd: top}):
+
+{ctCmdfile: plots/axes-labels-9.ct2 }
+
+In the general case, you have to specify the formula for changing the
+from linear to non-linear and *back*, unless it is an involution
+(which is the case here). Separate the formulas with a @:@.
+

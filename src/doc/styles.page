@@ -1,0 +1,19 @@
+---
+title: Styles
+inMenu: true
+gPriority: 0.1
+---
+h2. ctioga2's styles
+
+It is possible to tune the style of many objects in @ctioga2@ via
+style-sheets. While this page does not provide an explanation for all
+the stylistic elements, it provides a comprehensive list of all
+defined styles and the corresponding attributes.
+
+<notextile>
+{execute: {command: ctioga2 --write-html-styles /page-menu=page, processOutput:
+false, escapeHTML: false }}
+</notextile>
+
+Generated for @ctioga2@ version: 
+<notextile><span class='bold'>{execute: ctioga2 --version-raw}</span></notextile>

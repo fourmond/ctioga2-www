@@ -34,6 +34,13 @@ Patterned fills
 Fully-fledged CSS-like styling
 </td>
 </tr>
+<tr>
+<td>
+{example: /tutorial/complex-layouts.html#complex-layouts-3+1 }
+<br/>
+Grid elements spanning several rows/columns
+</td>
+</tr>
 </table>
 
 h4. New in version 0.10

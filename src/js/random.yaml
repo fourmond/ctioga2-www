@@ -58,3 +58,7 @@
   :link: "/tutorial/axes-labels.html#axes-labels-9"
   :description: |-
     Non linear axes: just specify the formula !
+- :title: Complex layouts
+  :link: "/tutorial/complex-layouts.html#complex-layouts-3+1"
+  :description: |-
+    Complex grid layouts made simple

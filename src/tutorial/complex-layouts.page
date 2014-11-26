@@ -48,6 +48,11 @@ options to control which space should be left on the sides of the
 whole plot (@left@, @top@, @bottom@ and @right@) and how much space
 should be inserted between the individual "insets" (@dx@, @dy@).
 
+A grid element can span several rows and/or columns. Just indicate
+them using a range such as @0-1@ instead of the column/row position:
+
+{ctCmdline: plots/complex-layouts-3+1.ct2-sh}
+
 h3. Unclipped elements and control of depth
 
 By default, elements drawn within a plot are clipped at the plot

@@ -1,4 +1,15 @@
 --- 
+- :date: 2015-01-01 23:37:15 +01:00
+  :author: Vincent Fourmond
+  :id: 41657
+  :title: ctioga2 version 0.11 is out
+  :contents: |-
+    Release 0.11 of ctioga2 features a greatly improved styling system
+    with CSS-like stylesheets, with classes, id and xpath-like
+    selection rules. It also features among other new features a new
+    mathematical backend for formulas depending on two independent
+    variables, loops, grid elements spanning several rows/columns and
+    patterned fills. 
 - :date: 2014-03-26 19:00:15 +01:00
   :author: Vincent Fourmond
   :id: 41657

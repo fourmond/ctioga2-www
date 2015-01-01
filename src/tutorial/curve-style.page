@@ -42,7 +42,7 @@ symbols, that are called markers in Tioga's nomenclature:
 As can be seen above, the markers symbol, size and color can be tuned
 using the options or the corresponding commands. The list of accepted
 symbol names can be found in 
-"Tioga's documentation":http://tioga.rubyforge.org/doc/classes/Tioga/MarkerConstants.html.
+"Tioga's documentation":http://tioga.sf.net/doc/classes/Tioga/MarkerConstants.html.
 
 Something that comes in useful with markers is the possibility to
 disable lines altogether this way:

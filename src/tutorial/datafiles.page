@@ -12,7 +12,7 @@ mathematical functions, and make it available to @ctioga2@.
 
 h3. Mathematical functions
 
-By default, @ctioga2@ acquires data using the @text@ backend, that
+By default, @ctioga2@ acquires data using the {command: text} backend, that
 reads space-separated files (spaces also include tabs). It is possible
 to switch to mathematical functions this way:
 
@@ -26,9 +26,10 @@ changed using other commands, such as:
 {ctCmdline: plots/datafiles-2.ct2-sh }
 
 This demonstrates that the first curve drawn got 31 samples, while the
-second one only got 5. This example also demonstrates another feature
-of @ctioga2@: the possibility to plot individual data points using a
-small symbol called a @marker@ in "Tioga"http://tioga.rubyforge.org
+second one only got 5 (see the small bit of green triangle on the
+lower corner of the graph). This example also demonstrates another
+feature of @ctioga2@: the possibility to plot individual data points
+using a small symbol called a @marker@ in "Tioga":http://tioga.sf.net
 terminology.
 
 The mathematical backend can also generate parametric plots when
@@ -38,7 +39,7 @@ giving @:@-separated functions of @t@:
 
 h3. Dirty tricks with text files
 
-The default @text@ backend allows for quite a few dirty tricks. First
+The default {command: text} backend allows for quite a few dirty tricks. First
 of all, it can parse CSV(comma-separated values) files, such as 
 "this one":plots/data.csv, if you ask it correctly:
 
@@ -68,8 +69,8 @@ this is rather cumbersome; it is much more interesting to use the
 {ctCmdline: plots/datafiles-6.ct2-sh }
 
 This can be tweaked into very complex relations, if you take into
-account the possibility to load more than two columns using the @text@
-backend: 
+account the possibility to load more than two columns using the
+{command: text} backend:
 
 {ctCmdline: plots/datafiles-7.ct2-sh }
 
@@ -103,3 +104,16 @@ argument. <code>@2</code> selects the second plot, while the @:a=3@
 suffix allows to modify the contents of the variables before running
 the plots commands. You can actually write any code there, so long as
 it is valid @gnuplot@ code.
+
+h3. The smath backend for surfaces
+
+The {command: smath} backend can be used to generate datasets with
+values that are functions of two independent variables, @u@ and @v@:
+
+{ctCmdline: plots/datafiles-9.ct2-sh }
+
+This example also demonstrates the possibility to use intermediate
+variables (such as @r@ here) to help define of complicated
+functions. This just follows the Ruby syntax.
+
+

@@ -70,7 +70,7 @@
           <div id="news_section">
             <h3>Latest news</h3>
             {news: {number: 1}}<br/>
-            <a href="http://freecode.com/projects/ctioga">All news at freecode</a>
+            <a href="http://vince-debian.blogspot.fr/search/label/ctioga">All news</a>
           </div>
         </div>
         <div class="cleaner"></div>

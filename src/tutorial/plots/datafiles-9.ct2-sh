@@ -1,0 +1,2 @@
+ctioga2 -X --smath /samples=100 --xyz-map \
+        'r=(u**2 + v**2)**0.5;sin(r)/r'

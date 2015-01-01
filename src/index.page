@@ -8,7 +8,7 @@ h2. What is ctioga2 ?
 
 @ctioga2@ is a powerful command-line based "polymorphic":doc/polymorphic.html
 plotting program, based on the 
-"Tioga plotting library":http://tioga.rubyforge.org.
+"Tioga plotting library":http://tioga.sf.net.
 
 It produces publication-quality PDF files; you make yourself an opinion of
 those looking at the "gallery":galleries.html.
@@ -31,7 +31,7 @@ Hmmm... Maybe not. At least not on every single aspect of
 plotting. But I wanted something:
 * *fast*: plotting a data file is done within one or two seconds, just
   run something like @ctioga2 -X data.dat@ from a terminal
-* *beautiful*: it is based on "Tioga":http://tioga.rubyforge.org, that
+* *beautiful*: it is based on "Tioga":http://tioga.sf.net, that
   produces high-quality PDF files
 * *powerful*: @ctioga2@ offers many features that are not found on
   other plotting systems (at least not all at once), such as gradients

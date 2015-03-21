@@ -5,3 +5,7 @@ output
 *.ogg
 *.mov
 *.mp4
+src/tutorial/plots/3D-data.dat
+.data
+src/js/index.yaml
+src/gnuplot-vs-ctioga2/plots/?.dat

@@ -29,7 +29,7 @@ h4. New in version 0.11
 Patterned fills
 </td>
 <td>
-{example: /tutorial/drawings.html#drawings-3 }
+{example: /tutorial/styles.html#styles-5 }
 <br/>
 Fully-fledged CSS-like styling
 </td>
@@ -267,5 +267,12 @@ Pat Scott, The European Physical Journal Plus, 2012
 
 
 h3(#index). Graphical index
+
+<script src='js/index.js'></script>
+<script src='js/search.js'></script>
+<input type='text' id='search'></input>
+<input type='submit' id='run' value='Search' onclick='search()' />
+<input type='submit' id='run' value='Clear' onclick='clearSearch()' />
+
 
 {gindex: index}

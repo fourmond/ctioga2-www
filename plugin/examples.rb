@@ -24,6 +24,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   CTiogaCommands = YAML.load(`ctioga2 --list-commands /format yaml`)
 
+  IndexFile = "src/js/index.yaml"
+
   begin
     # Indexing on command-line-switches
     a = {}
@@ -53,21 +55,29 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   end
 
   # Registers the file onto a global registry
-  def register_file(thumb, pid, chain)
-    if File.exists? 'index.yaml'
-      db = YAML.load(IO.readlines('index.yaml').join())
+  def register_file(thumb, pid, chain, full)
+    if File.exists? IndexFile
+      db = YAML.load(IO.readlines(IndexFile).join())
     end
 
     db ||= {}
+    db['thumbs'] ||= {}
+    db['text'] ||= {}
 
     page = File::basename(chain.last.node_info[:src], ".page") + ".html"
     root_node = chain.first.resolve_node("/index.html")
     base = File::dirname(root_node.route_to(chain.last))
 
     thmb = "#{base}/#{thumb}"
-    db[thmb] = "#{base}/#{page}##{pid}"
+    tgt = "#{base}/#{page}##{pid}"
+    db['thumbs'][thmb] = tgt
 
-    File.open("index.yaml", "w") do |f|
+    db['text'][tgt] = full
+
+    
+    # Create the base dir if does not exist
+    FileUtils.mkpath(File::dirname(IndexFile))
+    File.open(IndexFile, "w") do |f|
       f.write(db.to_yaml)
     end
   end
@@ -80,11 +90,11 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       thumb = base + '.thumb.png'
       id_base = "#{File::basename(image,'.png')}"
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
-      register_file(thumb, "pre-#{id_base}", chain)
       contents = ""
       return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
         begin
           contents = IO.readlines(filename).join
+          register_file(thumb, "pre-#{id_base}", chain, contents)
           nc = contents.dup
           link_commands(nc, chain)
         rescue Exception => e
@@ -306,6 +316,7 @@ class CTiogaFight < CTiogaCmdfileTag
   param 'file', false, "The file containing the command-line"
 
   set_mandatory 'file', true
+  FightFile = ".data/fight.yaml"
 
 
 
@@ -344,8 +355,8 @@ class CTiogaFight < CTiogaCmdfileTag
 
       begin
         db = {}
-        if File.exists? 'fight.yaml'
-          db = YAML.load(IO.readlines('fight.yaml').join())
+        if File.exists? FightFile
+          db = YAML.load(IO.readlines(FightFile).join())
         end
         
         # Update the database:
@@ -365,13 +376,15 @@ class CTiogaFight < CTiogaCmdfileTag
           local_db[radix] = ms
         end
 
-        File.open("fight.yaml", "w") do |f|
+        FileUtils.mkpath(File::dirname(FightFile))
+        File.open(FightFile, "w") do |f|
           f.write(db.to_yaml)
         end
       end
 
       if ct2_lines
-        register_file(thumb_ct2, "pre-#{radix}-ct2", chain)
+        register_file(thumb_ct2, "pre-#{radix}-ct2", chain,
+                      ct2_lines.join(""))
       end
 
       # Gnuplot code first:
@@ -422,8 +435,8 @@ class FightStats < Tags::DefaultTag
   def process_tag( tag, chain )
     if target = param('target')
       db = {}
-      if File.exists? 'fight.yaml'
-        db = YAML.load(IO.readlines('fight.yaml').join())
+      if File.exists? CTiogaFight::FightFile
+        db = YAML.load(IO.readlines(CTiogaFight::FightFile).join())
       end
 
       stats = ""
@@ -464,17 +477,25 @@ class GraphIndex < Tags::DefaultTag
   param 'target', false, "The target page"
   set_mandatory 'target', true
 
+  ThumbClass = "thumb"
+
+  # Transforms the link into an "id"
+  def self.sanitize_id(idx)
+    return idx.gsub(/\W/, '-')
+  end
+
 
   def process_tag( tag, chain )
     db = {}
-    if File.exists? 'index.yaml'
-      db = YAML.load(IO.readlines('index.yaml').join())
+    if File.exists? CTiogaCmdlineTag::IndexFile
+      db = YAML.load(IO.readlines(CTiogaCmdlineTag::IndexFile).join())
     end
     
     str = ""
+    db = db['thumbs']
     for tmb in db.keys.sort
       tg = db[tmb]
-      str << "<a href='#{tg}'><img src=\"#{tmb}\" class='thumbnail' /></a>\n"
+      str << "<a href='#{tg}' class='#{ThumbClass}' id='#{GraphIndex.sanitize_id(tg)}'><img src=\"#{tmb}\" class='thumbnail' /></a>\n"
     end
     return str
   end

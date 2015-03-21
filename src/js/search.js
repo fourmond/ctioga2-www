@@ -1,0 +1,32 @@
+// Search in images.
+
+function doSearch(srch) {
+    var nf = ""
+    for (var key in idx) {
+        var txt = idx[key];
+        var elem = document.getElementById(key)
+        if(elem) {
+            if(txt.indexOf(srch) >= 0) {
+                // Show
+                elem.style.display="initial";
+            }
+            else {
+                // Hide
+                elem.style.display="none";
+            }
+        }
+        else {
+            nf += ", " + key;
+        }
+    }
+}
+
+function clearSearch() {
+    doSearch('');
+}
+
+function search() {
+    var srch = document.getElementById('search').value;
+    doSearch(srch);
+}
+

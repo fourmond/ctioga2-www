@@ -18,7 +18,7 @@ inline documentation of @ctioga2@. Arguments to the commands, are
 links to the corresponding "type":types.html. So are options.
 
 <notextile>
-{execute: {command: ctioga2 --write-html-commands /page-menu=page, processOutput:
+{execute: {command: ctioga2 --write-html-commands /page-menu=page /snippets=.data/snippets.yaml, processOutput:
 false, escapeHTML: false }}
 </notextile>
 

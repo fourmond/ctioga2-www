@@ -5,6 +5,23 @@
 
 # @todo There are a lot of things to refactor here
 
+module YML
+  def self.load_yaml(file)
+    if File.exists? file
+      return YAML.load(IO.readlines(file).join())
+    else
+      return nil
+    end
+  end
+
+  def self.save_yaml(file, obj)
+    FileUtils.mkpath(File::dirname(file))
+    File.open(file, "w") do |f|
+      f.write(obj.to_yaml)
+    end
+  end
+end
+
 class CTiogaCmdlineTag < Tags::DefaultTag
 
   infos( :name => 'Tag/CTiogaCmdline',
@@ -25,6 +42,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
   CTiogaCommands = YAML.load(`ctioga2 --list-commands /format yaml`)
 
   IndexFile = "src/js/index.yaml"
+  SnippetsFile = ".data/snippets.yaml"
 
   begin
     # Indexing on command-line-switches
@@ -42,6 +60,25 @@ class CTiogaCmdlineTag < Tags::DefaultTag
     CTiogaShortSwitches = b
   end
 
+  # Returns the line matched by the last successful regexp match
+  def matched_line(bef, cur, aft)
+    bef = bef.dup
+    cur = cur.dup
+    aft = aft.dup
+    if idx = bef.rindex("\n")
+      bef = bef[idx+1..-1]
+    end
+    if idx = cur.index("\n")
+      cur = cur[0..idx - 1]
+      aft = ""
+    else
+      if idx = aft.index("\n")
+        aft = aft[0..idx-1]
+      end
+    end
+    return "#{bef}#{cur}#{aft}\n"
+  end
+
   # Hook at the end of the pre stuff...
   def pre_end(contents, tag, chain)
     c = contents.gsub("\\\n", '')
@@ -56,11 +93,8 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   # Registers the file onto a global registry
   def register_file(thumb, pid, chain, full)
-    if File.exists? IndexFile
-      db = YAML.load(IO.readlines(IndexFile).join())
-    end
+    db = YML::load_yaml(IndexFile) || {}
 
-    db ||= {}
     db['thumbs'] ||= {}
     db['text'] ||= {}
 
@@ -74,12 +108,7 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
     db['text'][tgt] = full
 
-    
-    # Create the base dir if does not exist
-    FileUtils.mkpath(File::dirname(IndexFile))
-    File.open(IndexFile, "w") do |f|
-      f.write(db.to_yaml)
-    end
+    YML::save_yaml(IndexFile, db)
   end
 
   def process_tag( tag, chain )
@@ -91,18 +120,20 @@ class CTiogaCmdlineTag < Tags::DefaultTag
       id_base = "#{File::basename(image,'.png')}"
       filename = File.join( chain.first.parent.node_info[:src], cmdline ) 
       contents = ""
-      return "</p><pre class='#{param('cls')}' id='pre-#{id_base}'>\n" +
+      id = "pre-#{id_base}"
+      return "</p><pre class='#{param('cls')}' id='#{id}'>\n" +
         begin
           contents = IO.readlines(filename).join
           register_file(thumb, "pre-#{id_base}", chain, contents)
           nc = contents.dup
-          link_commands(nc, chain)
+          link_commands(nc, chain, id)
         rescue Exception => e
+          p e.inspect
           "<b>IO problem reading file #{cmdline}: #{e.inspect}</b>"
         end  + "</pre>#{pre_end(contents, tag, chain)}" +
         "<p class='example-image'>\n" +
         "<a href=\"#{image}\" id=\"img-#{id_base}\">" +
-        "<img src=\"#{thumb}\" class='thumbnail' alt=\"#{alt}\"/></a>"
+             "<img src=\"#{thumb}\" class='thumbnail' alt=\"#{alt}\"/></a>"
     else
       return "Ourgh"
     end
@@ -121,44 +152,65 @@ class CTiogaCmdlineTag < Tags::DefaultTag
 
   # Transforms commands into links to the appropriate point in the
   # documentation.
-  def link_commands(string, chain)
+  def link_commands(string, chain, id)
     base = param('cmdbase')
     if base
       cmdlocation = resolve_path(base, chain)
       
       # Now, we need to be a little more subtle...
       escape_HTML!(string)
+      
+      db = YML::load_yaml(SnippetsFile) || {}
+      this_file = "#{reverse_resolve_path(base, chain)}##{id}"
 
       string.gsub!(/(\s)-(\w)/) do 
         init = $1
         switch = $2
+        line = matched_line($`, $&, $')
         cmd = CTiogaShortSwitches[switch]
         if cmd
+          nm = cmd['name']
+          db[nm] ||= {}
+          db[nm][this_file] = {:cls => param('cls'), :line => line}
           desc = purify_description(cmd['short_description'])
-          "#{init}<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{desc}\">-#{switch}</a>"
+          "#{init}<a href=\"#{cmdlocation}#command-#{nm}\" title=\"#{desc}\">-#{switch}</a>"
         else
           "#{init}-#{switch}"
         end
       end
 
-      return string.gsub(/--(\S+)/) do 
+      string.gsub!(/--(\S+)/) do 
         switch = $1
+        line = matched_line($`, $&, $')
+        # line = matched_line($`, $&, $')
         cmd = CTiogaSwitches[switch]
         if cmd
+          nm = cmd['name']
+          db[nm] ||= {}
+          db[nm][this_file] = {:cls => param('cls'), :line => line}
           desc = purify_description(cmd['short_description'])
-          "<a href=\"#{cmdlocation}#command-#{cmd['name']}\" title=\"#{desc}\">--#{switch}</a>"
+          "<a href=\"#{cmdlocation}#command-#{nm}\" title=\"#{desc}\">--#{switch}</a>"
         else
           "--#{switch}"
         end
       end
+      YML::save_yaml(SnippetsFile, db)
+      return string
     else
       return string
     end
   end
 
+  # Resolves the path of the target file from this file
   def resolve_path(uri, chain )
     dest_node = chain.first.resolve_node( uri )
     chain.last.route_to(dest_node)
+  end
+
+  # Resolves the path this file from the target file
+  def reverse_resolve_path(uri, chain )
+    dest_node = chain.first.resolve_node( uri )
+    dest_node.route_to(chain.last)
   end
 
   
@@ -185,26 +237,35 @@ class CTiogaCmdfileTag < CTiogaCmdlineTag
 
   # Transforms commands into links to the appropriate point in the
   # documentation.
-  def link_commands(string, chain)
+  def link_commands(string, chain, id)
     base = param('cmdbase')
     if base
       cmdlocation = resolve_path(base, chain)
       escape_HTML!(string)
-      return string.gsub(/^(\s*)([^ ()\n\t]+)(\(|\s+)/) do 
+
+      db = YML::load_yaml(SnippetsFile) || {}
+      this_file = "#{reverse_resolve_path(base, chain)}##{id}"
+
+      string.gsub!(/^(\s*)([^ ()\n\t]+)(\(|\s+)/) do 
         pre = $1
         command = $2
         sep = $3
+        line = matched_line($`, $&, $')
+
         cmd = CTiogaCommands[command]
         if cmd
           desc = purify_description(cmd['short_description'])
-          a = "#{pre}<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{desc}\">#{command}</a>#{sep}"
+          db[command] ||= {}
+          db[command][this_file] = {:cls => param('cls'), :line => line}
+
+          "#{pre}<a href=\"#{cmdlocation}#command-#{command}\" title=\"#{desc}\">#{command}</a>#{sep}"
         else
           "#{pre}#{command}#{sep}"
         end
       end
-    else
-      return string
+      YML::save_yaml(SnippetsFile, db)
     end
+    return string
   end
 
 
@@ -354,10 +415,7 @@ class CTiogaFight < CTiogaCmdfileTag
                   end
 
       begin
-        db = {}
-        if File.exists? FightFile
-          db = YAML.load(IO.readlines(FightFile).join())
-        end
+        db = YML::load_yaml(FightFile) || {}
         
         # Update the database:
         db_base = File::basename(chain.last.node_info[:src], ".page")
@@ -376,10 +434,7 @@ class CTiogaFight < CTiogaCmdfileTag
           local_db[radix] = ms
         end
 
-        FileUtils.mkpath(File::dirname(FightFile))
-        File.open(FightFile, "w") do |f|
-          f.write(db.to_yaml)
-        end
+        YML::save_yaml(FightFile, db)
       end
 
       if ct2_lines
@@ -434,10 +489,7 @@ class FightStats < Tags::DefaultTag
 
   def process_tag( tag, chain )
     if target = param('target')
-      db = {}
-      if File.exists? CTiogaFight::FightFile
-        db = YAML.load(IO.readlines(CTiogaFight::FightFile).join())
-      end
+      db = YML::load_yaml(CTiogaFight::FightFile)
 
       stats = ""
       if db[target]
@@ -486,10 +538,7 @@ class GraphIndex < Tags::DefaultTag
 
 
   def process_tag( tag, chain )
-    db = {}
-    if File.exists? CTiogaCmdlineTag::IndexFile
-      db = YAML.load(IO.readlines(CTiogaCmdlineTag::IndexFile).join())
-    end
+    db = YML::load_yaml(CTiogaCmdlineTag::IndexFile) || {}
     
     str = ""
     db = db['thumbs']

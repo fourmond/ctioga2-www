@@ -7,13 +7,15 @@ gPriority: 0.7
 h2. Galleries
 
 There are three galleries:
- * a "demo":#demo gallery, that demonstrates some of the most
- interesting features of @ctioga2@ and links to the documentation;
- * a "real life":#real-life gallery that has pictures coming from 
- scientific publications
- * an "index":#index, that links to all @ctioga2@-generated graphs within
+ * A "demo":#demo gallery, that demonstrates some of the most
+ interesting features of @ctioga2@ and links to the documentation.
+ It acts as a graphical changelog.
+ * A "real life":#real-life gallery with pictures that come from 
+ scientific publications;
+ * An "index":#index, that links to all @ctioga2@-generated graphs within
  this website, for you to find quickly that specific graph you saw
- ages ago and can't find anymore.
+ ages ago and can't find anymore. You can also search for a specific
+ command.
 
 h3(#demo). Demo gallery
 

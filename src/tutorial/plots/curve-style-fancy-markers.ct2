@@ -1,0 +1,8 @@
+math /samples=51
+marker auto
+margin 0.05
+marker-line-color Black
+marker-line-width 0.5
+plot sin(x)
+plot cos(x)
+plot -sin(x) /marker-fill-color=Purple

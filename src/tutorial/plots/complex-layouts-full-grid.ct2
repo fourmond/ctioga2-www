@@ -1,0 +1,28 @@
+ruby
+def omega(t)
+  if t > 10
+    return 3 - 0.2*(t - 10)
+  else
+    return 1 + 0.2 * t
+  end
+end
+ruby end
+
+xr = -1:21
+
+math /xrange 0:20 /samples=1000
+setup-grid 1x1,2 /top=1mm /right=2mm /dy=2mm
+inset grid:0,0
+  plot 'omega(x)'
+  ylabel '$\omega(t)$'
+  no-xlabel
+  bottom ticks
+  margin 0.08
+  xrange $(xr)
+next-inset grid:0,1
+  plot 'sin(omega(x) * x)'
+  ylabel '$\sin \left\{\omega(t) \, t\right\}$'
+  xlabel '$t$'
+  margin 0.03
+  xrange $(xr)
+end

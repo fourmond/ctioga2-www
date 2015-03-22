@@ -49,6 +49,21 @@ disable lines altogether this way:
 
 {ctCmdline: plots/curve-style-4.ct2-sh }
 
+From @ctioga2@ version @0.12@, it is possible to choose the marker
+fill and line color independently this way:
+
+{ctCmdfile: plots/curve-style-fancy-markers.ct2 }
+
+Using advanced specification of color sets, one can even draw markers
+with dimmed inside:
+
+{ctCmdfile: plots/curve-style-fancy-markers-2.ct2 }
+
+The specification @default!20@ for {command: marker-fill-color-set}
+specifies that the color set for the marker fill color should be the
+@default@ colorset dimmed by @100 - 20 =80%@ (it is a specification
+like LaTeX @xcolor@.).
+
 
 h3. Error bars
 
@@ -125,3 +140,17 @@ use *3 times* the @Solid@ line style, then *3 times* the @Dots@ line
 style. Combining these possibilities makes for very easy play with
 colors/markers/line styles...
 
+
+h3. Style manipulations
+
+@ctioga2@ offers advanced manipulations of style, such as skipping the
+next style or reusing the style of a previous curve, possibly with
+modifications: 
+
+{ctCmdfile: plots/curve-style-manipulations.ct2 }
+
+Without the call to {command: skip}, the @cos(x)@ curve would be green
+(by default), but with {command: skip}, it skips to the next color
+(blue). The {command: reuse-style} commands reuse the style of the
+named curve (with the @/id=@ option) for the next curve. The style can
+still be overridden by modifications.

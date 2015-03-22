@@ -1,0 +1,8 @@
+math
+plot sin(x) /id=sin /legend '$\sin x$'
+skip
+plot cos(x) /id=cos /legend '$\cos x$'
+reuse-style sin
+plot sin(x)**2 /legend '$\sin^2x$'
+reuse-style cos
+plot cos(x)**2  /line-style Dashes /legend '$\cos^2x$'

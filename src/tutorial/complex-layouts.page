@@ -53,6 +53,28 @@ them using a range such as @0-1@ instead of the column/row position:
 
 {ctCmdline: plots/complex-layouts-3+1.ct2-sh}
 
+h4. A full example of a complex grid
+
+Let's say we want to plot @sin(omega(t) t)@ for @omega(t)@ that first
+increases linearly and then decreases symetrically back to the initial
+value. We want to plot the value of @omega(t)@ above the main plot,
+but smaller. This is how it looks:
+
+{ctCmdfile: plots/complex-layouts-full-grid.ct2}
+
+To ensure both grids have the same @x@ range, despite the fact that we
+use different {command: margin} inside, we define a @xr@ variable that
+holds the range and use if with {command: xrange}. To have the top and
+bottom plots of different size, we used @1x1,2@ as an argument to
+{command: setup-grid}, which means that there is one column and two rows,
+the second being twice as large as the first (we could also have used
+@1x10,20@, the measures a relative). We used {command: bottom} @ticks@ to
+deactivate the display of tick labels on the bottom axis in the top
+plot. Finally, we used an inline bit of
+"ruby":../doc/formats.html#ruby code to ease the definition of
+@omega(t)@.
+
+
 h3. Unclipped elements and control of depth
 
 By default, elements drawn within a plot are clipped at the plot

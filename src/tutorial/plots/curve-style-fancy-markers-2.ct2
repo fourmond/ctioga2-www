@@ -1,0 +1,6 @@
+math /samples=51
+marker auto
+margin 0.05
+marker-fill-color-set default!20
+marker-line-width 0.5
+plot 'sin(x+0##4)'

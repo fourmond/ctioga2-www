@@ -96,6 +96,21 @@ wheel:
 
 This works also when using color sets.
 
+h3. Heterogeneous maps
+
+Most heatmap drawing software only work properly when all the points
+are aligned on a complete homogeneous grid. From version @0.12@,
+handles more gracefully the case when the grid is heterogeneous and/or
+not complete. However, as it still works in terms of homogeneous
+grids, it will not work properly with scattered data. Here is an
+example using the {command: smath} backend:
+
+{ctCmdfile: plots/3D-heterogeneous.ct2 }
+
+Mind that the @/where@ clause thinks in terms of @x@ and @y@
+coordinates, but the {command: smath} backend uses @u@ and @v@ as
+parameters.
+
 h3. Contour plots
 
 Finally, it is possible to draw contour plots using the

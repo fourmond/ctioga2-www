@@ -17,6 +17,8 @@ commands known to @ctioga2@. It is generated automatically from the
 inline documentation of @ctioga2@. Arguments to the commands, are
 links to the corresponding "type":types.html. So are options.
 
+<script src='../js/jquery.min.js'></script>
+<script src='../js/examples.js'></script>
 <notextile>
 {execute: {command: ctioga2 --write-html-commands /page-menu=page /snippets=.data/snippets.yaml, processOutput:
 false, escapeHTML: false }}

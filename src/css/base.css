@@ -398,3 +398,9 @@ cite span { color: #fff; }
 }
 
 /* end of footer */
+
+/* Snippets: */
+
+.snippets {
+    display:none;
+}

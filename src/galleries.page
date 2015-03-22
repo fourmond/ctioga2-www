@@ -270,6 +270,7 @@ Pat Scott, The European Physical Journal Plus, 2012
 
 h3(#index). Graphical index
 
+<script src='js/jquery.min.js'></script>
 <script src='js/index.js'></script>
 <script src='js/search.js'></script>
 <input type='text' id='search'></input>

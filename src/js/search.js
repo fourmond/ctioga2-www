@@ -8,11 +8,11 @@ function doSearch(srch) {
         if(elem) {
             if(txt.indexOf(srch) >= 0) {
                 // Show
-                elem.style.display="initial";
+                $("#" + key).fadeIn(250);
             }
             else {
                 // Hide
-                elem.style.display="none";
+                $("#" + key).fadeOut(250);
             }
         }
         else {

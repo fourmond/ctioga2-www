@@ -454,7 +454,7 @@ class CTiogaFight < CTiogaCmdfileTag
       str << "<h4  class='fight'><code>ctioga2</code> code <a href='#{link_ct2}'>(download)</a></h4>\n" 
       str << begin 
                "<pre class='examples-cmdfile' id='pre-#{radix}-ct2'>\n" + 
-                 link_commands(IO.readlines(file_ct2).join, chain) +
+                 link_commands(IO.readlines(file_ct2).join, chain, "pre-#{radix}-ct2") +
                  "</pre>"
              rescue
                "<strong>code missing, probably due to missing features in <code>ctioga2</code></strong>"

@@ -21,6 +21,23 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.12
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/3D.html#3D-heterogeneous }
+<br/>
+Handling of heterogeneous data in heat maps
+</td>
+<td>
+{example: /tutorial/curve-style.html#curve-style-fancy-markers-2 }
+<br/>
+Separate selection of line and fill colors for symbols
+</td>
+</tr>
+</table>
+
 h4. New in version 0.11
 
 <table class='gallery'>
@@ -276,6 +293,7 @@ h3(#index). Graphical index
 <input type='text' id='search'></input>
 <input type='submit' id='run' value='Search' onclick='search()' />
 <input type='submit' id='run' value='Clear' onclick='clearSearch()' />
+<br />
 
 
 {gindex: index}

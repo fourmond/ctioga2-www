@@ -1,4 +1,13 @@
 --- 
+- :date: 2015-03-23 21:47:15 +01:00
+  :author: Vincent Fourmond
+  :id: 41658
+  :title: ctioga2 version 0.12 is out
+  :contents: |-
+    Release 0.12 of ctioga2 features, among others a better handling
+    of heatmaps with heterogeneous X,Y points, the separated selection
+    of fill and stroke colors of markers, and significant improvements
+    in the error reports, and other various improvements.
 - :date: 2015-01-01 23:37:15 +01:00
   :author: Vincent Fourmond
   :id: 41657

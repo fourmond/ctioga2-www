@@ -3,6 +3,11 @@
   :link: "/tutorial/histograms.html#histograms-2"
   :description: |-
     <code>ctioga2</code> version 0.8 introduced nice-looking histograms
+- :title: Fancy symbols
+  :link: "/tutorial/curve-style.html#curve-style-fancy-markers-2
+  :description: |-
+    From <code>ctioga2</code> version 0.12, it is possible to change 
+    separately the markers fill and stroke colors
 - :title: Filled curves and transparency
   :link: "/tutorial/curve-style.html#curve-style-6-1"
   :description: |-

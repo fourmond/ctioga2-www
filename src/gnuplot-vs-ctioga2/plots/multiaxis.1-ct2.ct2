@@ -1,0 +1,25 @@
+ruby
+def a(jw, p1, p2)
+  i = Complex(0,1)
+  return (i*jw/(i*jw+p1)) * (1/(1+i*jw/p2))
+end
+ruby end
+
+title "Transistor Amplitude and Phase Frequency Response"
+xlabel '$j \omega$ (radians)'
+ylabel 'Magnitude of $A(j \omega)$'
+legend-inside tc:0.5,0.85 /scale=1.1 /frame-fill-color=white
+math /xrange 1.1:9e4 /log=true
+xlog true
+ylog true
+plot 'a(x, 10,10000).abs' /legend='$\left|A(j \omega)\right|$'
+y2
+ylog false
+axis-style left /log=true
+margin 0.03
+label-style right_label /text='Phase of $A(j\omega)$ (degrees)' /shift=2.1
+plot 'a(x, 10,10000).arg*180/PI' /legend='Argument of $A(j \omega)$'
+bg_lines = "/style=Dots /width=0.7"
+background-lines x Grey $(bg_lines)
+background-lines right Grey $(bg_lines)
+

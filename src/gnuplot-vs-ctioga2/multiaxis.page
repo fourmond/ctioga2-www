@@ -1,0 +1,13 @@
+---
+title: Multiaxis
+inMenu: true
+---
+
+h2. Multiple axes
+
+The original gallery can be found
+"there":http://gnuplot.sourceforge.net/demo_4.6/multiaxis.html.
+
+
+{fight: plots/multiaxis.1}
+

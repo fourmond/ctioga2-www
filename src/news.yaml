@@ -1,4 +1,19 @@
 --- 
+- :date: 2015-09-03 21:10:15 +02:00
+  :author: Vincent Fourmond
+  :id: 41658
+  :title: ctioga2 version 0.13.1 is out
+  :contents: |-
+    Release 0.13.1 is a bugfix release that corrects installation
+    problems with recent versions of Ruby, along with a smooth hook.
+- :date: 2015-06-11 12:23:15 +02:00
+  :author: Vincent Fourmond
+  :id: 41658
+  :title: ctioga2 version 0.13 is out
+  :contents: |-
+    Release 0.13 of ctioga2 features the possibility to change the
+    resolution of the output PDF file (and default resolution is much
+    higher), better handling of histograms and more.
 - :date: 2015-03-23 21:47:15 +01:00
   :author: Vincent Fourmond
   :id: 41658

@@ -492,7 +492,7 @@ class FightStats < Tags::DefaultTag
       db = YML::load_yaml(CTiogaFight::FightFile)
 
       stats = ""
-      if db[target]
+      if db && db[target]
         tot = 0
         compl = 0
         partial = 0

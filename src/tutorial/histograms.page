@@ -16,9 +16,9 @@ using {command: histogram}:
 
 {ctCmdfile: plots/histograms-1.ct2 }
 
-This example file also demonstrates the possibility to mix colorsets
-using the @xcolor@-style syntax that is also available for simple
-colors.
+The @default!!20@ syntax means "mixing 20% of the @default@ colorset
+with white". You can mix colorsets, and you can also use a single @!@
+to mix colors directly.
 
 The histograms are better filled for them to look good.
 

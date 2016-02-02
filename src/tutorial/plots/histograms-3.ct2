@@ -2,7 +2,7 @@ math /samples=15 /xrange=-1:1
 histogram /gap=1mm /cumulative=next
 margin 0.03
 fill 0
-fill-color-set default!10
+fill-color-set default!!10
 plot '0.5*cos(x)' 
 plot 'x**2/2.25'
 histogram /cumulative=next

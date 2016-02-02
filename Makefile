@@ -3,9 +3,13 @@
 
 # The game is to make my life easier
 
+# For the record, on Debian, we need;
+# apt install webgen0.4/oldstable
+# apt install ruby-bluecloth/oldstable
+
 WEBGEN = webgen0.4
 
-website: archive
+website: src/tutorial/plots/3D-data.dat src/gnuplot-vs-ctioga2/plots/1.dat archive 
 	rm -rf output/css/
 	rm -f output/doc/plots/list*
 	rm -f src/doc/plots/list*pdf
@@ -43,5 +47,11 @@ archive:
 
 movies: src/tutorial/plots/movie-1.avi
 
+src/tutorial/plots/3D-data.dat: src/tutorial/plots/3D-gen-data.rb
+	ruby $< > $@
+
 src/tutorial/plots/movie-1.avi: src/tutorial/plots/movie-1.ct2
 	cd src/tutorial/plots/; ct2-make-movie movie-1.ct2 --codec libx264 -p 1..50:200; rm -rf tmp
+
+src/gnuplot-vs-ctioga2/plots/1.dat: src/gnuplot-vs-ctioga2/plots/gen-dat.sh
+	cd `dirname $<`; . ./`basename $<`

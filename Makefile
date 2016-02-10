@@ -5,7 +5,7 @@
 
 # For the record, on Debian, we need;
 # apt install webgen0.4/oldstable
-# apt install ruby-bluecloth/oldstable
+# apt install ruby-redcloth/oldstable
 
 WEBGEN = webgen0.4
 

@@ -1,0 +1,5 @@
+math
+plot 'x' /id x
+plot 'x**2/4' /marker=Square /id x2
+draw-legend-pictogram 0,12 x
+draw-legend-pictogram -3,15 x2

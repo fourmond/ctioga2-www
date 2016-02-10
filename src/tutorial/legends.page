@@ -88,3 +88,12 @@ options to {cmd: legend-style} or directly {cmd: legend-inside}, such
 as the overall size of the pictogram and the size of the symbol:
 
 {ctCmdfile: plots/legends-8.ct2 }
+
+h3. Separate legend pictograms
+
+Starting from @ctioga2@ version 0.14, you can draw separate legend
+pictograms for a given curve using {cmd: draw-legend-pictogram},
+provided you give it a name using the @/id@ option to {cmd: plot}
+command: 
+
+{ctCmdfile: plots/legends-separate-pictograms.ct2 }

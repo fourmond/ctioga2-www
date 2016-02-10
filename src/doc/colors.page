@@ -11,7 +11,9 @@ value using HTML notation, like @#FF0000@ for red, or using
 comma-separated numbers: @1,0,0@ is also red (@1@ is the maximum
 intensity).
 
-<p class='example-image'><img src="plots/list-colors.png" class='thumbnail' alt="Comprehensive list of ctioga2 colors"/></p>
+<notextile>
+{execute: {command: ctioga2 --write-html-colors /rect-width=60 /columns=4, processOutput: false, escapeHTML: false }}
+</notextile>
 
 h2(#colorsets). List of color sets
 

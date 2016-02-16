@@ -21,6 +21,28 @@ h3(#demo). Demo gallery
 
 Images are links to the corresponding code.
 
+h4. New in version 0.14
+
+<table class='gallery'>
+<tr>
+<td>
+{example: /tutorial/legends.html#legends-separate-pictograms }
+<br/>
+Separate drawing of legend pictograms
+</td>
+<td>
+{example: /tutorial/complex-layouts.html#complex-layouts-styled-grid }
+<br/>
+A greatly improved way to build grids and style them
+</td>
+</tr>
+</table>
+
+h4. New in version 0.13
+
+Changes in versions 0.13 and 0.13.1 are not visual, and therefore not
+represented here.
+
 h4. New in version 0.12
 
 <table class='gallery'>

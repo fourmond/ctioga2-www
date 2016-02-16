@@ -74,6 +74,27 @@ plot. Finally, we used an inline bit of
 "ruby":../doc/formats.html#ruby code to ease the definition of
 @omega(t)@.
 
+h4. More control on grids
+
+The version 0.14 of @ctioga2@ introduced several features to ease the
+drawing of grids. First, it is possible to fill a whole grid by
+specifying @grid:next@. Second, all the subplots of the a grid
+automatically receive the following classes:
+ * @grid-left@, @grid-right@, @grid-top@ and @grid-bottom@ for
+   subplots that are the left, right, top and bottom positions of the
+   grid;
+ * @grid-non-left@, @grid-non-right@, @grid-non-top@ and
+   @grid-non-bottom@ for the complement;
+ * @grid-column-@<i>n</i> for the <i>n</i>th column (0-based)
+ * @grid-row-@_n_ for the <i>n</i>th row (0-based)
+ * @grid-odd-row@, @grid-even-row@, @grid-odd-column@ and
+   @grid-even-column@
+ * @grid-@<i>i</i>@-@<i>j</i> for element corresponding to @grid:@<i>i</i>,<i>j</i>
+
+This can be used for easy styling:
+
+{ctCmdfile: plots/complex-layouts-styled-grid.ct2}
+
 
 h3. Unclipped elements and control of depth
 
